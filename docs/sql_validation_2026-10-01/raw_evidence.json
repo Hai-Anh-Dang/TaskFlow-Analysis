@@ -1,0 +1,5028 @@
+{
+  "audit_utc": "2026-09-30T16:14:23.458603+00:00",
+  "analysis_cutoff": "2025-12-31",
+  "raw_source_directory": "./data/raw",
+  "execution_scope": "Independent Python calculation from CSVs; SQL Server not executed by this script.",
+  "definitions": {
+    "meaningful_actions": [
+      "first_task_completed",
+      "reminder_set",
+      "report_viewed",
+      "task_completed",
+      "workflow_completed"
+    ],
+    "meaningful_success_required": true,
+    "friction_actions": [
+      "action_blocked",
+      "action_failed",
+      "allowance_reached",
+      "sync_failed"
+    ],
+    "deletion_window": "Full prior calendar month [lookback_start, outcome_month_start).",
+    "deletion_eligibility": "Registration on/before prior month start; account open at outcome month start; exclude unavailable prior-month coverage.",
+    "pooled_deletion_grain": "Eligible account-months; retained people can repeat and later enter the deleted group.",
+    "free_tier": "Inclusive date interval; latest start_date then subscription_id wins; same-day ordering unknown.",
+    "paid_rate": "Opening Pro users cancelling this month / opening Pro users.",
+    "sync_denominator": "Recorded sync_completed plus sync_failed events; event platform.",
+    "platform_meaningful_population": "Distinct users by signup_platform; same as event platform in this export only if mismatch check is zero."
+  },
+  "source_manifest": [
+    {
+      "file": "Activity_Events.csv",
+      "rows": 120000,
+      "bytes": 12062825,
+      "sha256": "dbe2c4051c7ed95b7cee802feb039eb4fe848d1b222adaf6a46b811f83a44c96",
+      "date_coverage": {
+        "timestamp": {
+          "non_null_rows": 120000,
+          "min": "2023-01-05",
+          "max": "2025-12-31"
+        }
+      }
+    },
+    {
+      "file": "Business_Change_Register.csv",
+      "rows": 6,
+      "bytes": 1369,
+      "sha256": "f049a26b13378f948bbaaf9b5827869030b168358b84c00a7cdd71139b7b58bf",
+      "date_coverage": {
+        "rollout_end": {
+          "non_null_rows": 6,
+          "min": "2025-02-01",
+          "max": "2025-07-10"
+        },
+        "announcement_date": {
+          "non_null_rows": 6,
+          "min": "2025-01-15",
+          "max": "2025-06-25"
+        },
+        "rollout_start": {
+          "non_null_rows": 6,
+          "min": "2025-02-01",
+          "max": "2025-07-01"
+        }
+      }
+    },
+    {
+      "file": "Date.csv",
+      "rows": 1096,
+      "bytes": 34253,
+      "sha256": "27d7c51586b09b6365d6911ca32295be7586838da42deea8e98a1afc7aedb942",
+      "date_coverage": {
+        "date": {
+          "non_null_rows": 1096,
+          "min": "2023-01-01",
+          "max": "2025-12-31"
+        }
+      }
+    },
+    {
+      "file": "Invoices.csv",
+      "rows": 3421,
+      "bytes": 315873,
+      "sha256": "12cb6c9cfdf669e7756512d49640b163698c8871185404bd73bb647455980019",
+      "date_coverage": {
+        "issue_date": {
+          "non_null_rows": 3421,
+          "min": "2023-02-24",
+          "max": "2025-12-31"
+        }
+      }
+    },
+    {
+      "file": "Payment_Transactions.csv",
+      "rows": 3421,
+      "bytes": 255256,
+      "sha256": "c5a274eff72e41b0c20b165097ee38031d56761a96f1d214caf79f1fe4e7c9ee",
+      "date_coverage": {
+        "timestamp": {
+          "non_null_rows": 3421,
+          "min": "2023-02-24",
+          "max": "2025-12-31"
+        }
+      }
+    },
+    {
+      "file": "Plan_Versions.csv",
+      "rows": 4,
+      "bytes": 526,
+      "sha256": "f4827dc9b3d7efcbb71ea0109d8aa4ca3b76549a4ddb3741022fc1dbf85dd533",
+      "date_coverage": {}
+    },
+    {
+      "file": "Platforms.csv",
+      "rows": 3,
+      "bytes": 95,
+      "sha256": "cd1aa9ebfa6c7d55873d765ff0f094c838d0d9ae0a28f827bbe21eb3831055eb",
+      "date_coverage": {}
+    },
+    {
+      "file": "Reviews.csv",
+      "rows": 805,
+      "bytes": 73687,
+      "sha256": "ae2490da56b1b75f6a96420fd8acd716f29c04147ff04cef0e323b2bb030df97",
+      "date_coverage": {
+        "review_date": {
+          "non_null_rows": 805,
+          "min": "2023-04-21",
+          "max": "2025-12-31"
+        }
+      }
+    },
+    {
+      "file": "Sessions.csv",
+      "rows": 74834,
+      "bytes": 6796048,
+      "sha256": "07ea8cd4a12b70e40808a69cde7fd4ac8db3447d8506013dbcd64db4748ffac1",
+      "date_coverage": {
+        "date": {
+          "non_null_rows": 74834,
+          "min": "2023-01-05",
+          "max": "2025-12-31"
+        }
+      }
+    },
+    {
+      "file": "Subscription_History.csv",
+      "rows": 2078,
+      "bytes": 121788,
+      "sha256": "d58c5f3a6f6413a1a39239a3121294ab9fc868c723dd4f8008101a55bb4add36",
+      "date_coverage": {
+        "start_date": {
+          "non_null_rows": 2078,
+          "min": "2023-01-02",
+          "max": "2026-01-01"
+        },
+        "end_date": {
+          "non_null_rows": 728,
+          "min": "2023-01-31",
+          "max": "2025-12-31"
+        }
+      }
+    },
+    {
+      "file": "Users.csv",
+      "rows": 1500,
+      "bytes": 102302,
+      "sha256": "ff3b59e51462b9718e534016ec5b50ab1bbe3043bc10483f94e88ca6df699530",
+      "date_coverage": {
+        "account_deletion_date": {
+          "non_null_rows": 150,
+          "min": "2023-05-16",
+          "max": "2025-12-28"
+        },
+        "registration_date": {
+          "non_null_rows": 1500,
+          "min": "2023-01-02",
+          "max": "2025-12-27"
+        }
+      }
+    }
+  ],
+  "checks": {
+    "source_csv_count": 11,
+    "unique_user_ids": 1500,
+    "event_user_orphans": 0,
+    "event_vs_signup_platform_mismatch_rows": 0,
+    "events_with_multiple_date_only_tier_matches": 2911,
+    "events_without_tier_match": 0,
+    "nonzero_pro_ledger_residual_months": 0,
+    "nonzero_account_ledger_residual_months": 0
+  },
+  "headline_comparisons": {
+    "registration_2024_monthly_mean": 45.833333333333336,
+    "dec2025_registration_vs2024mean_relative_change": -0.7163636363636363,
+    "dec2025_pro_mom_relative_change": 0.006993006993007089,
+    "dec2025_pro_yoy_relative_change": -0.006896551724137945,
+    "dec2025_paid_cancellation_mom_pp": 0.8054014950566679,
+    "pro_peak": {
+      "month": "2025-05-01",
+      "registrations": 37,
+      "recorded_active_users": 1190,
+      "meaningfully_active_users": 870,
+      "meaningful_actions": 1428,
+      "meaningful_share_of_active": 0.7310924369747899,
+      "actions_per_meaningfully_active_user": 1.6413793103448275,
+      "opening_pro": 177,
+      "closing_pro": 187,
+      "opening_pro_cancellations": 16,
+      "opening_accounts": 1275,
+      "closing_accounts": 1302,
+      "deletions": 10,
+      "all_pro_cancellation_events": 16,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 23,
+      "repeat_upgrades": 4,
+      "paid_cancellation_rate": 0.0903954802259887,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    "deletion_user_count": 150,
+    "deleted_users_with_deletion_month_events": 0
+  },
+  "operational_monthly": [
+    {
+      "month": "2023-01-01",
+      "registrations": 25,
+      "recorded_active_users": 25,
+      "meaningfully_active_users": 24,
+      "meaningful_actions": 79,
+      "meaningful_share_of_active": 0.96,
+      "actions_per_meaningfully_active_user": 3.2916666666666665,
+      "opening_pro": 0,
+      "closing_pro": 1,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 0,
+      "closing_accounts": 25,
+      "deletions": 0,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 1,
+      "paid_cancellation_rate": null,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-02-01",
+      "registrations": 27,
+      "recorded_active_users": 52,
+      "meaningfully_active_users": 52,
+      "meaningful_actions": 163,
+      "meaningful_share_of_active": 1.0,
+      "actions_per_meaningfully_active_user": 3.1346153846153846,
+      "opening_pro": 1,
+      "closing_pro": 1,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 25,
+      "closing_accounts": 52,
+      "deletions": 0,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-03-01",
+      "registrations": 30,
+      "recorded_active_users": 82,
+      "meaningfully_active_users": 81,
+      "meaningful_actions": 266,
+      "meaningful_share_of_active": 0.9878048780487805,
+      "actions_per_meaningfully_active_user": 3.2839506172839505,
+      "opening_pro": 1,
+      "closing_pro": 5,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 52,
+      "closing_accounts": 82,
+      "deletions": 0,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 4,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-04-01",
+      "registrations": 32,
+      "recorded_active_users": 114,
+      "meaningfully_active_users": 111,
+      "meaningful_actions": 342,
+      "meaningful_share_of_active": 0.9736842105263158,
+      "actions_per_meaningfully_active_user": 3.081081081081081,
+      "opening_pro": 5,
+      "closing_pro": 6,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 82,
+      "closing_accounts": 114,
+      "deletions": 0,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 1,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-05-01",
+      "registrations": 34,
+      "recorded_active_users": 147,
+      "meaningfully_active_users": 145,
+      "meaningful_actions": 425,
+      "meaningful_share_of_active": 0.9863945578231292,
+      "actions_per_meaningfully_active_user": 2.9310344827586206,
+      "opening_pro": 6,
+      "closing_pro": 13,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 114,
+      "closing_accounts": 147,
+      "deletions": 1,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 7,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-06-01",
+      "registrations": 36,
+      "recorded_active_users": 182,
+      "meaningfully_active_users": 179,
+      "meaningful_actions": 582,
+      "meaningful_share_of_active": 0.9835164835164835,
+      "actions_per_meaningfully_active_user": 3.2513966480446927,
+      "opening_pro": 13,
+      "closing_pro": 22,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 147,
+      "closing_accounts": 182,
+      "deletions": 1,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 9,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-07-01",
+      "registrations": 39,
+      "recorded_active_users": 221,
+      "meaningfully_active_users": 217,
+      "meaningful_actions": 607,
+      "meaningful_share_of_active": 0.9819004524886877,
+      "actions_per_meaningfully_active_user": 2.7972350230414746,
+      "opening_pro": 22,
+      "closing_pro": 33,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 182,
+      "closing_accounts": 221,
+      "deletions": 0,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 11,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-08-01",
+      "registrations": 41,
+      "recorded_active_users": 260,
+      "meaningfully_active_users": 253,
+      "meaningful_actions": 788,
+      "meaningful_share_of_active": 0.9730769230769231,
+      "actions_per_meaningfully_active_user": 3.1146245059288535,
+      "opening_pro": 33,
+      "closing_pro": 43,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 221,
+      "closing_accounts": 260,
+      "deletions": 2,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 10,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-09-01",
+      "registrations": 43,
+      "recorded_active_users": 302,
+      "meaningfully_active_users": 296,
+      "meaningful_actions": 880,
+      "meaningful_share_of_active": 0.9801324503311258,
+      "actions_per_meaningfully_active_user": 2.972972972972973,
+      "opening_pro": 43,
+      "closing_pro": 49,
+      "opening_pro_cancellations": 1,
+      "opening_accounts": 260,
+      "closing_accounts": 303,
+      "deletions": 0,
+      "all_pro_cancellation_events": 1,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 7,
+      "paid_cancellation_rate": 0.023255813953488372,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-10-01",
+      "registrations": 45,
+      "recorded_active_users": 347,
+      "meaningfully_active_users": 336,
+      "meaningful_actions": 994,
+      "meaningful_share_of_active": 0.968299711815562,
+      "actions_per_meaningfully_active_user": 2.9583333333333335,
+      "opening_pro": 49,
+      "closing_pro": 49,
+      "opening_pro_cancellations": 3,
+      "opening_accounts": 303,
+      "closing_accounts": 348,
+      "deletions": 0,
+      "all_pro_cancellation_events": 3,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 3,
+      "paid_cancellation_rate": 0.061224489795918366,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-11-01",
+      "registrations": 48,
+      "recorded_active_users": 394,
+      "meaningfully_active_users": 382,
+      "meaningful_actions": 1066,
+      "meaningful_share_of_active": 0.9695431472081218,
+      "actions_per_meaningfully_active_user": 2.7905759162303663,
+      "opening_pro": 49,
+      "closing_pro": 66,
+      "opening_pro_cancellations": 0,
+      "opening_accounts": 348,
+      "closing_accounts": 395,
+      "deletions": 1,
+      "all_pro_cancellation_events": 0,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 16,
+      "repeat_upgrades": 1,
+      "paid_cancellation_rate": 0.0,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2023-12-01",
+      "registrations": 50,
+      "recorded_active_users": 445,
+      "meaningfully_active_users": 433,
+      "meaningful_actions": 1296,
+      "meaningful_share_of_active": 0.9730337078651685,
+      "actions_per_meaningfully_active_user": 2.9930715935334873,
+      "opening_pro": 66,
+      "closing_pro": 70,
+      "opening_pro_cancellations": 4,
+      "opening_accounts": 395,
+      "closing_accounts": 445,
+      "deletions": 0,
+      "all_pro_cancellation_events": 4,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 8,
+      "paid_cancellation_rate": 0.06060606060606061,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-01-01",
+      "registrations": 44,
+      "recorded_active_users": 487,
+      "meaningfully_active_users": 464,
+      "meaningful_actions": 1348,
+      "meaningful_share_of_active": 0.9527720739219713,
+      "actions_per_meaningfully_active_user": 2.9051724137931036,
+      "opening_pro": 70,
+      "closing_pro": 77,
+      "opening_pro_cancellations": 2,
+      "opening_accounts": 445,
+      "closing_accounts": 488,
+      "deletions": 1,
+      "all_pro_cancellation_events": 2,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 9,
+      "paid_cancellation_rate": 0.02857142857142857,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-02-01",
+      "registrations": 44,
+      "recorded_active_users": 528,
+      "meaningfully_active_users": 504,
+      "meaningful_actions": 1434,
+      "meaningful_share_of_active": 0.9545454545454546,
+      "actions_per_meaningfully_active_user": 2.8452380952380953,
+      "opening_pro": 77,
+      "closing_pro": 79,
+      "opening_pro_cancellations": 1,
+      "opening_accounts": 488,
+      "closing_accounts": 530,
+      "deletions": 2,
+      "all_pro_cancellation_events": 1,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 4,
+      "paid_cancellation_rate": 0.012987012987012988,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-03-01",
+      "registrations": 44,
+      "recorded_active_users": 572,
+      "meaningfully_active_users": 550,
+      "meaningful_actions": 1609,
+      "meaningful_share_of_active": 0.9615384615384616,
+      "actions_per_meaningfully_active_user": 2.9254545454545453,
+      "opening_pro": 79,
+      "closing_pro": 80,
+      "opening_pro_cancellations": 8,
+      "opening_accounts": 530,
+      "closing_accounts": 574,
+      "deletions": 0,
+      "first_upgrades": 9,
+      "all_pro_cancellation_events": 8,
+      "pro_deletion_exits": 0,
+      "paid_cancellation_rate": 0.10126582278481013,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-04-01",
+      "registrations": 45,
+      "recorded_active_users": 616,
+      "meaningfully_active_users": 588,
+      "meaningful_actions": 1637,
+      "meaningful_share_of_active": 0.9545454545454546,
+      "actions_per_meaningfully_active_user": 2.7840136054421767,
+      "opening_pro": 80,
+      "closing_pro": 85,
+      "opening_pro_cancellations": 3,
+      "opening_accounts": 574,
+      "closing_accounts": 617,
+      "deletions": 2,
+      "all_pro_cancellation_events": 3,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 7,
+      "repeat_upgrades": 1,
+      "paid_cancellation_rate": 0.0375,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-05-01",
+      "registrations": 45,
+      "recorded_active_users": 661,
+      "meaningfully_active_users": 634,
+      "meaningful_actions": 1750,
+      "meaningful_share_of_active": 0.9591527987897126,
+      "actions_per_meaningfully_active_user": 2.7602523659305995,
+      "opening_pro": 85,
+      "closing_pro": 95,
+      "opening_pro_cancellations": 1,
+      "opening_accounts": 617,
+      "closing_accounts": 662,
+      "deletions": 0,
+      "all_pro_cancellation_events": 1,
+      "pro_deletion_exits": 0,
+      "repeat_upgrades": 2,
+      "first_upgrades": 9,
+      "paid_cancellation_rate": 0.011764705882352941,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-06-01",
+      "registrations": 46,
+      "recorded_active_users": 706,
+      "meaningfully_active_users": 675,
+      "meaningful_actions": 1884,
+      "meaningful_share_of_active": 0.9560906515580736,
+      "actions_per_meaningfully_active_user": 2.7911111111111113,
+      "opening_pro": 95,
+      "closing_pro": 103,
+      "opening_pro_cancellations": 2,
+      "opening_accounts": 662,
+      "closing_accounts": 706,
+      "deletions": 2,
+      "all_pro_cancellation_events": 2,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 10,
+      "paid_cancellation_rate": 0.021052631578947368,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-07-01",
+      "registrations": 46,
+      "recorded_active_users": 748,
+      "meaningfully_active_users": 706,
+      "meaningful_actions": 1920,
+      "meaningful_share_of_active": 0.9438502673796791,
+      "actions_per_meaningfully_active_user": 2.7195467422096318,
+      "opening_pro": 103,
+      "closing_pro": 109,
+      "opening_pro_cancellations": 3,
+      "opening_accounts": 706,
+      "closing_accounts": 751,
+      "deletions": 1,
+      "all_pro_cancellation_events": 3,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 9,
+      "paid_cancellation_rate": 0.02912621359223301,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-08-01",
+      "registrations": 46,
+      "recorded_active_users": 795,
+      "meaningfully_active_users": 757,
+      "meaningful_actions": 2027,
+      "meaningful_share_of_active": 0.9522012578616352,
+      "actions_per_meaningfully_active_user": 2.677675033025099,
+      "opening_pro": 109,
+      "closing_pro": 110,
+      "opening_pro_cancellations": 7,
+      "opening_accounts": 751,
+      "closing_accounts": 797,
+      "deletions": 0,
+      "all_pro_cancellation_events": 7,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 6,
+      "repeat_upgrades": 2,
+      "paid_cancellation_rate": 0.06422018348623854,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-09-01",
+      "registrations": 47,
+      "recorded_active_users": 836,
+      "meaningfully_active_users": 807,
+      "meaningful_actions": 2105,
+      "meaningful_share_of_active": 0.965311004784689,
+      "actions_per_meaningfully_active_user": 2.6084262701363072,
+      "opening_pro": 110,
+      "closing_pro": 114,
+      "opening_pro_cancellations": 3,
+      "opening_accounts": 797,
+      "closing_accounts": 841,
+      "deletions": 3,
+      "all_pro_cancellation_events": 3,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 8,
+      "paid_cancellation_rate": 0.02727272727272727,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-10-01",
+      "registrations": 47,
+      "recorded_active_users": 877,
+      "meaningfully_active_users": 826,
+      "meaningful_actions": 2186,
+      "meaningful_share_of_active": 0.9418472063854048,
+      "actions_per_meaningfully_active_user": 2.6464891041162226,
+      "opening_pro": 114,
+      "closing_pro": 125,
+      "opening_pro_cancellations": 4,
+      "opening_accounts": 841,
+      "closing_accounts": 888,
+      "deletions": 0,
+      "all_pro_cancellation_events": 4,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 15,
+      "paid_cancellation_rate": 0.03508771929824561,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-11-01",
+      "registrations": 48,
+      "recorded_active_users": 928,
+      "meaningfully_active_users": 869,
+      "meaningful_actions": 2287,
+      "meaningful_share_of_active": 0.9364224137931034,
+      "actions_per_meaningfully_active_user": 2.6317606444188724,
+      "opening_pro": 125,
+      "closing_pro": 133,
+      "opening_pro_cancellations": 3,
+      "opening_accounts": 888,
+      "closing_accounts": 934,
+      "deletions": 2,
+      "all_pro_cancellation_events": 3,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 12,
+      "paid_cancellation_rate": 0.024,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2024-12-01",
+      "registrations": 48,
+      "recorded_active_users": 970,
+      "meaningfully_active_users": 926,
+      "meaningful_actions": 2338,
+      "meaningful_share_of_active": 0.954639175257732,
+      "actions_per_meaningfully_active_user": 2.524838012958963,
+      "opening_pro": 133,
+      "closing_pro": 145,
+      "opening_pro_cancellations": 5,
+      "opening_accounts": 934,
+      "closing_accounts": 979,
+      "deletions": 3,
+      "all_pro_cancellation_events": 5,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 15,
+      "repeat_upgrades": 2,
+      "paid_cancellation_rate": 0.03759398496240601,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-01-01",
+      "registrations": 105,
+      "recorded_active_users": 1074,
+      "meaningfully_active_users": 1020,
+      "meaningful_actions": 2636,
+      "meaningful_share_of_active": 0.9497206703910615,
+      "actions_per_meaningfully_active_user": 2.5843137254901962,
+      "opening_pro": 145,
+      "closing_pro": 160,
+      "opening_pro_cancellations": 1,
+      "opening_accounts": 979,
+      "closing_accounts": 1082,
+      "deletions": 2,
+      "all_pro_cancellation_events": 1,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 16,
+      "paid_cancellation_rate": 0.006896551724137931,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-02-01",
+      "registrations": 92,
+      "recorded_active_users": 1131,
+      "meaningfully_active_users": 999,
+      "meaningful_actions": 2217,
+      "meaningful_share_of_active": 0.883289124668435,
+      "actions_per_meaningfully_active_user": 2.219219219219219,
+      "opening_pro": 160,
+      "closing_pro": 176,
+      "opening_pro_cancellations": 5,
+      "opening_accounts": 1082,
+      "closing_accounts": 1169,
+      "deletions": 5,
+      "all_pro_cancellation_events": 5,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 21,
+      "paid_cancellation_rate": 0.03125,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-03-01",
+      "registrations": 75,
+      "recorded_active_users": 1211,
+      "meaningfully_active_users": 1074,
+      "meaningful_actions": 2294,
+      "meaningful_share_of_active": 0.8868703550784476,
+      "actions_per_meaningfully_active_user": 2.1359404096834265,
+      "opening_pro": 176,
+      "closing_pro": 180,
+      "opening_pro_cancellations": 20,
+      "opening_accounts": 1169,
+      "closing_accounts": 1237,
+      "deletions": 7,
+      "all_pro_cancellation_events": 20,
+      "pro_deletion_exits": 2,
+      "first_upgrades": 24,
+      "repeat_upgrades": 2,
+      "paid_cancellation_rate": 0.11363636363636363,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-04-01",
+      "registrations": 48,
+      "recorded_active_users": 1210,
+      "meaningfully_active_users": 995,
+      "meaningful_actions": 1964,
+      "meaningful_share_of_active": 0.8223140495867769,
+      "actions_per_meaningfully_active_user": 1.9738693467336683,
+      "opening_pro": 180,
+      "closing_pro": 177,
+      "opening_pro_cancellations": 19,
+      "opening_accounts": 1237,
+      "closing_accounts": 1275,
+      "deletions": 10,
+      "all_pro_cancellation_events": 19,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 17,
+      "paid_cancellation_rate": 0.10555555555555556,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-05-01",
+      "registrations": 37,
+      "recorded_active_users": 1190,
+      "meaningfully_active_users": 870,
+      "meaningful_actions": 1428,
+      "meaningful_share_of_active": 0.7310924369747899,
+      "actions_per_meaningfully_active_user": 1.6413793103448275,
+      "opening_pro": 177,
+      "closing_pro": 187,
+      "opening_pro_cancellations": 16,
+      "opening_accounts": 1275,
+      "closing_accounts": 1302,
+      "deletions": 10,
+      "all_pro_cancellation_events": 16,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 23,
+      "repeat_upgrades": 4,
+      "paid_cancellation_rate": 0.0903954802259887,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-06-01",
+      "registrations": 30,
+      "recorded_active_users": 1208,
+      "meaningfully_active_users": 884,
+      "meaningful_actions": 1476,
+      "meaningful_share_of_active": 0.7317880794701986,
+      "actions_per_meaningfully_active_user": 1.669683257918552,
+      "opening_pro": 187,
+      "closing_pro": 173,
+      "opening_pro_cancellations": 20,
+      "opening_accounts": 1302,
+      "closing_accounts": 1324,
+      "deletions": 8,
+      "all_pro_cancellation_events": 20,
+      "pro_deletion_exits": 0,
+      "repeat_upgrades": 1,
+      "first_upgrades": 5,
+      "paid_cancellation_rate": 0.10695187165775401,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-07-01",
+      "registrations": 26,
+      "recorded_active_users": 1223,
+      "meaningfully_active_users": 854,
+      "meaningful_actions": 1405,
+      "meaningful_share_of_active": 0.6982829108748978,
+      "actions_per_meaningfully_active_user": 1.64519906323185,
+      "opening_pro": 173,
+      "closing_pro": 168,
+      "opening_pro_cancellations": 11,
+      "opening_accounts": 1324,
+      "closing_accounts": 1336,
+      "deletions": 14,
+      "all_pro_cancellation_events": 11,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 7,
+      "paid_cancellation_rate": 0.06358381502890173,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-08-01",
+      "registrations": 23,
+      "recorded_active_users": 1203,
+      "meaningfully_active_users": 854,
+      "meaningful_actions": 1372,
+      "meaningful_share_of_active": 0.7098919368246052,
+      "actions_per_meaningfully_active_user": 1.6065573770491803,
+      "opening_pro": 168,
+      "closing_pro": 160,
+      "opening_pro_cancellations": 16,
+      "opening_accounts": 1336,
+      "closing_accounts": 1344,
+      "deletions": 15,
+      "all_pro_cancellation_events": 16,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 8,
+      "paid_cancellation_rate": 0.09523809523809523,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-09-01",
+      "registrations": 19,
+      "recorded_active_users": 1207,
+      "meaningfully_active_users": 836,
+      "meaningful_actions": 1397,
+      "meaningful_share_of_active": 0.6926263463131731,
+      "actions_per_meaningfully_active_user": 1.6710526315789473,
+      "opening_pro": 160,
+      "closing_pro": 153,
+      "opening_pro_cancellations": 14,
+      "opening_accounts": 1344,
+      "closing_accounts": 1349,
+      "deletions": 14,
+      "all_pro_cancellation_events": 14,
+      "pro_deletion_exits": 2,
+      "first_upgrades": 9,
+      "paid_cancellation_rate": 0.0875,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-10-01",
+      "registrations": 17,
+      "recorded_active_users": 1204,
+      "meaningfully_active_users": 865,
+      "meaningful_actions": 1453,
+      "meaningful_share_of_active": 0.71843853820598,
+      "actions_per_meaningfully_active_user": 1.6797687861271677,
+      "opening_pro": 153,
+      "closing_pro": 145,
+      "opening_pro_cancellations": 15,
+      "opening_accounts": 1349,
+      "closing_accounts": 1347,
+      "deletions": 19,
+      "all_pro_cancellation_events": 15,
+      "pro_deletion_exits": 3,
+      "first_upgrades": 10,
+      "paid_cancellation_rate": 0.09803921568627451,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-11-01",
+      "registrations": 15,
+      "recorded_active_users": 1186,
+      "meaningfully_active_users": 822,
+      "meaningful_actions": 1343,
+      "meaningful_share_of_active": 0.6930860033726813,
+      "actions_per_meaningfully_active_user": 1.6338199513381995,
+      "opening_pro": 145,
+      "closing_pro": 143,
+      "opening_pro_cancellations": 11,
+      "opening_accounts": 1347,
+      "closing_accounts": 1349,
+      "deletions": 13,
+      "all_pro_cancellation_events": 11,
+      "pro_deletion_exits": 1,
+      "first_upgrades": 9,
+      "repeat_upgrades": 1,
+      "paid_cancellation_rate": 0.07586206896551724,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    },
+    {
+      "month": "2025-12-01",
+      "registrations": 13,
+      "recorded_active_users": 1155,
+      "meaningfully_active_users": 810,
+      "meaningful_actions": 1316,
+      "meaningful_share_of_active": 0.7012987012987013,
+      "actions_per_meaningfully_active_user": 1.6246913580246913,
+      "opening_pro": 143,
+      "closing_pro": 144,
+      "opening_pro_cancellations": 12,
+      "opening_accounts": 1349,
+      "closing_accounts": 1350,
+      "deletions": 12,
+      "all_pro_cancellation_events": 12,
+      "pro_deletion_exits": 0,
+      "first_upgrades": 11,
+      "repeat_upgrades": 2,
+      "paid_cancellation_rate": 0.08391608391608392,
+      "pro_ledger_residual": 0,
+      "account_ledger_residual": 0
+    }
+  ],
+  "registrations_by_month_channel": [
+    {
+      "month": "2023-01-01",
+      "channel": "App Store Search",
+      "registrations": 1
+    },
+    {
+      "month": "2023-01-01",
+      "channel": "Organic Search",
+      "registrations": 6
+    },
+    {
+      "month": "2023-01-01",
+      "channel": "Paid Ads",
+      "registrations": 4
+    },
+    {
+      "month": "2023-01-01",
+      "channel": "Referral",
+      "registrations": 7
+    },
+    {
+      "month": "2023-01-01",
+      "channel": "Social Media",
+      "registrations": 7
+    },
+    {
+      "month": "2023-02-01",
+      "channel": "App Store Search",
+      "registrations": 3
+    },
+    {
+      "month": "2023-02-01",
+      "channel": "Organic Search",
+      "registrations": 6
+    },
+    {
+      "month": "2023-02-01",
+      "channel": "Paid Ads",
+      "registrations": 4
+    },
+    {
+      "month": "2023-02-01",
+      "channel": "Referral",
+      "registrations": 8
+    },
+    {
+      "month": "2023-02-01",
+      "channel": "Social Media",
+      "registrations": 6
+    },
+    {
+      "month": "2023-03-01",
+      "channel": "App Store Search",
+      "registrations": 1
+    },
+    {
+      "month": "2023-03-01",
+      "channel": "Organic Search",
+      "registrations": 10
+    },
+    {
+      "month": "2023-03-01",
+      "channel": "Paid Ads",
+      "registrations": 9
+    },
+    {
+      "month": "2023-03-01",
+      "channel": "Referral",
+      "registrations": 5
+    },
+    {
+      "month": "2023-03-01",
+      "channel": "Social Media",
+      "registrations": 5
+    },
+    {
+      "month": "2023-04-01",
+      "channel": "App Store Search",
+      "registrations": 2
+    },
+    {
+      "month": "2023-04-01",
+      "channel": "Organic Search",
+      "registrations": 10
+    },
+    {
+      "month": "2023-04-01",
+      "channel": "Paid Ads",
+      "registrations": 6
+    },
+    {
+      "month": "2023-04-01",
+      "channel": "Referral",
+      "registrations": 4
+    },
+    {
+      "month": "2023-04-01",
+      "channel": "Social Media",
+      "registrations": 10
+    },
+    {
+      "month": "2023-05-01",
+      "channel": "App Store Search",
+      "registrations": 0
+    },
+    {
+      "month": "2023-05-01",
+      "channel": "Organic Search",
+      "registrations": 12
+    },
+    {
+      "month": "2023-05-01",
+      "channel": "Paid Ads",
+      "registrations": 9
+    },
+    {
+      "month": "2023-05-01",
+      "channel": "Referral",
+      "registrations": 9
+    },
+    {
+      "month": "2023-05-01",
+      "channel": "Social Media",
+      "registrations": 4
+    },
+    {
+      "month": "2023-06-01",
+      "channel": "App Store Search",
+      "registrations": 4
+    },
+    {
+      "month": "2023-06-01",
+      "channel": "Organic Search",
+      "registrations": 17
+    },
+    {
+      "month": "2023-06-01",
+      "channel": "Paid Ads",
+      "registrations": 2
+    },
+    {
+      "month": "2023-06-01",
+      "channel": "Referral",
+      "registrations": 7
+    },
+    {
+      "month": "2023-06-01",
+      "channel": "Social Media",
+      "registrations": 6
+    },
+    {
+      "month": "2023-07-01",
+      "channel": "App Store Search",
+      "registrations": 3
+    },
+    {
+      "month": "2023-07-01",
+      "channel": "Organic Search",
+      "registrations": 12
+    },
+    {
+      "month": "2023-07-01",
+      "channel": "Paid Ads",
+      "registrations": 12
+    },
+    {
+      "month": "2023-07-01",
+      "channel": "Referral",
+      "registrations": 9
+    },
+    {
+      "month": "2023-07-01",
+      "channel": "Social Media",
+      "registrations": 3
+    },
+    {
+      "month": "2023-08-01",
+      "channel": "App Store Search",
+      "registrations": 4
+    },
+    {
+      "month": "2023-08-01",
+      "channel": "Organic Search",
+      "registrations": 9
+    },
+    {
+      "month": "2023-08-01",
+      "channel": "Paid Ads",
+      "registrations": 4
+    },
+    {
+      "month": "2023-08-01",
+      "channel": "Referral",
+      "registrations": 17
+    },
+    {
+      "month": "2023-08-01",
+      "channel": "Social Media",
+      "registrations": 7
+    },
+    {
+      "month": "2023-09-01",
+      "channel": "App Store Search",
+      "registrations": 5
+    },
+    {
+      "month": "2023-09-01",
+      "channel": "Organic Search",
+      "registrations": 9
+    },
+    {
+      "month": "2023-09-01",
+      "channel": "Paid Ads",
+      "registrations": 7
+    },
+    {
+      "month": "2023-09-01",
+      "channel": "Referral",
+      "registrations": 14
+    },
+    {
+      "month": "2023-09-01",
+      "channel": "Social Media",
+      "registrations": 8
+    },
+    {
+      "month": "2023-10-01",
+      "channel": "App Store Search",
+      "registrations": 8
+    },
+    {
+      "month": "2023-10-01",
+      "channel": "Organic Search",
+      "registrations": 11
+    },
+    {
+      "month": "2023-10-01",
+      "channel": "Paid Ads",
+      "registrations": 11
+    },
+    {
+      "month": "2023-10-01",
+      "channel": "Referral",
+      "registrations": 9
+    },
+    {
+      "month": "2023-10-01",
+      "channel": "Social Media",
+      "registrations": 6
+    },
+    {
+      "month": "2023-11-01",
+      "channel": "App Store Search",
+      "registrations": 7
+    },
+    {
+      "month": "2023-11-01",
+      "channel": "Organic Search",
+      "registrations": 12
+    },
+    {
+      "month": "2023-11-01",
+      "channel": "Paid Ads",
+      "registrations": 10
+    },
+    {
+      "month": "2023-11-01",
+      "channel": "Referral",
+      "registrations": 12
+    },
+    {
+      "month": "2023-11-01",
+      "channel": "Social Media",
+      "registrations": 7
+    },
+    {
+      "month": "2023-12-01",
+      "channel": "App Store Search",
+      "registrations": 7
+    },
+    {
+      "month": "2023-12-01",
+      "channel": "Organic Search",
+      "registrations": 14
+    },
+    {
+      "month": "2023-12-01",
+      "channel": "Paid Ads",
+      "registrations": 10
+    },
+    {
+      "month": "2023-12-01",
+      "channel": "Referral",
+      "registrations": 8
+    },
+    {
+      "month": "2023-12-01",
+      "channel": "Social Media",
+      "registrations": 11
+    },
+    {
+      "month": "2024-01-01",
+      "channel": "App Store Search",
+      "registrations": 8
+    },
+    {
+      "month": "2024-01-01",
+      "channel": "Organic Search",
+      "registrations": 18
+    },
+    {
+      "month": "2024-01-01",
+      "channel": "Paid Ads",
+      "registrations": 4
+    },
+    {
+      "month": "2024-01-01",
+      "channel": "Referral",
+      "registrations": 13
+    },
+    {
+      "month": "2024-01-01",
+      "channel": "Social Media",
+      "registrations": 1
+    },
+    {
+      "month": "2024-02-01",
+      "channel": "App Store Search",
+      "registrations": 5
+    },
+    {
+      "month": "2024-02-01",
+      "channel": "Organic Search",
+      "registrations": 15
+    },
+    {
+      "month": "2024-02-01",
+      "channel": "Paid Ads",
+      "registrations": 9
+    },
+    {
+      "month": "2024-02-01",
+      "channel": "Referral",
+      "registrations": 6
+    },
+    {
+      "month": "2024-02-01",
+      "channel": "Social Media",
+      "registrations": 9
+    },
+    {
+      "month": "2024-03-01",
+      "channel": "App Store Search",
+      "registrations": 4
+    },
+    {
+      "month": "2024-03-01",
+      "channel": "Organic Search",
+      "registrations": 13
+    },
+    {
+      "month": "2024-03-01",
+      "channel": "Paid Ads",
+      "registrations": 4
+    },
+    {
+      "month": "2024-03-01",
+      "channel": "Referral",
+      "registrations": 11
+    },
+    {
+      "month": "2024-03-01",
+      "channel": "Social Media",
+      "registrations": 12
+    },
+    {
+      "month": "2024-04-01",
+      "channel": "App Store Search",
+      "registrations": 8
+    },
+    {
+      "month": "2024-04-01",
+      "channel": "Organic Search",
+      "registrations": 14
+    },
+    {
+      "month": "2024-04-01",
+      "channel": "Paid Ads",
+      "registrations": 6
+    },
+    {
+      "month": "2024-04-01",
+      "channel": "Referral",
+      "registrations": 11
+    },
+    {
+      "month": "2024-04-01",
+      "channel": "Social Media",
+      "registrations": 6
+    },
+    {
+      "month": "2024-05-01",
+      "channel": "App Store Search",
+      "registrations": 5
+    },
+    {
+      "month": "2024-05-01",
+      "channel": "Organic Search",
+      "registrations": 16
+    },
+    {
+      "month": "2024-05-01",
+      "channel": "Paid Ads",
+      "registrations": 6
+    },
+    {
+      "month": "2024-05-01",
+      "channel": "Referral",
+      "registrations": 11
+    },
+    {
+      "month": "2024-05-01",
+      "channel": "Social Media",
+      "registrations": 7
+    },
+    {
+      "month": "2024-06-01",
+      "channel": "App Store Search",
+      "registrations": 10
+    },
+    {
+      "month": "2024-06-01",
+      "channel": "Organic Search",
+      "registrations": 16
+    },
+    {
+      "month": "2024-06-01",
+      "channel": "Paid Ads",
+      "registrations": 7
+    },
+    {
+      "month": "2024-06-01",
+      "channel": "Referral",
+      "registrations": 5
+    },
+    {
+      "month": "2024-06-01",
+      "channel": "Social Media",
+      "registrations": 8
+    },
+    {
+      "month": "2024-07-01",
+      "channel": "App Store Search",
+      "registrations": 4
+    },
+    {
+      "month": "2024-07-01",
+      "channel": "Organic Search",
+      "registrations": 15
+    },
+    {
+      "month": "2024-07-01",
+      "channel": "Paid Ads",
+      "registrations": 10
+    },
+    {
+      "month": "2024-07-01",
+      "channel": "Referral",
+      "registrations": 7
+    },
+    {
+      "month": "2024-07-01",
+      "channel": "Social Media",
+      "registrations": 10
+    },
+    {
+      "month": "2024-08-01",
+      "channel": "App Store Search",
+      "registrations": 4
+    },
+    {
+      "month": "2024-08-01",
+      "channel": "Organic Search",
+      "registrations": 14
+    },
+    {
+      "month": "2024-08-01",
+      "channel": "Paid Ads",
+      "registrations": 11
+    },
+    {
+      "month": "2024-08-01",
+      "channel": "Referral",
+      "registrations": 11
+    },
+    {
+      "month": "2024-08-01",
+      "channel": "Social Media",
+      "registrations": 6
+    },
+    {
+      "month": "2024-09-01",
+      "channel": "App Store Search",
+      "registrations": 3
+    },
+    {
+      "month": "2024-09-01",
+      "channel": "Organic Search",
+      "registrations": 18
+    },
+    {
+      "month": "2024-09-01",
+      "channel": "Paid Ads",
+      "registrations": 6
+    },
+    {
+      "month": "2024-09-01",
+      "channel": "Referral",
+      "registrations": 10
+    },
+    {
+      "month": "2024-09-01",
+      "channel": "Social Media",
+      "registrations": 10
+    },
+    {
+      "month": "2024-10-01",
+      "channel": "App Store Search",
+      "registrations": 7
+    },
+    {
+      "month": "2024-10-01",
+      "channel": "Organic Search",
+      "registrations": 19
+    },
+    {
+      "month": "2024-10-01",
+      "channel": "Paid Ads",
+      "registrations": 5
+    },
+    {
+      "month": "2024-10-01",
+      "channel": "Referral",
+      "registrations": 9
+    },
+    {
+      "month": "2024-10-01",
+      "channel": "Social Media",
+      "registrations": 7
+    },
+    {
+      "month": "2024-11-01",
+      "channel": "App Store Search",
+      "registrations": 2
+    },
+    {
+      "month": "2024-11-01",
+      "channel": "Organic Search",
+      "registrations": 16
+    },
+    {
+      "month": "2024-11-01",
+      "channel": "Paid Ads",
+      "registrations": 12
+    },
+    {
+      "month": "2024-11-01",
+      "channel": "Referral",
+      "registrations": 11
+    },
+    {
+      "month": "2024-11-01",
+      "channel": "Social Media",
+      "registrations": 7
+    },
+    {
+      "month": "2024-12-01",
+      "channel": "App Store Search",
+      "registrations": 7
+    },
+    {
+      "month": "2024-12-01",
+      "channel": "Organic Search",
+      "registrations": 15
+    },
+    {
+      "month": "2024-12-01",
+      "channel": "Paid Ads",
+      "registrations": 7
+    },
+    {
+      "month": "2024-12-01",
+      "channel": "Referral",
+      "registrations": 9
+    },
+    {
+      "month": "2024-12-01",
+      "channel": "Social Media",
+      "registrations": 10
+    },
+    {
+      "month": "2025-01-01",
+      "channel": "App Store Search",
+      "registrations": 15
+    },
+    {
+      "month": "2025-01-01",
+      "channel": "Organic Search",
+      "registrations": 36
+    },
+    {
+      "month": "2025-01-01",
+      "channel": "Paid Ads",
+      "registrations": 16
+    },
+    {
+      "month": "2025-01-01",
+      "channel": "Referral",
+      "registrations": 22
+    },
+    {
+      "month": "2025-01-01",
+      "channel": "Social Media",
+      "registrations": 16
+    },
+    {
+      "month": "2025-02-01",
+      "channel": "App Store Search",
+      "registrations": 7
+    },
+    {
+      "month": "2025-02-01",
+      "channel": "Organic Search",
+      "registrations": 34
+    },
+    {
+      "month": "2025-02-01",
+      "channel": "Paid Ads",
+      "registrations": 12
+    },
+    {
+      "month": "2025-02-01",
+      "channel": "Referral",
+      "registrations": 19
+    },
+    {
+      "month": "2025-02-01",
+      "channel": "Social Media",
+      "registrations": 20
+    },
+    {
+      "month": "2025-03-01",
+      "channel": "App Store Search",
+      "registrations": 9
+    },
+    {
+      "month": "2025-03-01",
+      "channel": "Organic Search",
+      "registrations": 21
+    },
+    {
+      "month": "2025-03-01",
+      "channel": "Paid Ads",
+      "registrations": 9
+    },
+    {
+      "month": "2025-03-01",
+      "channel": "Referral",
+      "registrations": 18
+    },
+    {
+      "month": "2025-03-01",
+      "channel": "Social Media",
+      "registrations": 18
+    },
+    {
+      "month": "2025-04-01",
+      "channel": "App Store Search",
+      "registrations": 5
+    },
+    {
+      "month": "2025-04-01",
+      "channel": "Organic Search",
+      "registrations": 15
+    },
+    {
+      "month": "2025-04-01",
+      "channel": "Paid Ads",
+      "registrations": 9
+    },
+    {
+      "month": "2025-04-01",
+      "channel": "Referral",
+      "registrations": 8
+    },
+    {
+      "month": "2025-04-01",
+      "channel": "Social Media",
+      "registrations": 11
+    },
+    {
+      "month": "2025-05-01",
+      "channel": "App Store Search",
+      "registrations": 3
+    },
+    {
+      "month": "2025-05-01",
+      "channel": "Organic Search",
+      "registrations": 14
+    },
+    {
+      "month": "2025-05-01",
+      "channel": "Paid Ads",
+      "registrations": 5
+    },
+    {
+      "month": "2025-05-01",
+      "channel": "Referral",
+      "registrations": 11
+    },
+    {
+      "month": "2025-05-01",
+      "channel": "Social Media",
+      "registrations": 4
+    },
+    {
+      "month": "2025-06-01",
+      "channel": "App Store Search",
+      "registrations": 2
+    },
+    {
+      "month": "2025-06-01",
+      "channel": "Organic Search",
+      "registrations": 12
+    },
+    {
+      "month": "2025-06-01",
+      "channel": "Paid Ads",
+      "registrations": 2
+    },
+    {
+      "month": "2025-06-01",
+      "channel": "Referral",
+      "registrations": 8
+    },
+    {
+      "month": "2025-06-01",
+      "channel": "Social Media",
+      "registrations": 6
+    },
+    {
+      "month": "2025-07-01",
+      "channel": "App Store Search",
+      "registrations": 3
+    },
+    {
+      "month": "2025-07-01",
+      "channel": "Organic Search",
+      "registrations": 7
+    },
+    {
+      "month": "2025-07-01",
+      "channel": "Paid Ads",
+      "registrations": 5
+    },
+    {
+      "month": "2025-07-01",
+      "channel": "Referral",
+      "registrations": 7
+    },
+    {
+      "month": "2025-07-01",
+      "channel": "Social Media",
+      "registrations": 4
+    },
+    {
+      "month": "2025-08-01",
+      "channel": "App Store Search",
+      "registrations": 1
+    },
+    {
+      "month": "2025-08-01",
+      "channel": "Organic Search",
+      "registrations": 9
+    },
+    {
+      "month": "2025-08-01",
+      "channel": "Paid Ads",
+      "registrations": 5
+    },
+    {
+      "month": "2025-08-01",
+      "channel": "Referral",
+      "registrations": 4
+    },
+    {
+      "month": "2025-08-01",
+      "channel": "Social Media",
+      "registrations": 4
+    },
+    {
+      "month": "2025-09-01",
+      "channel": "App Store Search",
+      "registrations": 4
+    },
+    {
+      "month": "2025-09-01",
+      "channel": "Organic Search",
+      "registrations": 6
+    },
+    {
+      "month": "2025-09-01",
+      "channel": "Paid Ads",
+      "registrations": 4
+    },
+    {
+      "month": "2025-09-01",
+      "channel": "Referral",
+      "registrations": 1
+    },
+    {
+      "month": "2025-09-01",
+      "channel": "Social Media",
+      "registrations": 4
+    },
+    {
+      "month": "2025-10-01",
+      "channel": "App Store Search",
+      "registrations": 2
+    },
+    {
+      "month": "2025-10-01",
+      "channel": "Organic Search",
+      "registrations": 7
+    },
+    {
+      "month": "2025-10-01",
+      "channel": "Paid Ads",
+      "registrations": 2
+    },
+    {
+      "month": "2025-10-01",
+      "channel": "Referral",
+      "registrations": 4
+    },
+    {
+      "month": "2025-10-01",
+      "channel": "Social Media",
+      "registrations": 2
+    },
+    {
+      "month": "2025-11-01",
+      "channel": "App Store Search",
+      "registrations": 2
+    },
+    {
+      "month": "2025-11-01",
+      "channel": "Organic Search",
+      "registrations": 4
+    },
+    {
+      "month": "2025-11-01",
+      "channel": "Paid Ads",
+      "registrations": 1
+    },
+    {
+      "month": "2025-11-01",
+      "channel": "Referral",
+      "registrations": 4
+    },
+    {
+      "month": "2025-11-01",
+      "channel": "Social Media",
+      "registrations": 4
+    },
+    {
+      "month": "2025-12-01",
+      "channel": "App Store Search",
+      "registrations": 1
+    },
+    {
+      "month": "2025-12-01",
+      "channel": "Organic Search",
+      "registrations": 2
+    },
+    {
+      "month": "2025-12-01",
+      "channel": "Paid Ads",
+      "registrations": 5
+    },
+    {
+      "month": "2025-12-01",
+      "channel": "Referral",
+      "registrations": 4
+    },
+    {
+      "month": "2025-12-01",
+      "channel": "Social Media",
+      "registrations": 1
+    }
+  ],
+  "free_restrictions_monthly": [
+    {
+      "month": "2023-01-01",
+      "free_exposed_users": 25,
+      "free_events": 208,
+      "restriction_events": 13,
+      "users_with_restriction_event": 11,
+      "blocks_per_exposed_free_user": 0.52,
+      "blocks_per_100_free_events": 6.25,
+      "share_exposed_free_users_with_block": 0.44
+    },
+    {
+      "month": "2023-02-01",
+      "free_exposed_users": 51,
+      "free_events": 394,
+      "restriction_events": 34,
+      "users_with_restriction_event": 25,
+      "blocks_per_exposed_free_user": 0.6666666666666666,
+      "blocks_per_100_free_events": 8.629441624365482,
+      "share_exposed_free_users_with_block": 0.49019607843137253
+    },
+    {
+      "month": "2023-03-01",
+      "free_exposed_users": 81,
+      "free_events": 585,
+      "restriction_events": 43,
+      "users_with_restriction_event": 31,
+      "blocks_per_exposed_free_user": 0.5308641975308642,
+      "blocks_per_100_free_events": 7.350427350427351,
+      "share_exposed_free_users_with_block": 0.38271604938271603
+    },
+    {
+      "month": "2023-04-01",
+      "free_exposed_users": 109,
+      "free_events": 796,
+      "restriction_events": 64,
+      "users_with_restriction_event": 51,
+      "blocks_per_exposed_free_user": 0.5871559633027523,
+      "blocks_per_100_free_events": 8.040201005025125,
+      "share_exposed_free_users_with_block": 0.46788990825688076
+    },
+    {
+      "month": "2023-05-01",
+      "free_exposed_users": 140,
+      "free_events": 946,
+      "restriction_events": 73,
+      "users_with_restriction_event": 52,
+      "blocks_per_exposed_free_user": 0.5214285714285715,
+      "blocks_per_100_free_events": 7.716701902748414,
+      "share_exposed_free_users_with_block": 0.37142857142857144
+    },
+    {
+      "month": "2023-06-01",
+      "free_exposed_users": 167,
+      "free_events": 1178,
+      "restriction_events": 76,
+      "users_with_restriction_event": 61,
+      "blocks_per_exposed_free_user": 0.4550898203592814,
+      "blocks_per_100_free_events": 6.451612903225806,
+      "share_exposed_free_users_with_block": 0.3652694610778443
+    },
+    {
+      "month": "2023-07-01",
+      "free_exposed_users": 195,
+      "free_events": 1263,
+      "restriction_events": 110,
+      "users_with_restriction_event": 78,
+      "blocks_per_exposed_free_user": 0.5641025641025641,
+      "blocks_per_100_free_events": 8.709422011084719,
+      "share_exposed_free_users_with_block": 0.4
+    },
+    {
+      "month": "2023-08-01",
+      "free_exposed_users": 223,
+      "free_events": 1477,
+      "restriction_events": 131,
+      "users_with_restriction_event": 93,
+      "blocks_per_exposed_free_user": 0.5874439461883408,
+      "blocks_per_100_free_events": 8.86932972241029,
+      "share_exposed_free_users_with_block": 0.4170403587443946
+    },
+    {
+      "month": "2023-09-01",
+      "free_exposed_users": 255,
+      "free_events": 1725,
+      "restriction_events": 135,
+      "users_with_restriction_event": 105,
+      "blocks_per_exposed_free_user": 0.5294117647058824,
+      "blocks_per_100_free_events": 7.82608695652174,
+      "share_exposed_free_users_with_block": 0.4117647058823529
+    },
+    {
+      "month": "2023-10-01",
+      "free_exposed_users": 297,
+      "free_events": 1875,
+      "restriction_events": 137,
+      "users_with_restriction_event": 102,
+      "blocks_per_exposed_free_user": 0.4612794612794613,
+      "blocks_per_100_free_events": 7.306666666666667,
+      "share_exposed_free_users_with_block": 0.3434343434343434
+    },
+    {
+      "month": "2023-11-01",
+      "free_exposed_users": 342,
+      "free_events": 2120,
+      "restriction_events": 165,
+      "users_with_restriction_event": 128,
+      "blocks_per_exposed_free_user": 0.4824561403508772,
+      "blocks_per_100_free_events": 7.783018867924528,
+      "share_exposed_free_users_with_block": 0.3742690058479532
+    },
+    {
+      "month": "2023-12-01",
+      "free_exposed_users": 377,
+      "free_events": 2427,
+      "restriction_events": 196,
+      "users_with_restriction_event": 146,
+      "blocks_per_exposed_free_user": 0.519893899204244,
+      "blocks_per_100_free_events": 8.0758137618459,
+      "share_exposed_free_users_with_block": 0.38726790450928383
+    },
+    {
+      "month": "2024-01-01",
+      "free_exposed_users": 415,
+      "free_events": 2535,
+      "restriction_events": 207,
+      "users_with_restriction_event": 164,
+      "blocks_per_exposed_free_user": 0.4987951807228916,
+      "blocks_per_100_free_events": 8.165680473372781,
+      "share_exposed_free_users_with_block": 0.39518072289156625
+    },
+    {
+      "month": "2024-02-01",
+      "free_exposed_users": 450,
+      "free_events": 2686,
+      "restriction_events": 234,
+      "users_with_restriction_event": 175,
+      "blocks_per_exposed_free_user": 0.52,
+      "blocks_per_100_free_events": 8.711839166046165,
+      "share_exposed_free_users_with_block": 0.3888888888888889
+    },
+    {
+      "month": "2024-03-01",
+      "free_exposed_users": 491,
+      "free_events": 2973,
+      "restriction_events": 242,
+      "users_with_restriction_event": 187,
+      "blocks_per_exposed_free_user": 0.49287169042769857,
+      "blocks_per_100_free_events": 8.139926000672721,
+      "share_exposed_free_users_with_block": 0.38085539714867617
+    },
+    {
+      "month": "2024-04-01",
+      "free_exposed_users": 534,
+      "free_events": 3076,
+      "restriction_events": 224,
+      "users_with_restriction_event": 175,
+      "blocks_per_exposed_free_user": 0.41947565543071164,
+      "blocks_per_100_free_events": 7.282184655396619,
+      "share_exposed_free_users_with_block": 0.32771535580524347
+    },
+    {
+      "month": "2024-05-01",
+      "free_exposed_users": 574,
+      "free_events": 3410,
+      "restriction_events": 260,
+      "users_with_restriction_event": 205,
+      "blocks_per_exposed_free_user": 0.4529616724738676,
+      "blocks_per_100_free_events": 7.624633431085044,
+      "share_exposed_free_users_with_block": 0.35714285714285715
+    },
+    {
+      "month": "2024-06-01",
+      "free_exposed_users": 607,
+      "free_events": 3575,
+      "restriction_events": 275,
+      "users_with_restriction_event": 223,
+      "blocks_per_exposed_free_user": 0.45304777594728174,
+      "blocks_per_100_free_events": 7.6923076923076925,
+      "share_exposed_free_users_with_block": 0.3673805601317957
+    },
+    {
+      "month": "2024-07-01",
+      "free_exposed_users": 643,
+      "free_events": 3728,
+      "restriction_events": 329,
+      "users_with_restriction_event": 252,
+      "blocks_per_exposed_free_user": 0.5116640746500778,
+      "blocks_per_100_free_events": 8.82510729613734,
+      "share_exposed_free_users_with_block": 0.39191290824261277
+    },
+    {
+      "month": "2024-08-01",
+      "free_exposed_users": 685,
+      "free_events": 3819,
+      "restriction_events": 335,
+      "users_with_restriction_event": 255,
+      "blocks_per_exposed_free_user": 0.48905109489051096,
+      "blocks_per_100_free_events": 8.771929824561402,
+      "share_exposed_free_users_with_block": 0.3722627737226277
+    },
+    {
+      "month": "2024-09-01",
+      "free_exposed_users": 726,
+      "free_events": 4045,
+      "restriction_events": 347,
+      "users_with_restriction_event": 259,
+      "blocks_per_exposed_free_user": 0.47796143250688705,
+      "blocks_per_100_free_events": 8.57849196538937,
+      "share_exposed_free_users_with_block": 0.35674931129476584
+    },
+    {
+      "month": "2024-10-01",
+      "free_exposed_users": 763,
+      "free_events": 4233,
+      "restriction_events": 374,
+      "users_with_restriction_event": 286,
+      "blocks_per_exposed_free_user": 0.49017038007863695,
+      "blocks_per_100_free_events": 8.835341365461847,
+      "share_exposed_free_users_with_block": 0.3748361730013106
+    },
+    {
+      "month": "2024-11-01",
+      "free_exposed_users": 800,
+      "free_events": 4471,
+      "restriction_events": 430,
+      "users_with_restriction_event": 314,
+      "blocks_per_exposed_free_user": 0.5375,
+      "blocks_per_100_free_events": 9.617535227018564,
+      "share_exposed_free_users_with_block": 0.3925
+    },
+    {
+      "month": "2024-12-01",
+      "free_exposed_users": 833,
+      "free_events": 4465,
+      "restriction_events": 349,
+      "users_with_restriction_event": 273,
+      "blocks_per_exposed_free_user": 0.4189675870348139,
+      "blocks_per_100_free_events": 7.816349384098545,
+      "share_exposed_free_users_with_block": 0.3277310924369748
+    },
+    {
+      "month": "2025-01-01",
+      "free_exposed_users": 921,
+      "free_events": 5121,
+      "restriction_events": 389,
+      "users_with_restriction_event": 295,
+      "blocks_per_exposed_free_user": 0.4223669923995657,
+      "blocks_per_100_free_events": 7.596172622534661,
+      "share_exposed_free_users_with_block": 0.32030401737242126
+    },
+    {
+      "month": "2025-02-01",
+      "free_exposed_users": 966,
+      "free_events": 3954,
+      "restriction_events": 358,
+      "users_with_restriction_event": 295,
+      "blocks_per_exposed_free_user": 0.37060041407867494,
+      "blocks_per_100_free_events": 9.054122407688418,
+      "share_exposed_free_users_with_block": 0.3053830227743271
+    },
+    {
+      "month": "2025-03-01",
+      "free_exposed_users": 1029,
+      "free_events": 4038,
+      "restriction_events": 378,
+      "users_with_restriction_event": 303,
+      "blocks_per_exposed_free_user": 0.3673469387755102,
+      "blocks_per_100_free_events": 9.36106983655275,
+      "share_exposed_free_users_with_block": 0.2944606413994169
+    },
+    {
+      "month": "2025-04-01",
+      "free_exposed_users": 1026,
+      "free_events": 3666,
+      "restriction_events": 283,
+      "users_with_restriction_event": 242,
+      "blocks_per_exposed_free_user": 0.27582846003898637,
+      "blocks_per_100_free_events": 7.719585379159848,
+      "share_exposed_free_users_with_block": 0.23586744639376217
+    },
+    {
+      "month": "2025-05-01",
+      "free_exposed_users": 1011,
+      "free_events": 2999,
+      "restriction_events": 213,
+      "users_with_restriction_event": 188,
+      "blocks_per_exposed_free_user": 0.21068249258160238,
+      "blocks_per_100_free_events": 7.102367455818606,
+      "share_exposed_free_users_with_block": 0.18595450049455983
+    },
+    {
+      "month": "2025-06-01",
+      "free_exposed_users": 1032,
+      "free_events": 3145,
+      "restriction_events": 255,
+      "users_with_restriction_event": 227,
+      "blocks_per_exposed_free_user": 0.24709302325581395,
+      "blocks_per_100_free_events": 8.108108108108109,
+      "share_exposed_free_users_with_block": 0.21996124031007752
+    },
+    {
+      "month": "2025-07-01",
+      "free_exposed_users": 1057,
+      "free_events": 3163,
+      "restriction_events": 261,
+      "users_with_restriction_event": 230,
+      "blocks_per_exposed_free_user": 0.2469252601702933,
+      "blocks_per_100_free_events": 8.251659816629783,
+      "share_exposed_free_users_with_block": 0.21759697256385999
+    },
+    {
+      "month": "2025-08-01",
+      "free_exposed_users": 1041,
+      "free_events": 3139,
+      "restriction_events": 207,
+      "users_with_restriction_event": 186,
+      "blocks_per_exposed_free_user": 0.1988472622478386,
+      "blocks_per_100_free_events": 6.594456833386429,
+      "share_exposed_free_users_with_block": 0.1786743515850144
+    },
+    {
+      "month": "2025-09-01",
+      "free_exposed_users": 1055,
+      "free_events": 3103,
+      "restriction_events": 218,
+      "users_with_restriction_event": 192,
+      "blocks_per_exposed_free_user": 0.2066350710900474,
+      "blocks_per_100_free_events": 7.025459233000323,
+      "share_exposed_free_users_with_block": 0.1819905213270142
+    },
+    {
+      "month": "2025-10-01",
+      "free_exposed_users": 1059,
+      "free_events": 3048,
+      "restriction_events": 226,
+      "users_with_restriction_event": 205,
+      "blocks_per_exposed_free_user": 0.21340887629839472,
+      "blocks_per_100_free_events": 7.414698162729659,
+      "share_exposed_free_users_with_block": 0.1935788479697828
+    },
+    {
+      "month": "2025-11-01",
+      "free_exposed_users": 1048,
+      "free_events": 3076,
+      "restriction_events": 244,
+      "users_with_restriction_event": 217,
+      "blocks_per_exposed_free_user": 0.23282442748091603,
+      "blocks_per_100_free_events": 7.932379713914174,
+      "share_exposed_free_users_with_block": 0.20706106870229007
+    },
+    {
+      "month": "2025-12-01",
+      "free_exposed_users": 1019,
+      "free_events": 2846,
+      "restriction_events": 222,
+      "users_with_restriction_event": 194,
+      "blocks_per_exposed_free_user": 0.21786064769381747,
+      "blocks_per_100_free_events": 7.800421644413212,
+      "share_exposed_free_users_with_block": 0.1903827281648675
+    }
+  ],
+  "deletion_prior_calendar_month": [
+    {
+      "outcome_month": "2023-02-01",
+      "lookback_start": "2023-01-01",
+      "lookback_end_exclusive": "2023-02-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-02-01",
+      "lookback_start": "2023-01-01",
+      "lookback_end_exclusive": "2023-02-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-03-01",
+      "lookback_start": "2023-02-01",
+      "lookback_end_exclusive": "2023-03-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-03-01",
+      "lookback_start": "2023-02-01",
+      "lookback_end_exclusive": "2023-03-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 27,
+      "with_prior_friction": 12,
+      "prior_friction_rate": 0.4444444444444444,
+      "friction_events": 17,
+      "sensitivity_all_failed_results_count": 12,
+      "sensitivity_all_failed_results_rate": 0.4444444444444444
+    },
+    {
+      "outcome_month": "2023-04-01",
+      "lookback_start": "2023-03-01",
+      "lookback_end_exclusive": "2023-04-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-04-01",
+      "lookback_start": "2023-03-01",
+      "lookback_end_exclusive": "2023-04-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 52,
+      "with_prior_friction": 21,
+      "prior_friction_rate": 0.40384615384615385,
+      "friction_events": 32,
+      "sensitivity_all_failed_results_count": 21,
+      "sensitivity_all_failed_results_rate": 0.40384615384615385
+    },
+    {
+      "outcome_month": "2023-05-01",
+      "lookback_start": "2023-04-01",
+      "lookback_end_exclusive": "2023-05-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-05-01",
+      "lookback_start": "2023-04-01",
+      "lookback_end_exclusive": "2023-05-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 82,
+      "with_prior_friction": 31,
+      "prior_friction_rate": 0.3780487804878049,
+      "friction_events": 40,
+      "sensitivity_all_failed_results_count": 31,
+      "sensitivity_all_failed_results_rate": 0.3780487804878049
+    },
+    {
+      "outcome_month": "2023-06-01",
+      "lookback_start": "2023-05-01",
+      "lookback_end_exclusive": "2023-06-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-06-01",
+      "lookback_start": "2023-05-01",
+      "lookback_end_exclusive": "2023-06-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 114,
+      "with_prior_friction": 41,
+      "prior_friction_rate": 0.35964912280701755,
+      "friction_events": 60,
+      "sensitivity_all_failed_results_count": 41,
+      "sensitivity_all_failed_results_rate": 0.35964912280701755
+    },
+    {
+      "outcome_month": "2023-07-01",
+      "lookback_start": "2023-06-01",
+      "lookback_end_exclusive": "2023-07-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-07-01",
+      "lookback_start": "2023-06-01",
+      "lookback_end_exclusive": "2023-07-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 148,
+      "with_prior_friction": 48,
+      "prior_friction_rate": 0.32432432432432434,
+      "friction_events": 57,
+      "sensitivity_all_failed_results_count": 48,
+      "sensitivity_all_failed_results_rate": 0.32432432432432434
+    },
+    {
+      "outcome_month": "2023-08-01",
+      "lookback_start": "2023-07-01",
+      "lookback_end_exclusive": "2023-08-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 1,
+      "with_prior_friction": 0,
+      "prior_friction_rate": 0.0,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": 0.0
+    },
+    {
+      "outcome_month": "2023-08-01",
+      "lookback_start": "2023-07-01",
+      "lookback_end_exclusive": "2023-08-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 181,
+      "with_prior_friction": 68,
+      "prior_friction_rate": 0.3756906077348066,
+      "friction_events": 96,
+      "sensitivity_all_failed_results_count": 69,
+      "sensitivity_all_failed_results_rate": 0.3812154696132597
+    },
+    {
+      "outcome_month": "2023-09-01",
+      "lookback_start": "2023-08-01",
+      "lookback_end_exclusive": "2023-09-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-09-01",
+      "lookback_start": "2023-08-01",
+      "lookback_end_exclusive": "2023-09-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 220,
+      "with_prior_friction": 76,
+      "prior_friction_rate": 0.34545454545454546,
+      "friction_events": 109,
+      "sensitivity_all_failed_results_count": 76,
+      "sensitivity_all_failed_results_rate": 0.34545454545454546
+    },
+    {
+      "outcome_month": "2023-10-01",
+      "lookback_start": "2023-09-01",
+      "lookback_end_exclusive": "2023-10-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-10-01",
+      "lookback_start": "2023-09-01",
+      "lookback_end_exclusive": "2023-10-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 262,
+      "with_prior_friction": 90,
+      "prior_friction_rate": 0.3435114503816794,
+      "friction_events": 112,
+      "sensitivity_all_failed_results_count": 90,
+      "sensitivity_all_failed_results_rate": 0.3435114503816794
+    },
+    {
+      "outcome_month": "2023-11-01",
+      "lookback_start": "2023-10-01",
+      "lookback_end_exclusive": "2023-11-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 1,
+      "with_prior_friction": 1,
+      "prior_friction_rate": 1.0,
+      "friction_events": 3,
+      "sensitivity_all_failed_results_count": 1,
+      "sensitivity_all_failed_results_rate": 1.0
+    },
+    {
+      "outcome_month": "2023-11-01",
+      "lookback_start": "2023-10-01",
+      "lookback_end_exclusive": "2023-11-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 303,
+      "with_prior_friction": 96,
+      "prior_friction_rate": 0.31683168316831684,
+      "friction_events": 126,
+      "sensitivity_all_failed_results_count": 96,
+      "sensitivity_all_failed_results_rate": 0.31683168316831684
+    },
+    {
+      "outcome_month": "2023-12-01",
+      "lookback_start": "2023-11-01",
+      "lookback_end_exclusive": "2023-12-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2023-12-01",
+      "lookback_start": "2023-11-01",
+      "lookback_end_exclusive": "2023-12-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 348,
+      "with_prior_friction": 111,
+      "prior_friction_rate": 0.31896551724137934,
+      "friction_events": 142,
+      "sensitivity_all_failed_results_count": 111,
+      "sensitivity_all_failed_results_rate": 0.31896551724137934
+    },
+    {
+      "outcome_month": "2024-01-01",
+      "lookback_start": "2023-12-01",
+      "lookback_end_exclusive": "2024-01-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 1,
+      "with_prior_friction": 0,
+      "prior_friction_rate": 0.0,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": 0.0
+    },
+    {
+      "outcome_month": "2024-01-01",
+      "lookback_start": "2023-12-01",
+      "lookback_end_exclusive": "2024-01-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 395,
+      "with_prior_friction": 132,
+      "prior_friction_rate": 0.3341772151898734,
+      "friction_events": 179,
+      "sensitivity_all_failed_results_count": 132,
+      "sensitivity_all_failed_results_rate": 0.3341772151898734
+    },
+    {
+      "outcome_month": "2024-02-01",
+      "lookback_start": "2024-01-01",
+      "lookback_end_exclusive": "2024-02-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 2,
+      "with_prior_friction": 1,
+      "prior_friction_rate": 0.5,
+      "friction_events": 1,
+      "sensitivity_all_failed_results_count": 1,
+      "sensitivity_all_failed_results_rate": 0.5
+    },
+    {
+      "outcome_month": "2024-02-01",
+      "lookback_start": "2024-01-01",
+      "lookback_end_exclusive": "2024-02-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 442,
+      "with_prior_friction": 144,
+      "prior_friction_rate": 0.3257918552036199,
+      "friction_events": 183,
+      "sensitivity_all_failed_results_count": 144,
+      "sensitivity_all_failed_results_rate": 0.3257918552036199
+    },
+    {
+      "outcome_month": "2024-03-01",
+      "lookback_start": "2024-02-01",
+      "lookback_end_exclusive": "2024-03-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2024-03-01",
+      "lookback_start": "2024-02-01",
+      "lookback_end_exclusive": "2024-03-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 486,
+      "with_prior_friction": 155,
+      "prior_friction_rate": 0.31893004115226337,
+      "friction_events": 204,
+      "sensitivity_all_failed_results_count": 155,
+      "sensitivity_all_failed_results_rate": 0.31893004115226337
+    },
+    {
+      "outcome_month": "2024-04-01",
+      "lookback_start": "2024-03-01",
+      "lookback_end_exclusive": "2024-04-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 2,
+      "with_prior_friction": 1,
+      "prior_friction_rate": 0.5,
+      "friction_events": 1,
+      "sensitivity_all_failed_results_count": 1,
+      "sensitivity_all_failed_results_rate": 0.5
+    },
+    {
+      "outcome_month": "2024-04-01",
+      "lookback_start": "2024-03-01",
+      "lookback_end_exclusive": "2024-04-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 529,
+      "with_prior_friction": 175,
+      "prior_friction_rate": 0.33081285444234404,
+      "friction_events": 225,
+      "sensitivity_all_failed_results_count": 175,
+      "sensitivity_all_failed_results_rate": 0.33081285444234404
+    },
+    {
+      "outcome_month": "2024-05-01",
+      "lookback_start": "2024-04-01",
+      "lookback_end_exclusive": "2024-05-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2024-05-01",
+      "lookback_start": "2024-04-01",
+      "lookback_end_exclusive": "2024-05-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 573,
+      "with_prior_friction": 161,
+      "prior_friction_rate": 0.28097731239092494,
+      "friction_events": 207,
+      "sensitivity_all_failed_results_count": 161,
+      "sensitivity_all_failed_results_rate": 0.28097731239092494
+    },
+    {
+      "outcome_month": "2024-06-01",
+      "lookback_start": "2024-05-01",
+      "lookback_end_exclusive": "2024-06-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 2,
+      "with_prior_friction": 0,
+      "prior_friction_rate": 0.0,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": 0.0
+    },
+    {
+      "outcome_month": "2024-06-01",
+      "lookback_start": "2024-05-01",
+      "lookback_end_exclusive": "2024-06-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 617,
+      "with_prior_friction": 196,
+      "prior_friction_rate": 0.31766612641815234,
+      "friction_events": 251,
+      "sensitivity_all_failed_results_count": 196,
+      "sensitivity_all_failed_results_rate": 0.31766612641815234
+    },
+    {
+      "outcome_month": "2024-07-01",
+      "lookback_start": "2024-06-01",
+      "lookback_end_exclusive": "2024-07-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 1,
+      "with_prior_friction": 0,
+      "prior_friction_rate": 0.0,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": 0.0
+    },
+    {
+      "outcome_month": "2024-07-01",
+      "lookback_start": "2024-06-01",
+      "lookback_end_exclusive": "2024-07-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 661,
+      "with_prior_friction": 207,
+      "prior_friction_rate": 0.31316187594553707,
+      "friction_events": 258,
+      "sensitivity_all_failed_results_count": 207,
+      "sensitivity_all_failed_results_rate": 0.31316187594553707
+    },
+    {
+      "outcome_month": "2024-08-01",
+      "lookback_start": "2024-07-01",
+      "lookback_end_exclusive": "2024-08-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2024-08-01",
+      "lookback_start": "2024-07-01",
+      "lookback_end_exclusive": "2024-08-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 708,
+      "with_prior_friction": 241,
+      "prior_friction_rate": 0.3403954802259887,
+      "friction_events": 312,
+      "sensitivity_all_failed_results_count": 241,
+      "sensitivity_all_failed_results_rate": 0.3403954802259887
+    },
+    {
+      "outcome_month": "2024-09-01",
+      "lookback_start": "2024-08-01",
+      "lookback_end_exclusive": "2024-09-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 3,
+      "with_prior_friction": 1,
+      "prior_friction_rate": 0.3333333333333333,
+      "friction_events": 1,
+      "sensitivity_all_failed_results_count": 1,
+      "sensitivity_all_failed_results_rate": 0.3333333333333333
+    },
+    {
+      "outcome_month": "2024-09-01",
+      "lookback_start": "2024-08-01",
+      "lookback_end_exclusive": "2024-09-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 749,
+      "with_prior_friction": 240,
+      "prior_friction_rate": 0.3204272363150868,
+      "friction_events": 319,
+      "sensitivity_all_failed_results_count": 240,
+      "sensitivity_all_failed_results_rate": 0.3204272363150868
+    },
+    {
+      "outcome_month": "2024-10-01",
+      "lookback_start": "2024-09-01",
+      "lookback_end_exclusive": "2024-10-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 0,
+      "with_prior_friction": 0,
+      "prior_friction_rate": null,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": null
+    },
+    {
+      "outcome_month": "2024-10-01",
+      "lookback_start": "2024-09-01",
+      "lookback_end_exclusive": "2024-10-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 796,
+      "with_prior_friction": 249,
+      "prior_friction_rate": 0.3128140703517588,
+      "friction_events": 335,
+      "sensitivity_all_failed_results_count": 249,
+      "sensitivity_all_failed_results_rate": 0.3128140703517588
+    },
+    {
+      "outcome_month": "2024-11-01",
+      "lookback_start": "2024-10-01",
+      "lookback_end_exclusive": "2024-11-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 2,
+      "with_prior_friction": 0,
+      "prior_friction_rate": 0.0,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": 0.0
+    },
+    {
+      "outcome_month": "2024-11-01",
+      "lookback_start": "2024-10-01",
+      "lookback_end_exclusive": "2024-11-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 839,
+      "with_prior_friction": 265,
+      "prior_friction_rate": 0.31585220500595945,
+      "friction_events": 349,
+      "sensitivity_all_failed_results_count": 265,
+      "sensitivity_all_failed_results_rate": 0.31585220500595945
+    },
+    {
+      "outcome_month": "2024-12-01",
+      "lookback_start": "2024-11-01",
+      "lookback_end_exclusive": "2024-12-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 3,
+      "with_prior_friction": 2,
+      "prior_friction_rate": 0.6666666666666666,
+      "friction_events": 2,
+      "sensitivity_all_failed_results_count": 2,
+      "sensitivity_all_failed_results_rate": 0.6666666666666666
+    },
+    {
+      "outcome_month": "2024-12-01",
+      "lookback_start": "2024-11-01",
+      "lookback_end_exclusive": "2024-12-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 887,
+      "with_prior_friction": 296,
+      "prior_friction_rate": 0.3337091319052988,
+      "friction_events": 409,
+      "sensitivity_all_failed_results_count": 296,
+      "sensitivity_all_failed_results_rate": 0.3337091319052988
+    },
+    {
+      "outcome_month": "2025-01-01",
+      "lookback_start": "2024-12-01",
+      "lookback_end_exclusive": "2025-01-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 2,
+      "with_prior_friction": 0,
+      "prior_friction_rate": 0.0,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": 0.0
+    },
+    {
+      "outcome_month": "2025-01-01",
+      "lookback_start": "2024-12-01",
+      "lookback_end_exclusive": "2025-01-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 931,
+      "with_prior_friction": 265,
+      "prior_friction_rate": 0.284640171858217,
+      "friction_events": 341,
+      "sensitivity_all_failed_results_count": 267,
+      "sensitivity_all_failed_results_rate": 0.28678839957035446
+    },
+    {
+      "outcome_month": "2025-02-01",
+      "lookback_start": "2025-01-01",
+      "lookback_end_exclusive": "2025-02-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 4,
+      "with_prior_friction": 0,
+      "prior_friction_rate": 0.0,
+      "friction_events": 0,
+      "sensitivity_all_failed_results_count": 0,
+      "sensitivity_all_failed_results_rate": 0.0
+    },
+    {
+      "outcome_month": "2025-02-01",
+      "lookback_start": "2025-01-01",
+      "lookback_end_exclusive": "2025-02-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 974,
+      "with_prior_friction": 267,
+      "prior_friction_rate": 0.2741273100616016,
+      "friction_events": 354,
+      "sensitivity_all_failed_results_count": 267,
+      "sensitivity_all_failed_results_rate": 0.2741273100616016
+    },
+    {
+      "outcome_month": "2025-03-01",
+      "lookback_start": "2025-02-01",
+      "lookback_end_exclusive": "2025-03-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 7,
+      "with_prior_friction": 2,
+      "prior_friction_rate": 0.2857142857142857,
+      "friction_events": 2,
+      "sensitivity_all_failed_results_count": 2,
+      "sensitivity_all_failed_results_rate": 0.2857142857142857
+    },
+    {
+      "outcome_month": "2025-03-01",
+      "lookback_start": "2025-02-01",
+      "lookback_end_exclusive": "2025-03-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1072,
+      "with_prior_friction": 274,
+      "prior_friction_rate": 0.2555970149253731,
+      "friction_events": 336,
+      "sensitivity_all_failed_results_count": 274,
+      "sensitivity_all_failed_results_rate": 0.2555970149253731
+    },
+    {
+      "outcome_month": "2025-04-01",
+      "lookback_start": "2025-03-01",
+      "lookback_end_exclusive": "2025-04-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 8,
+      "with_prior_friction": 2,
+      "prior_friction_rate": 0.25,
+      "friction_events": 2,
+      "sensitivity_all_failed_results_count": 2,
+      "sensitivity_all_failed_results_rate": 0.25
+    },
+    {
+      "outcome_month": "2025-04-01",
+      "lookback_start": "2025-03-01",
+      "lookback_end_exclusive": "2025-04-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1154,
+      "with_prior_friction": 281,
+      "prior_friction_rate": 0.24350086655112652,
+      "friction_events": 354,
+      "sensitivity_all_failed_results_count": 281,
+      "sensitivity_all_failed_results_rate": 0.24350086655112652
+    },
+    {
+      "outcome_month": "2025-05-01",
+      "lookback_start": "2025-04-01",
+      "lookback_end_exclusive": "2025-05-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 9,
+      "with_prior_friction": 2,
+      "prior_friction_rate": 0.2222222222222222,
+      "friction_events": 3,
+      "sensitivity_all_failed_results_count": 2,
+      "sensitivity_all_failed_results_rate": 0.2222222222222222
+    },
+    {
+      "outcome_month": "2025-05-01",
+      "lookback_start": "2025-04-01",
+      "lookback_end_exclusive": "2025-05-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1220,
+      "with_prior_friction": 295,
+      "prior_friction_rate": 0.24180327868852458,
+      "friction_events": 340,
+      "sensitivity_all_failed_results_count": 320,
+      "sensitivity_all_failed_results_rate": 0.26229508196721313
+    },
+    {
+      "outcome_month": "2025-06-01",
+      "lookback_start": "2025-05-01",
+      "lookback_end_exclusive": "2025-06-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 8,
+      "with_prior_friction": 3,
+      "prior_friction_rate": 0.375,
+      "friction_events": 3,
+      "sensitivity_all_failed_results_count": 3,
+      "sensitivity_all_failed_results_rate": 0.375
+    },
+    {
+      "outcome_month": "2025-06-01",
+      "lookback_start": "2025-05-01",
+      "lookback_end_exclusive": "2025-06-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1258,
+      "with_prior_friction": 301,
+      "prior_friction_rate": 0.23926868044515104,
+      "friction_events": 340,
+      "sensitivity_all_failed_results_count": 360,
+      "sensitivity_all_failed_results_rate": 0.2861685214626391
+    },
+    {
+      "outcome_month": "2025-07-01",
+      "lookback_start": "2025-06-01",
+      "lookback_end_exclusive": "2025-07-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 14,
+      "with_prior_friction": 3,
+      "prior_friction_rate": 0.21428571428571427,
+      "friction_events": 3,
+      "sensitivity_all_failed_results_count": 5,
+      "sensitivity_all_failed_results_rate": 0.35714285714285715
+    },
+    {
+      "outcome_month": "2025-07-01",
+      "lookback_start": "2025-06-01",
+      "lookback_end_exclusive": "2025-07-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1280,
+      "with_prior_friction": 349,
+      "prior_friction_rate": 0.27265625,
+      "friction_events": 396,
+      "sensitivity_all_failed_results_count": 403,
+      "sensitivity_all_failed_results_rate": 0.31484375
+    },
+    {
+      "outcome_month": "2025-08-01",
+      "lookback_start": "2025-07-01",
+      "lookback_end_exclusive": "2025-08-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 15,
+      "with_prior_friction": 4,
+      "prior_friction_rate": 0.26666666666666666,
+      "friction_events": 4,
+      "sensitivity_all_failed_results_count": 5,
+      "sensitivity_all_failed_results_rate": 0.3333333333333333
+    },
+    {
+      "outcome_month": "2025-08-01",
+      "lookback_start": "2025-07-01",
+      "lookback_end_exclusive": "2025-08-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1295,
+      "with_prior_friction": 356,
+      "prior_friction_rate": 0.2749034749034749,
+      "friction_events": 407,
+      "sensitivity_all_failed_results_count": 405,
+      "sensitivity_all_failed_results_rate": 0.3127413127413127
+    },
+    {
+      "outcome_month": "2025-09-01",
+      "lookback_start": "2025-08-01",
+      "lookback_end_exclusive": "2025-09-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 13,
+      "with_prior_friction": 4,
+      "prior_friction_rate": 0.3076923076923077,
+      "friction_events": 4,
+      "sensitivity_all_failed_results_count": 6,
+      "sensitivity_all_failed_results_rate": 0.46153846153846156
+    },
+    {
+      "outcome_month": "2025-09-01",
+      "lookback_start": "2025-08-01",
+      "lookback_end_exclusive": "2025-09-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1309,
+      "with_prior_friction": 307,
+      "prior_friction_rate": 0.2345301757066463,
+      "friction_events": 346,
+      "sensitivity_all_failed_results_count": 362,
+      "sensitivity_all_failed_results_rate": 0.2765469824293354
+    },
+    {
+      "outcome_month": "2025-10-01",
+      "lookback_start": "2025-09-01",
+      "lookback_end_exclusive": "2025-10-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 19,
+      "with_prior_friction": 7,
+      "prior_friction_rate": 0.3684210526315789,
+      "friction_events": 9,
+      "sensitivity_all_failed_results_count": 7,
+      "sensitivity_all_failed_results_rate": 0.3684210526315789
+    },
+    {
+      "outcome_month": "2025-10-01",
+      "lookback_start": "2025-09-01",
+      "lookback_end_exclusive": "2025-10-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1311,
+      "with_prior_friction": 293,
+      "prior_friction_rate": 0.2234935163996949,
+      "friction_events": 331,
+      "sensitivity_all_failed_results_count": 347,
+      "sensitivity_all_failed_results_rate": 0.2646834477498093
+    },
+    {
+      "outcome_month": "2025-11-01",
+      "lookback_start": "2025-10-01",
+      "lookback_end_exclusive": "2025-11-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 13,
+      "with_prior_friction": 4,
+      "prior_friction_rate": 0.3076923076923077,
+      "friction_events": 6,
+      "sensitivity_all_failed_results_count": 4,
+      "sensitivity_all_failed_results_rate": 0.3076923076923077
+    },
+    {
+      "outcome_month": "2025-11-01",
+      "lookback_start": "2025-10-01",
+      "lookback_end_exclusive": "2025-11-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1318,
+      "with_prior_friction": 323,
+      "prior_friction_rate": 0.24506828528072838,
+      "friction_events": 363,
+      "sensitivity_all_failed_results_count": 364,
+      "sensitivity_all_failed_results_rate": 0.27617602427921095
+    },
+    {
+      "outcome_month": "2025-12-01",
+      "lookback_start": "2025-11-01",
+      "lookback_end_exclusive": "2025-12-01",
+      "outcome": "Deleted this month",
+      "eligible_account_months": 12,
+      "with_prior_friction": 1,
+      "prior_friction_rate": 0.08333333333333333,
+      "friction_events": 1,
+      "sensitivity_all_failed_results_count": 1,
+      "sensitivity_all_failed_results_rate": 0.08333333333333333
+    },
+    {
+      "outcome_month": "2025-12-01",
+      "lookback_start": "2025-11-01",
+      "lookback_end_exclusive": "2025-12-01",
+      "outcome": "Retained through month end",
+      "eligible_account_months": 1323,
+      "with_prior_friction": 341,
+      "prior_friction_rate": 0.25774754346182915,
+      "friction_events": 382,
+      "sensitivity_all_failed_results_count": 387,
+      "sensitivity_all_failed_results_rate": 0.2925170068027211
+    }
+  ],
+  "deletion_prior_calendar_month_pooled_2025": [
+    {
+      "outcome": "Deleted this month",
+      "eligible_account_months": 124,
+      "with_prior_friction": 32,
+      "prior_friction_rate": 0.25806451612903225,
+      "unique_users": 124,
+      "unique_users_with_any_prior_friction": 32,
+      "friction_events": 37
+    },
+    {
+      "outcome": "Retained through month end",
+      "eligible_account_months": 14445,
+      "with_prior_friction": 3652,
+      "prior_friction_rate": 0.25282104534440986,
+      "unique_users": 1441,
+      "unique_users_with_any_prior_friction": 1308,
+      "friction_events": 4290
+    }
+  ],
+  "sync_monthly": [
+    {
+      "month": "2023-01-01",
+      "event_platform": "Android",
+      "sync_outcomes": 5,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-01-01",
+      "event_platform": "Web",
+      "sync_outcomes": 3,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-01-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 1,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-02-01",
+      "event_platform": "Android",
+      "sync_outcomes": 0,
+      "sync_failures": 0,
+      "failure_rate": null
+    },
+    {
+      "month": "2023-02-01",
+      "event_platform": "Web",
+      "sync_outcomes": 5,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-02-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 7,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-03-01",
+      "event_platform": "Android",
+      "sync_outcomes": 9,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-03-01",
+      "event_platform": "Web",
+      "sync_outcomes": 15,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-03-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 8,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-04-01",
+      "event_platform": "Android",
+      "sync_outcomes": 12,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-04-01",
+      "event_platform": "Web",
+      "sync_outcomes": 23,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-04-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 16,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-05-01",
+      "event_platform": "Android",
+      "sync_outcomes": 18,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-05-01",
+      "event_platform": "Web",
+      "sync_outcomes": 11,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-05-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 19,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-06-01",
+      "event_platform": "Android",
+      "sync_outcomes": 17,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-06-01",
+      "event_platform": "Web",
+      "sync_outcomes": 28,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-06-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 28,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-07-01",
+      "event_platform": "Android",
+      "sync_outcomes": 16,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-07-01",
+      "event_platform": "Web",
+      "sync_outcomes": 42,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-07-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 30,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-08-01",
+      "event_platform": "Android",
+      "sync_outcomes": 28,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-08-01",
+      "event_platform": "Web",
+      "sync_outcomes": 46,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-08-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 40,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-09-01",
+      "event_platform": "Android",
+      "sync_outcomes": 28,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-09-01",
+      "event_platform": "Web",
+      "sync_outcomes": 49,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-09-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 35,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-10-01",
+      "event_platform": "Android",
+      "sync_outcomes": 39,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-10-01",
+      "event_platform": "Web",
+      "sync_outcomes": 63,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-10-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 36,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-11-01",
+      "event_platform": "Android",
+      "sync_outcomes": 34,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-11-01",
+      "event_platform": "Web",
+      "sync_outcomes": 68,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-11-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 42,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-12-01",
+      "event_platform": "Android",
+      "sync_outcomes": 40,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-12-01",
+      "event_platform": "Web",
+      "sync_outcomes": 76,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2023-12-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 52,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-01-01",
+      "event_platform": "Android",
+      "sync_outcomes": 47,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-01-01",
+      "event_platform": "Web",
+      "sync_outcomes": 83,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-01-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 64,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-02-01",
+      "event_platform": "Android",
+      "sync_outcomes": 49,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-02-01",
+      "event_platform": "Web",
+      "sync_outcomes": 81,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-02-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 59,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-03-01",
+      "event_platform": "Android",
+      "sync_outcomes": 56,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-03-01",
+      "event_platform": "Web",
+      "sync_outcomes": 81,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-03-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 65,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-04-01",
+      "event_platform": "Android",
+      "sync_outcomes": 51,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-04-01",
+      "event_platform": "Web",
+      "sync_outcomes": 87,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-04-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 65,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-05-01",
+      "event_platform": "Android",
+      "sync_outcomes": 72,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-05-01",
+      "event_platform": "Web",
+      "sync_outcomes": 95,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-05-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 71,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-06-01",
+      "event_platform": "Android",
+      "sync_outcomes": 54,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-06-01",
+      "event_platform": "Web",
+      "sync_outcomes": 128,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-06-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 58,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-07-01",
+      "event_platform": "Android",
+      "sync_outcomes": 51,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-07-01",
+      "event_platform": "Web",
+      "sync_outcomes": 106,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-07-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 76,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-08-01",
+      "event_platform": "Android",
+      "sync_outcomes": 65,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-08-01",
+      "event_platform": "Web",
+      "sync_outcomes": 97,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-08-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 91,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-09-01",
+      "event_platform": "Android",
+      "sync_outcomes": 65,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-09-01",
+      "event_platform": "Web",
+      "sync_outcomes": 124,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-09-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 85,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-10-01",
+      "event_platform": "Android",
+      "sync_outcomes": 63,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-10-01",
+      "event_platform": "Web",
+      "sync_outcomes": 116,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-10-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 96,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-11-01",
+      "event_platform": "Android",
+      "sync_outcomes": 78,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-11-01",
+      "event_platform": "Web",
+      "sync_outcomes": 125,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-11-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 102,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-12-01",
+      "event_platform": "Android",
+      "sync_outcomes": 66,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-12-01",
+      "event_platform": "Web",
+      "sync_outcomes": 139,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2024-12-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 83,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-01-01",
+      "event_platform": "Android",
+      "sync_outcomes": 91,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-01-01",
+      "event_platform": "Web",
+      "sync_outcomes": 147,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-01-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 106,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-02-01",
+      "event_platform": "Android",
+      "sync_outcomes": 60,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-02-01",
+      "event_platform": "Web",
+      "sync_outcomes": 114,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-02-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 85,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-03-01",
+      "event_platform": "Android",
+      "sync_outcomes": 72,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-03-01",
+      "event_platform": "Web",
+      "sync_outcomes": 116,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-03-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 85,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-04-01",
+      "event_platform": "Android",
+      "sync_outcomes": 65,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-04-01",
+      "event_platform": "Web",
+      "sync_outcomes": 72,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-04-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 67,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-05-01",
+      "event_platform": "Android",
+      "sync_outcomes": 38,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-05-01",
+      "event_platform": "Web",
+      "sync_outcomes": 74,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-05-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 39,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-06-01",
+      "event_platform": "Android",
+      "sync_outcomes": 26,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-06-01",
+      "event_platform": "Web",
+      "sync_outcomes": 76,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-06-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 55,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-07-01",
+      "event_platform": "Android",
+      "sync_outcomes": 76,
+      "sync_failures": 26,
+      "failure_rate": 0.34210526315789475
+    },
+    {
+      "month": "2025-07-01",
+      "event_platform": "Web",
+      "sync_outcomes": 77,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-07-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 58,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-08-01",
+      "event_platform": "Android",
+      "sync_outcomes": 81,
+      "sync_failures": 32,
+      "failure_rate": 0.3950617283950617
+    },
+    {
+      "month": "2025-08-01",
+      "event_platform": "Web",
+      "sync_outcomes": 85,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-08-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 66,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-09-01",
+      "event_platform": "Android",
+      "sync_outcomes": 82,
+      "sync_failures": 28,
+      "failure_rate": 0.34146341463414637
+    },
+    {
+      "month": "2025-09-01",
+      "event_platform": "Web",
+      "sync_outcomes": 81,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-09-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 48,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-10-01",
+      "event_platform": "Android",
+      "sync_outcomes": 74,
+      "sync_failures": 26,
+      "failure_rate": 0.35135135135135137
+    },
+    {
+      "month": "2025-10-01",
+      "event_platform": "Web",
+      "sync_outcomes": 70,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-10-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 53,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-11-01",
+      "event_platform": "Android",
+      "sync_outcomes": 88,
+      "sync_failures": 34,
+      "failure_rate": 0.38636363636363635
+    },
+    {
+      "month": "2025-11-01",
+      "event_platform": "Web",
+      "sync_outcomes": 66,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-11-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 42,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-12-01",
+      "event_platform": "Android",
+      "sync_outcomes": 88,
+      "sync_failures": 29,
+      "failure_rate": 0.32954545454545453
+    },
+    {
+      "month": "2025-12-01",
+      "event_platform": "Web",
+      "sync_outcomes": 81,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    },
+    {
+      "month": "2025-12-01",
+      "event_platform": "iOS",
+      "sync_outcomes": 42,
+      "sync_failures": 0,
+      "failure_rate": 0.0
+    }
+  ],
+  "meaningful_active_by_signup_platform": [
+    {
+      "month": "2023-01-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 9
+    },
+    {
+      "month": "2023-01-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 10
+    },
+    {
+      "month": "2023-01-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 5
+    },
+    {
+      "month": "2023-02-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 14
+    },
+    {
+      "month": "2023-02-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 23
+    },
+    {
+      "month": "2023-02-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 15
+    },
+    {
+      "month": "2023-03-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 23
+    },
+    {
+      "month": "2023-03-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 38
+    },
+    {
+      "month": "2023-03-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 20
+    },
+    {
+      "month": "2023-04-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 30
+    },
+    {
+      "month": "2023-04-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 48
+    },
+    {
+      "month": "2023-04-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 33
+    },
+    {
+      "month": "2023-05-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 39
+    },
+    {
+      "month": "2023-05-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 61
+    },
+    {
+      "month": "2023-05-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 45
+    },
+    {
+      "month": "2023-06-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 44
+    },
+    {
+      "month": "2023-06-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 79
+    },
+    {
+      "month": "2023-06-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 56
+    },
+    {
+      "month": "2023-07-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 55
+    },
+    {
+      "month": "2023-07-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 96
+    },
+    {
+      "month": "2023-07-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 66
+    },
+    {
+      "month": "2023-08-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 64
+    },
+    {
+      "month": "2023-08-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 106
+    },
+    {
+      "month": "2023-08-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 83
+    },
+    {
+      "month": "2023-09-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 78
+    },
+    {
+      "month": "2023-09-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 125
+    },
+    {
+      "month": "2023-09-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 93
+    },
+    {
+      "month": "2023-10-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 82
+    },
+    {
+      "month": "2023-10-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 148
+    },
+    {
+      "month": "2023-10-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 106
+    },
+    {
+      "month": "2023-11-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 93
+    },
+    {
+      "month": "2023-11-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 171
+    },
+    {
+      "month": "2023-11-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 118
+    },
+    {
+      "month": "2023-12-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 103
+    },
+    {
+      "month": "2023-12-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 193
+    },
+    {
+      "month": "2023-12-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 137
+    },
+    {
+      "month": "2024-01-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 118
+    },
+    {
+      "month": "2024-01-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 201
+    },
+    {
+      "month": "2024-01-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 145
+    },
+    {
+      "month": "2024-02-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 126
+    },
+    {
+      "month": "2024-02-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 227
+    },
+    {
+      "month": "2024-02-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 151
+    },
+    {
+      "month": "2024-03-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 140
+    },
+    {
+      "month": "2024-03-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 240
+    },
+    {
+      "month": "2024-03-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 170
+    },
+    {
+      "month": "2024-04-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 151
+    },
+    {
+      "month": "2024-04-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 254
+    },
+    {
+      "month": "2024-04-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 183
+    },
+    {
+      "month": "2024-05-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 164
+    },
+    {
+      "month": "2024-05-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 275
+    },
+    {
+      "month": "2024-05-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 195
+    },
+    {
+      "month": "2024-06-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 169
+    },
+    {
+      "month": "2024-06-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 293
+    },
+    {
+      "month": "2024-06-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 213
+    },
+    {
+      "month": "2024-07-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 172
+    },
+    {
+      "month": "2024-07-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 311
+    },
+    {
+      "month": "2024-07-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 223
+    },
+    {
+      "month": "2024-08-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 188
+    },
+    {
+      "month": "2024-08-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 328
+    },
+    {
+      "month": "2024-08-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 241
+    },
+    {
+      "month": "2024-09-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 200
+    },
+    {
+      "month": "2024-09-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 352
+    },
+    {
+      "month": "2024-09-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 255
+    },
+    {
+      "month": "2024-10-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 209
+    },
+    {
+      "month": "2024-10-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 362
+    },
+    {
+      "month": "2024-10-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 255
+    },
+    {
+      "month": "2024-11-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 210
+    },
+    {
+      "month": "2024-11-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 386
+    },
+    {
+      "month": "2024-11-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 273
+    },
+    {
+      "month": "2024-12-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 227
+    },
+    {
+      "month": "2024-12-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 412
+    },
+    {
+      "month": "2024-12-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 287
+    },
+    {
+      "month": "2025-01-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 245
+    },
+    {
+      "month": "2025-01-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 448
+    },
+    {
+      "month": "2025-01-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 327
+    },
+    {
+      "month": "2025-02-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 247
+    },
+    {
+      "month": "2025-02-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 445
+    },
+    {
+      "month": "2025-02-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 307
+    },
+    {
+      "month": "2025-03-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 263
+    },
+    {
+      "month": "2025-03-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 483
+    },
+    {
+      "month": "2025-03-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 328
+    },
+    {
+      "month": "2025-04-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 274
+    },
+    {
+      "month": "2025-04-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 381
+    },
+    {
+      "month": "2025-04-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 340
+    },
+    {
+      "month": "2025-05-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 223
+    },
+    {
+      "month": "2025-05-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 377
+    },
+    {
+      "month": "2025-05-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 270
+    },
+    {
+      "month": "2025-06-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 207
+    },
+    {
+      "month": "2025-06-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 410
+    },
+    {
+      "month": "2025-06-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 267
+    },
+    {
+      "month": "2025-07-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 187
+    },
+    {
+      "month": "2025-07-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 393
+    },
+    {
+      "month": "2025-07-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 274
+    },
+    {
+      "month": "2025-08-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 201
+    },
+    {
+      "month": "2025-08-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 386
+    },
+    {
+      "month": "2025-08-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 267
+    },
+    {
+      "month": "2025-09-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 182
+    },
+    {
+      "month": "2025-09-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 397
+    },
+    {
+      "month": "2025-09-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 257
+    },
+    {
+      "month": "2025-10-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 194
+    },
+    {
+      "month": "2025-10-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 391
+    },
+    {
+      "month": "2025-10-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 280
+    },
+    {
+      "month": "2025-11-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 190
+    },
+    {
+      "month": "2025-11-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 372
+    },
+    {
+      "month": "2025-11-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 260
+    },
+    {
+      "month": "2025-12-01",
+      "signup_platform": "Android",
+      "meaningfully_active_users": 181
+    },
+    {
+      "month": "2025-12-01",
+      "signup_platform": "Web",
+      "meaningfully_active_users": 381
+    },
+    {
+      "month": "2025-12-01",
+      "signup_platform": "iOS",
+      "meaningfully_active_users": 248
+    }
+  ],
+  "conversion_90d_by_cohort": [
+    {
+      "cohort_month": "2023-01-01",
+      "cohort_size": 25,
+      "eligible_90d_users": 25,
+      "converted_90d_users": 2,
+      "conversion_rate_eligible_only": 0.08,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-02-01",
+      "cohort_size": 27,
+      "eligible_90d_users": 27,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.1111111111111111,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-03-01",
+      "cohort_size": 30,
+      "eligible_90d_users": 30,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.1,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-04-01",
+      "cohort_size": 32,
+      "eligible_90d_users": 32,
+      "converted_90d_users": 6,
+      "conversion_rate_eligible_only": 0.1875,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-05-01",
+      "cohort_size": 34,
+      "eligible_90d_users": 34,
+      "converted_90d_users": 6,
+      "conversion_rate_eligible_only": 0.17647058823529413,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-06-01",
+      "cohort_size": 36,
+      "eligible_90d_users": 36,
+      "converted_90d_users": 6,
+      "conversion_rate_eligible_only": 0.16666666666666666,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-07-01",
+      "cohort_size": 39,
+      "eligible_90d_users": 39,
+      "converted_90d_users": 7,
+      "conversion_rate_eligible_only": 0.1794871794871795,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-08-01",
+      "cohort_size": 41,
+      "eligible_90d_users": 41,
+      "converted_90d_users": 8,
+      "conversion_rate_eligible_only": 0.1951219512195122,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-09-01",
+      "cohort_size": 43,
+      "eligible_90d_users": 43,
+      "converted_90d_users": 4,
+      "conversion_rate_eligible_only": 0.09302325581395349,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-10-01",
+      "cohort_size": 45,
+      "eligible_90d_users": 45,
+      "converted_90d_users": 1,
+      "conversion_rate_eligible_only": 0.022222222222222223,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-11-01",
+      "cohort_size": 48,
+      "eligible_90d_users": 48,
+      "converted_90d_users": 9,
+      "conversion_rate_eligible_only": 0.1875,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2023-12-01",
+      "cohort_size": 50,
+      "eligible_90d_users": 50,
+      "converted_90d_users": 6,
+      "conversion_rate_eligible_only": 0.12,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-01-01",
+      "cohort_size": 44,
+      "eligible_90d_users": 44,
+      "converted_90d_users": 2,
+      "conversion_rate_eligible_only": 0.045454545454545456,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-02-01",
+      "cohort_size": 44,
+      "eligible_90d_users": 44,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.06818181818181818,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-03-01",
+      "cohort_size": 44,
+      "eligible_90d_users": 44,
+      "converted_90d_users": 4,
+      "conversion_rate_eligible_only": 0.09090909090909091,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-04-01",
+      "cohort_size": 45,
+      "eligible_90d_users": 45,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.06666666666666667,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-05-01",
+      "cohort_size": 45,
+      "eligible_90d_users": 45,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.06666666666666667,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-06-01",
+      "cohort_size": 46,
+      "eligible_90d_users": 46,
+      "converted_90d_users": 4,
+      "conversion_rate_eligible_only": 0.08695652173913043,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-07-01",
+      "cohort_size": 46,
+      "eligible_90d_users": 46,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.06521739130434782,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-08-01",
+      "cohort_size": 46,
+      "eligible_90d_users": 46,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.06521739130434782,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-09-01",
+      "cohort_size": 47,
+      "eligible_90d_users": 47,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.06382978723404255,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-10-01",
+      "cohort_size": 47,
+      "eligible_90d_users": 47,
+      "converted_90d_users": 6,
+      "conversion_rate_eligible_only": 0.1276595744680851,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-11-01",
+      "cohort_size": 48,
+      "eligible_90d_users": 48,
+      "converted_90d_users": 3,
+      "conversion_rate_eligible_only": 0.0625,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2024-12-01",
+      "cohort_size": 48,
+      "eligible_90d_users": 48,
+      "converted_90d_users": 7,
+      "conversion_rate_eligible_only": 0.14583333333333334,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-01-01",
+      "cohort_size": 105,
+      "eligible_90d_users": 105,
+      "converted_90d_users": 19,
+      "conversion_rate_eligible_only": 0.18095238095238095,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-02-01",
+      "cohort_size": 92,
+      "eligible_90d_users": 92,
+      "converted_90d_users": 10,
+      "conversion_rate_eligible_only": 0.10869565217391304,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-03-01",
+      "cohort_size": 75,
+      "eligible_90d_users": 75,
+      "converted_90d_users": 15,
+      "conversion_rate_eligible_only": 0.2,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-04-01",
+      "cohort_size": 48,
+      "eligible_90d_users": 48,
+      "converted_90d_users": 4,
+      "conversion_rate_eligible_only": 0.08333333333333333,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-05-01",
+      "cohort_size": 37,
+      "eligible_90d_users": 37,
+      "converted_90d_users": 2,
+      "conversion_rate_eligible_only": 0.05405405405405406,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-06-01",
+      "cohort_size": 30,
+      "eligible_90d_users": 30,
+      "converted_90d_users": 2,
+      "conversion_rate_eligible_only": 0.06666666666666667,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-07-01",
+      "cohort_size": 26,
+      "eligible_90d_users": 26,
+      "converted_90d_users": 2,
+      "conversion_rate_eligible_only": 0.07692307692307693,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-08-01",
+      "cohort_size": 23,
+      "eligible_90d_users": 23,
+      "converted_90d_users": 1,
+      "conversion_rate_eligible_only": 0.043478260869565216,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-09-01",
+      "cohort_size": 19,
+      "eligible_90d_users": 19,
+      "converted_90d_users": 1,
+      "conversion_rate_eligible_only": 0.05263157894736842,
+      "fully_mature_cohort": true
+    },
+    {
+      "cohort_month": "2025-10-01",
+      "cohort_size": 17,
+      "eligible_90d_users": 1,
+      "converted_90d_users": 1,
+      "conversion_rate_eligible_only": 1.0,
+      "fully_mature_cohort": false
+    },
+    {
+      "cohort_month": "2025-11-01",
+      "cohort_size": 15,
+      "eligible_90d_users": 0,
+      "converted_90d_users": 0,
+      "conversion_rate_eligible_only": null,
+      "fully_mature_cohort": false
+    },
+    {
+      "cohort_month": "2025-12-01",
+      "cohort_size": 13,
+      "eligible_90d_users": 0,
+      "converted_90d_users": 0,
+      "conversion_rate_eligible_only": null,
+      "fully_mature_cohort": false
+    }
+  ],
+  "reviews_monthly": [
+    {
+      "month": "2023-01-01",
+      "reviews": 0,
+      "average_rating": null,
+      "issue_categories": {}
+    },
+    {
+      "month": "2023-02-01",
+      "reviews": 0,
+      "average_rating": null,
+      "issue_categories": {}
+    },
+    {
+      "month": "2023-03-01",
+      "reviews": 0,
+      "average_rating": null,
+      "issue_categories": {}
+    },
+    {
+      "month": "2023-04-01",
+      "reviews": 1,
+      "average_rating": 4.0,
+      "issue_categories": {
+        "Positive / other": 1
+      }
+    },
+    {
+      "month": "2023-05-01",
+      "reviews": 2,
+      "average_rating": 5.0,
+      "issue_categories": {
+        "Positive / other": 2
+      }
+    },
+    {
+      "month": "2023-06-01",
+      "reviews": 1,
+      "average_rating": 4.0,
+      "issue_categories": {
+        "Positive / other": 1
+      }
+    },
+    {
+      "month": "2023-07-01",
+      "reviews": 3,
+      "average_rating": 4.0,
+      "issue_categories": {
+        "Positive / other": 3
+      }
+    },
+    {
+      "month": "2023-08-01",
+      "reviews": 2,
+      "average_rating": 4.0,
+      "issue_categories": {
+        "Positive / other": 2
+      }
+    },
+    {
+      "month": "2023-09-01",
+      "reviews": 2,
+      "average_rating": 4.5,
+      "issue_categories": {
+        "Positive / other": 2
+      }
+    },
+    {
+      "month": "2023-10-01",
+      "reviews": 0,
+      "average_rating": null,
+      "issue_categories": {}
+    },
+    {
+      "month": "2023-11-01",
+      "reviews": 2,
+      "average_rating": 5.0,
+      "issue_categories": {
+        "Positive / other": 2
+      }
+    },
+    {
+      "month": "2023-12-01",
+      "reviews": 4,
+      "average_rating": 4.0,
+      "issue_categories": {
+        "Positive / other": 4
+      }
+    },
+    {
+      "month": "2024-01-01",
+      "reviews": 0,
+      "average_rating": null,
+      "issue_categories": {}
+    },
+    {
+      "month": "2024-02-01",
+      "reviews": 2,
+      "average_rating": 4.0,
+      "issue_categories": {
+        "Positive / other": 2
+      }
+    },
+    {
+      "month": "2024-03-01",
+      "reviews": 6,
+      "average_rating": 4.333333333333333,
+      "issue_categories": {
+        "Positive / other": 6
+      }
+    },
+    {
+      "month": "2024-04-01",
+      "reviews": 2,
+      "average_rating": 4.5,
+      "issue_categories": {
+        "Positive / other": 2
+      }
+    },
+    {
+      "month": "2024-05-01",
+      "reviews": 7,
+      "average_rating": 4.428571428571429,
+      "issue_categories": {
+        "Positive / other": 7
+      }
+    },
+    {
+      "month": "2024-06-01",
+      "reviews": 5,
+      "average_rating": 4.4,
+      "issue_categories": {
+        "Positive / other": 5
+      }
+    },
+    {
+      "month": "2024-07-01",
+      "reviews": 5,
+      "average_rating": 4.2,
+      "issue_categories": {
+        "Positive / other": 5
+      }
+    },
+    {
+      "month": "2024-08-01",
+      "reviews": 6,
+      "average_rating": 4.333333333333333,
+      "issue_categories": {
+        "Positive / other": 6
+      }
+    },
+    {
+      "month": "2024-09-01",
+      "reviews": 5,
+      "average_rating": 4.4,
+      "issue_categories": {
+        "Positive / other": 5
+      }
+    },
+    {
+      "month": "2024-10-01",
+      "reviews": 1,
+      "average_rating": 5.0,
+      "issue_categories": {
+        "Positive / other": 1
+      }
+    },
+    {
+      "month": "2024-11-01",
+      "reviews": 5,
+      "average_rating": 4.2,
+      "issue_categories": {
+        "Positive / other": 5
+      }
+    },
+    {
+      "month": "2024-12-01",
+      "reviews": 6,
+      "average_rating": 4.666666666666667,
+      "issue_categories": {
+        "Positive / other": 6
+      }
+    },
+    {
+      "month": "2025-01-01",
+      "reviews": 10,
+      "average_rating": 4.6,
+      "issue_categories": {
+        "Positive / other": 10
+      }
+    },
+    {
+      "month": "2025-02-01",
+      "reviews": 33,
+      "average_rating": 2.6666666666666665,
+      "issue_categories": {
+        "Restriction": 21,
+        "Positive / other": 12
+      }
+    },
+    {
+      "month": "2025-03-01",
+      "reviews": 37,
+      "average_rating": 2.5135135135135136,
+      "issue_categories": {
+        "Restriction": 24,
+        "Price": 1,
+        "Positive / other": 12
+      }
+    },
+    {
+      "month": "2025-04-01",
+      "reviews": 52,
+      "average_rating": 2.519230769230769,
+      "issue_categories": {
+        "Restriction": 21,
+        "Navigation": 14,
+        "Price": 6,
+        "Positive / other": 11
+      }
+    },
+    {
+      "month": "2025-05-01",
+      "reviews": 67,
+      "average_rating": 2.5074626865671643,
+      "issue_categories": {
+        "Restriction": 25,
+        "Navigation": 20,
+        "Price": 7,
+        "Positive / other": 15
+      }
+    },
+    {
+      "month": "2025-06-01",
+      "reviews": 66,
+      "average_rating": 2.727272727272727,
+      "issue_categories": {
+        "Restriction": 18,
+        "Navigation": 24,
+        "Price": 4,
+        "Checkout": 2,
+        "Positive / other": 18
+      }
+    },
+    {
+      "month": "2025-07-01",
+      "reviews": 69,
+      "average_rating": 2.318840579710145,
+      "issue_categories": {
+        "Restriction": 25,
+        "Navigation": 14,
+        "Sync": 7,
+        "Price": 6,
+        "Checkout": 4,
+        "Positive / other": 13
+      }
+    },
+    {
+      "month": "2025-08-01",
+      "reviews": 72,
+      "average_rating": 2.1666666666666665,
+      "issue_categories": {
+        "Restriction": 13,
+        "Navigation": 26,
+        "Sync": 16,
+        "Price": 5,
+        "Checkout": 4,
+        "Positive / other": 8
+      }
+    },
+    {
+      "month": "2025-09-01",
+      "reviews": 75,
+      "average_rating": 2.36,
+      "issue_categories": {
+        "Restriction": 18,
+        "Navigation": 20,
+        "Sync": 13,
+        "Price": 6,
+        "Checkout": 4,
+        "Positive / other": 14
+      }
+    },
+    {
+      "month": "2025-10-01",
+      "reviews": 91,
+      "average_rating": 2.3516483516483517,
+      "issue_categories": {
+        "Restriction": 39,
+        "Navigation": 21,
+        "Sync": 11,
+        "Price": 6,
+        "Positive / other": 14
+      }
+    },
+    {
+      "month": "2025-11-01",
+      "reviews": 73,
+      "average_rating": 2.506849315068493,
+      "issue_categories": {
+        "Restriction": 24,
+        "Navigation": 23,
+        "Sync": 6,
+        "Price": 1,
+        "Checkout": 2,
+        "Positive / other": 17
+      }
+    },
+    {
+      "month": "2025-12-01",
+      "reviews": 93,
+      "average_rating": 2.236559139784946,
+      "issue_categories": {
+        "Restriction": 25,
+        "Navigation": 25,
+        "Sync": 17,
+        "Price": 8,
+        "Checkout": 5,
+        "Positive / other": 13
+      }
+    }
+  ]
+}

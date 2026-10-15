@@ -1,0 +1,50 @@
+// Historical definitions from TaskFlow Dashboard.pbix; this package does not verify the current saved model.
+// This query provides their definitions and a runnable example.
+DEFINE
+    /// Evaluate a numeric measure in an offset complete calendar month. Requires one full selected month and a fully available comparison month. Uses loaded historical calendar, never TODAY.
+    FUNCTION Month_Value =
+        (Metric : SCALAR EXPR, MonthOffset : SCALAR INT64 VAL) =>
+        VAR Anchor = SELECTEDVALUE('Date'[Month Start])
+        VAR FullMonth = NOT ISBLANK(Anchor) && COUNTROWS(VALUES('Date'[date])) = DAY(EOMONTH(Anchor,0))
+        VAR TargetStart = EDATE(Anchor,MonthOffset)
+        VAR TargetEnd = EOMONTH(TargetStart,0)
+        VAR CalendarFirstDay = MINX(ALL('Date'),'Date'[date])
+        VAR CalendarLastDay = MAXX(ALL('Date'),'Date'[date])
+        RETURN IF(FullMonth && TargetStart >= CalendarFirstDay && TargetEnd <= CalendarLastDay,
+            CALCULATE(Metric, FILTER(ALL('Date'),'Date'[date]>=TargetStart && 'Date'[date]<=TargetEnd)), BLANK())
+
+    /// Relative change; blank when either value is unavailable or baseline is zero.
+    FUNCTION Relative_Change =
+        (CurrentAmount : SCALAR VAL, PriorAmount : SCALAR VAL) => IF(ISBLANK(CurrentAmount) || ISBLANK(PriorAmount) || PriorAmount=0, BLANK(), DIVIDE(CurrentAmount-PriorAmount,PriorAmount))
+
+    /// Direction only: up/down/unchanged. Blank stays blank; direction does not prove business improvement.
+    FUNCTION Change_Icon =
+        (Delta : SCALAR VAL) => IF(ISBLANK(Delta),BLANK(),SWITCH(TRUE(),Delta>0,UNICHAR(9650),Delta<0,UNICHAR(9660),UNICHAR(8212)))
+
+    /// Conditional formatting: GoodDirection=1 for higher-is-better; -1 for lower-is-better; zero/blank neutral.
+    FUNCTION Change_Color =
+        (Delta : SCALAR VAL, GoodDirection : SCALAR INT64 VAL) => IF(ISBLANK(Delta) || Delta=0,"#6B7280",IF(Delta*GoodDirection>0,"#15803D","#B91C1C"))
+
+    /// Month-over-month relative change for one full selected month.
+    FUNCTION MoM_Perc =
+        (Metric : SCALAR EXPR) => Relative_Change(Month_Value(Metric,0),Month_Value(Metric,-1))
+
+    /// Same calendar month last year relative change; not an annual-total comparison.
+    FUNCTION YoY_Perc =
+        (Metric : SCALAR EXPR) => Relative_Change(Month_Value(Metric,0),Month_Value(Metric,-12))
+
+    /// Reusable MoM direction glyph for a numeric measure.
+    FUNCTION MoM_Icon =
+        (Metric : SCALAR EXPR) => Change_Icon(MoM_Perc(Metric))
+
+    /// Reusable YoY direction glyph for a numeric measure.
+    FUNCTION YoY_Icon =
+        (Metric : SCALAR EXPR) => Change_Icon(YoY_Perc(Metric))
+
+EVALUATE
+CALCULATETABLE(
+    ROW("New users",[New Users],
+        "MoM",MoM_Perc([New Users]),"MoM icon",MoM_Icon([New Users]),
+        "YoY",YoY_Perc([New Users]),"YoY icon",YoY_Icon([New Users])),
+    'Date'[Month Start]=DATE(2025,3,1)
+)

@@ -1,0 +1,4448 @@
+{
+  "scope": "Fresh executed SQL compared with independently calculated raw CSV metrics and boundary/integrity assertions. Does not validate Power BI visuals.",
+  "checks": 740,
+  "passed": 740,
+  "failed": [],
+  "details": [
+    {
+      "check": "success",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "check": "rollback_completed",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "check": "database_view_definitions_unchanged",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "check": "Q01 2025-01-01 registrations",
+      "passed": true,
+      "actual": 105,
+      "expected": 105
+    },
+    {
+      "check": "Q01 2025-01-01 observed_active_users",
+      "passed": true,
+      "actual": 1074,
+      "expected": 1074
+    },
+    {
+      "check": "Q01 2025-01-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 1020,
+      "expected": 1020
+    },
+    {
+      "check": "Q01 2025-01-01 meaningful_actions",
+      "passed": true,
+      "actual": 2636,
+      "expected": 2636
+    },
+    {
+      "check": "Q01 2025-01-01 opening_accounts",
+      "passed": true,
+      "actual": 979,
+      "expected": 979
+    },
+    {
+      "check": "Q01 2025-01-01 closing_accounts",
+      "passed": true,
+      "actual": 1082,
+      "expected": 1082
+    },
+    {
+      "check": "Q01 2025-01-01 account_deletions",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q01 2025-01-01 opening_pro",
+      "passed": true,
+      "actual": 145,
+      "expected": 145
+    },
+    {
+      "check": "Q01 2025-01-01 closing_pro",
+      "passed": true,
+      "actual": 160,
+      "expected": 160
+    },
+    {
+      "check": "Q01 2025-01-01 first_upgrades",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Q01 2025-01-01 cancellation_events",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q01 2025-01-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q01 2025-01-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q01 2025-01-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.949720670391,
+      "expected": 0.9497206703910615
+    },
+    {
+      "check": "Q01 2025-01-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 2.58431372549,
+      "expected": 2.5843137254901962
+    },
+    {
+      "check": "Q01 2025-01-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.006896551724,
+      "expected": 0.006896551724137931
+    },
+    {
+      "check": "Q01 2025-01-01 engagement split",
+      "passed": true,
+      "actual": 1074,
+      "expected": 1074
+    },
+    {
+      "check": "Q01 2025-02-01 registrations",
+      "passed": true,
+      "actual": 92,
+      "expected": 92
+    },
+    {
+      "check": "Q01 2025-02-01 observed_active_users",
+      "passed": true,
+      "actual": 1131,
+      "expected": 1131
+    },
+    {
+      "check": "Q01 2025-02-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 999,
+      "expected": 999
+    },
+    {
+      "check": "Q01 2025-02-01 meaningful_actions",
+      "passed": true,
+      "actual": 2217,
+      "expected": 2217
+    },
+    {
+      "check": "Q01 2025-02-01 opening_accounts",
+      "passed": true,
+      "actual": 1082,
+      "expected": 1082
+    },
+    {
+      "check": "Q01 2025-02-01 closing_accounts",
+      "passed": true,
+      "actual": 1169,
+      "expected": 1169
+    },
+    {
+      "check": "Q01 2025-02-01 account_deletions",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q01 2025-02-01 opening_pro",
+      "passed": true,
+      "actual": 160,
+      "expected": 160
+    },
+    {
+      "check": "Q01 2025-02-01 closing_pro",
+      "passed": true,
+      "actual": 176,
+      "expected": 176
+    },
+    {
+      "check": "Q01 2025-02-01 first_upgrades",
+      "passed": true,
+      "actual": 21,
+      "expected": 21
+    },
+    {
+      "check": "Q01 2025-02-01 cancellation_events",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q01 2025-02-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q01 2025-02-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q01 2025-02-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.883289124668,
+      "expected": 0.883289124668435
+    },
+    {
+      "check": "Q01 2025-02-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 2.219219219219,
+      "expected": 2.219219219219219
+    },
+    {
+      "check": "Q01 2025-02-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.03125,
+      "expected": 0.03125
+    },
+    {
+      "check": "Q01 2025-02-01 engagement split",
+      "passed": true,
+      "actual": 1131,
+      "expected": 1131
+    },
+    {
+      "check": "Q01 2025-03-01 registrations",
+      "passed": true,
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "check": "Q01 2025-03-01 observed_active_users",
+      "passed": true,
+      "actual": 1211,
+      "expected": 1211
+    },
+    {
+      "check": "Q01 2025-03-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 1074,
+      "expected": 1074
+    },
+    {
+      "check": "Q01 2025-03-01 meaningful_actions",
+      "passed": true,
+      "actual": 2294,
+      "expected": 2294
+    },
+    {
+      "check": "Q01 2025-03-01 opening_accounts",
+      "passed": true,
+      "actual": 1169,
+      "expected": 1169
+    },
+    {
+      "check": "Q01 2025-03-01 closing_accounts",
+      "passed": true,
+      "actual": 1237,
+      "expected": 1237
+    },
+    {
+      "check": "Q01 2025-03-01 account_deletions",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q01 2025-03-01 opening_pro",
+      "passed": true,
+      "actual": 176,
+      "expected": 176
+    },
+    {
+      "check": "Q01 2025-03-01 closing_pro",
+      "passed": true,
+      "actual": 180,
+      "expected": 180
+    },
+    {
+      "check": "Q01 2025-03-01 first_upgrades",
+      "passed": true,
+      "actual": 24,
+      "expected": 24
+    },
+    {
+      "check": "Q01 2025-03-01 cancellation_events",
+      "passed": true,
+      "actual": 20,
+      "expected": 20
+    },
+    {
+      "check": "Q01 2025-03-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q01 2025-03-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 20,
+      "expected": 20
+    },
+    {
+      "check": "Q01 2025-03-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.886870355078,
+      "expected": 0.8868703550784476
+    },
+    {
+      "check": "Q01 2025-03-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 2.135940409683,
+      "expected": 2.1359404096834265
+    },
+    {
+      "check": "Q01 2025-03-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.113636363636,
+      "expected": 0.11363636363636363
+    },
+    {
+      "check": "Q01 2025-03-01 engagement split",
+      "passed": true,
+      "actual": 1211,
+      "expected": 1211
+    },
+    {
+      "check": "Q01 2025-04-01 registrations",
+      "passed": true,
+      "actual": 48,
+      "expected": 48
+    },
+    {
+      "check": "Q01 2025-04-01 observed_active_users",
+      "passed": true,
+      "actual": 1210,
+      "expected": 1210
+    },
+    {
+      "check": "Q01 2025-04-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 995,
+      "expected": 995
+    },
+    {
+      "check": "Q01 2025-04-01 meaningful_actions",
+      "passed": true,
+      "actual": 1964,
+      "expected": 1964
+    },
+    {
+      "check": "Q01 2025-04-01 opening_accounts",
+      "passed": true,
+      "actual": 1237,
+      "expected": 1237
+    },
+    {
+      "check": "Q01 2025-04-01 closing_accounts",
+      "passed": true,
+      "actual": 1275,
+      "expected": 1275
+    },
+    {
+      "check": "Q01 2025-04-01 account_deletions",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "check": "Q01 2025-04-01 opening_pro",
+      "passed": true,
+      "actual": 180,
+      "expected": 180
+    },
+    {
+      "check": "Q01 2025-04-01 closing_pro",
+      "passed": true,
+      "actual": 177,
+      "expected": 177
+    },
+    {
+      "check": "Q01 2025-04-01 first_upgrades",
+      "passed": true,
+      "actual": 17,
+      "expected": 17
+    },
+    {
+      "check": "Q01 2025-04-01 cancellation_events",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q01 2025-04-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q01 2025-04-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q01 2025-04-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.822314049586,
+      "expected": 0.8223140495867769
+    },
+    {
+      "check": "Q01 2025-04-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.973869346733,
+      "expected": 1.9738693467336683
+    },
+    {
+      "check": "Q01 2025-04-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.105555555555,
+      "expected": 0.10555555555555556
+    },
+    {
+      "check": "Q01 2025-04-01 engagement split",
+      "passed": true,
+      "actual": 1210,
+      "expected": 1210
+    },
+    {
+      "check": "Q01 2025-05-01 registrations",
+      "passed": true,
+      "actual": 37,
+      "expected": 37
+    },
+    {
+      "check": "Q01 2025-05-01 observed_active_users",
+      "passed": true,
+      "actual": 1190,
+      "expected": 1190
+    },
+    {
+      "check": "Q01 2025-05-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 870,
+      "expected": 870
+    },
+    {
+      "check": "Q01 2025-05-01 meaningful_actions",
+      "passed": true,
+      "actual": 1428,
+      "expected": 1428
+    },
+    {
+      "check": "Q01 2025-05-01 opening_accounts",
+      "passed": true,
+      "actual": 1275,
+      "expected": 1275
+    },
+    {
+      "check": "Q01 2025-05-01 closing_accounts",
+      "passed": true,
+      "actual": 1302,
+      "expected": 1302
+    },
+    {
+      "check": "Q01 2025-05-01 account_deletions",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "check": "Q01 2025-05-01 opening_pro",
+      "passed": true,
+      "actual": 177,
+      "expected": 177
+    },
+    {
+      "check": "Q01 2025-05-01 closing_pro",
+      "passed": true,
+      "actual": 187,
+      "expected": 187
+    },
+    {
+      "check": "Q01 2025-05-01 first_upgrades",
+      "passed": true,
+      "actual": 23,
+      "expected": 23
+    },
+    {
+      "check": "Q01 2025-05-01 cancellation_events",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Q01 2025-05-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q01 2025-05-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Q01 2025-05-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.731092436974,
+      "expected": 0.7310924369747899
+    },
+    {
+      "check": "Q01 2025-05-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.641379310344,
+      "expected": 1.6413793103448275
+    },
+    {
+      "check": "Q01 2025-05-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.090395480225,
+      "expected": 0.0903954802259887
+    },
+    {
+      "check": "Q01 2025-05-01 engagement split",
+      "passed": true,
+      "actual": 1190,
+      "expected": 1190
+    },
+    {
+      "check": "Q01 2025-06-01 registrations",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "check": "Q01 2025-06-01 observed_active_users",
+      "passed": true,
+      "actual": 1208,
+      "expected": 1208
+    },
+    {
+      "check": "Q01 2025-06-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 884,
+      "expected": 884
+    },
+    {
+      "check": "Q01 2025-06-01 meaningful_actions",
+      "passed": true,
+      "actual": 1476,
+      "expected": 1476
+    },
+    {
+      "check": "Q01 2025-06-01 opening_accounts",
+      "passed": true,
+      "actual": 1302,
+      "expected": 1302
+    },
+    {
+      "check": "Q01 2025-06-01 closing_accounts",
+      "passed": true,
+      "actual": 1324,
+      "expected": 1324
+    },
+    {
+      "check": "Q01 2025-06-01 account_deletions",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Q01 2025-06-01 opening_pro",
+      "passed": true,
+      "actual": 187,
+      "expected": 187
+    },
+    {
+      "check": "Q01 2025-06-01 closing_pro",
+      "passed": true,
+      "actual": 173,
+      "expected": 173
+    },
+    {
+      "check": "Q01 2025-06-01 first_upgrades",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q01 2025-06-01 cancellation_events",
+      "passed": true,
+      "actual": 20,
+      "expected": 20
+    },
+    {
+      "check": "Q01 2025-06-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q01 2025-06-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 20,
+      "expected": 20
+    },
+    {
+      "check": "Q01 2025-06-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.73178807947,
+      "expected": 0.7317880794701986
+    },
+    {
+      "check": "Q01 2025-06-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.669683257918,
+      "expected": 1.669683257918552
+    },
+    {
+      "check": "Q01 2025-06-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.106951871657,
+      "expected": 0.10695187165775401
+    },
+    {
+      "check": "Q01 2025-06-01 engagement split",
+      "passed": true,
+      "actual": 1208,
+      "expected": 1208
+    },
+    {
+      "check": "Q01 2025-07-01 registrations",
+      "passed": true,
+      "actual": 26,
+      "expected": 26
+    },
+    {
+      "check": "Q01 2025-07-01 observed_active_users",
+      "passed": true,
+      "actual": 1223,
+      "expected": 1223
+    },
+    {
+      "check": "Q01 2025-07-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 854,
+      "expected": 854
+    },
+    {
+      "check": "Q01 2025-07-01 meaningful_actions",
+      "passed": true,
+      "actual": 1405,
+      "expected": 1405
+    },
+    {
+      "check": "Q01 2025-07-01 opening_accounts",
+      "passed": true,
+      "actual": 1324,
+      "expected": 1324
+    },
+    {
+      "check": "Q01 2025-07-01 closing_accounts",
+      "passed": true,
+      "actual": 1336,
+      "expected": 1336
+    },
+    {
+      "check": "Q01 2025-07-01 account_deletions",
+      "passed": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "check": "Q01 2025-07-01 opening_pro",
+      "passed": true,
+      "actual": 173,
+      "expected": 173
+    },
+    {
+      "check": "Q01 2025-07-01 closing_pro",
+      "passed": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Q01 2025-07-01 first_upgrades",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q01 2025-07-01 cancellation_events",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Q01 2025-07-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q01 2025-07-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Q01 2025-07-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.698282910874,
+      "expected": 0.6982829108748978
+    },
+    {
+      "check": "Q01 2025-07-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.645199063231,
+      "expected": 1.64519906323185
+    },
+    {
+      "check": "Q01 2025-07-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.063583815028,
+      "expected": 0.06358381502890173
+    },
+    {
+      "check": "Q01 2025-07-01 engagement split",
+      "passed": true,
+      "actual": 1223,
+      "expected": 1223
+    },
+    {
+      "check": "Q01 2025-08-01 registrations",
+      "passed": true,
+      "actual": 23,
+      "expected": 23
+    },
+    {
+      "check": "Q01 2025-08-01 observed_active_users",
+      "passed": true,
+      "actual": 1203,
+      "expected": 1203
+    },
+    {
+      "check": "Q01 2025-08-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 854,
+      "expected": 854
+    },
+    {
+      "check": "Q01 2025-08-01 meaningful_actions",
+      "passed": true,
+      "actual": 1372,
+      "expected": 1372
+    },
+    {
+      "check": "Q01 2025-08-01 opening_accounts",
+      "passed": true,
+      "actual": 1336,
+      "expected": 1336
+    },
+    {
+      "check": "Q01 2025-08-01 closing_accounts",
+      "passed": true,
+      "actual": 1344,
+      "expected": 1344
+    },
+    {
+      "check": "Q01 2025-08-01 account_deletions",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q01 2025-08-01 opening_pro",
+      "passed": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Q01 2025-08-01 closing_pro",
+      "passed": true,
+      "actual": 160,
+      "expected": 160
+    },
+    {
+      "check": "Q01 2025-08-01 first_upgrades",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Q01 2025-08-01 cancellation_events",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Q01 2025-08-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q01 2025-08-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Q01 2025-08-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.709891936824,
+      "expected": 0.7098919368246052
+    },
+    {
+      "check": "Q01 2025-08-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.606557377049,
+      "expected": 1.6065573770491803
+    },
+    {
+      "check": "Q01 2025-08-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.095238095238,
+      "expected": 0.09523809523809523
+    },
+    {
+      "check": "Q01 2025-08-01 engagement split",
+      "passed": true,
+      "actual": 1203,
+      "expected": 1203
+    },
+    {
+      "check": "Q01 2025-09-01 registrations",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q01 2025-09-01 observed_active_users",
+      "passed": true,
+      "actual": 1207,
+      "expected": 1207
+    },
+    {
+      "check": "Q01 2025-09-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 836,
+      "expected": 836
+    },
+    {
+      "check": "Q01 2025-09-01 meaningful_actions",
+      "passed": true,
+      "actual": 1397,
+      "expected": 1397
+    },
+    {
+      "check": "Q01 2025-09-01 opening_accounts",
+      "passed": true,
+      "actual": 1344,
+      "expected": 1344
+    },
+    {
+      "check": "Q01 2025-09-01 closing_accounts",
+      "passed": true,
+      "actual": 1349,
+      "expected": 1349
+    },
+    {
+      "check": "Q01 2025-09-01 account_deletions",
+      "passed": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "check": "Q01 2025-09-01 opening_pro",
+      "passed": true,
+      "actual": 160,
+      "expected": 160
+    },
+    {
+      "check": "Q01 2025-09-01 closing_pro",
+      "passed": true,
+      "actual": 153,
+      "expected": 153
+    },
+    {
+      "check": "Q01 2025-09-01 first_upgrades",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q01 2025-09-01 cancellation_events",
+      "passed": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "check": "Q01 2025-09-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q01 2025-09-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "check": "Q01 2025-09-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.692626346313,
+      "expected": 0.6926263463131731
+    },
+    {
+      "check": "Q01 2025-09-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.671052631578,
+      "expected": 1.6710526315789473
+    },
+    {
+      "check": "Q01 2025-09-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.0875,
+      "expected": 0.0875
+    },
+    {
+      "check": "Q01 2025-09-01 engagement split",
+      "passed": true,
+      "actual": 1207,
+      "expected": 1207
+    },
+    {
+      "check": "Q01 2025-10-01 registrations",
+      "passed": true,
+      "actual": 17,
+      "expected": 17
+    },
+    {
+      "check": "Q01 2025-10-01 observed_active_users",
+      "passed": true,
+      "actual": 1204,
+      "expected": 1204
+    },
+    {
+      "check": "Q01 2025-10-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 865,
+      "expected": 865
+    },
+    {
+      "check": "Q01 2025-10-01 meaningful_actions",
+      "passed": true,
+      "actual": 1453,
+      "expected": 1453
+    },
+    {
+      "check": "Q01 2025-10-01 opening_accounts",
+      "passed": true,
+      "actual": 1349,
+      "expected": 1349
+    },
+    {
+      "check": "Q01 2025-10-01 closing_accounts",
+      "passed": true,
+      "actual": 1347,
+      "expected": 1347
+    },
+    {
+      "check": "Q01 2025-10-01 account_deletions",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q01 2025-10-01 opening_pro",
+      "passed": true,
+      "actual": 153,
+      "expected": 153
+    },
+    {
+      "check": "Q01 2025-10-01 closing_pro",
+      "passed": true,
+      "actual": 145,
+      "expected": 145
+    },
+    {
+      "check": "Q01 2025-10-01 first_upgrades",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "check": "Q01 2025-10-01 cancellation_events",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q01 2025-10-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q01 2025-10-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q01 2025-10-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.718438538205,
+      "expected": 0.71843853820598
+    },
+    {
+      "check": "Q01 2025-10-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.679768786127,
+      "expected": 1.6797687861271677
+    },
+    {
+      "check": "Q01 2025-10-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.098039215686,
+      "expected": 0.09803921568627451
+    },
+    {
+      "check": "Q01 2025-10-01 engagement split",
+      "passed": true,
+      "actual": 1204,
+      "expected": 1204
+    },
+    {
+      "check": "Q01 2025-11-01 registrations",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q01 2025-11-01 observed_active_users",
+      "passed": true,
+      "actual": 1186,
+      "expected": 1186
+    },
+    {
+      "check": "Q01 2025-11-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 822,
+      "expected": 822
+    },
+    {
+      "check": "Q01 2025-11-01 meaningful_actions",
+      "passed": true,
+      "actual": 1343,
+      "expected": 1343
+    },
+    {
+      "check": "Q01 2025-11-01 opening_accounts",
+      "passed": true,
+      "actual": 1347,
+      "expected": 1347
+    },
+    {
+      "check": "Q01 2025-11-01 closing_accounts",
+      "passed": true,
+      "actual": 1349,
+      "expected": 1349
+    },
+    {
+      "check": "Q01 2025-11-01 account_deletions",
+      "passed": true,
+      "actual": 13,
+      "expected": 13
+    },
+    {
+      "check": "Q01 2025-11-01 opening_pro",
+      "passed": true,
+      "actual": 145,
+      "expected": 145
+    },
+    {
+      "check": "Q01 2025-11-01 closing_pro",
+      "passed": true,
+      "actual": 143,
+      "expected": 143
+    },
+    {
+      "check": "Q01 2025-11-01 first_upgrades",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q01 2025-11-01 cancellation_events",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Q01 2025-11-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q01 2025-11-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Q01 2025-11-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.693086003372,
+      "expected": 0.6930860033726813
+    },
+    {
+      "check": "Q01 2025-11-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.633819951338,
+      "expected": 1.6338199513381995
+    },
+    {
+      "check": "Q01 2025-11-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.075862068965,
+      "expected": 0.07586206896551724
+    },
+    {
+      "check": "Q01 2025-11-01 engagement split",
+      "passed": true,
+      "actual": 1186,
+      "expected": 1186
+    },
+    {
+      "check": "Q01 2025-12-01 registrations",
+      "passed": true,
+      "actual": 13,
+      "expected": 13
+    },
+    {
+      "check": "Q01 2025-12-01 observed_active_users",
+      "passed": true,
+      "actual": 1155,
+      "expected": 1155
+    },
+    {
+      "check": "Q01 2025-12-01 meaningfully_active_users",
+      "passed": true,
+      "actual": 810,
+      "expected": 810
+    },
+    {
+      "check": "Q01 2025-12-01 meaningful_actions",
+      "passed": true,
+      "actual": 1316,
+      "expected": 1316
+    },
+    {
+      "check": "Q01 2025-12-01 opening_accounts",
+      "passed": true,
+      "actual": 1349,
+      "expected": 1349
+    },
+    {
+      "check": "Q01 2025-12-01 closing_accounts",
+      "passed": true,
+      "actual": 1350,
+      "expected": 1350
+    },
+    {
+      "check": "Q01 2025-12-01 account_deletions",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "check": "Q01 2025-12-01 opening_pro",
+      "passed": true,
+      "actual": 143,
+      "expected": 143
+    },
+    {
+      "check": "Q01 2025-12-01 closing_pro",
+      "passed": true,
+      "actual": 144,
+      "expected": 144
+    },
+    {
+      "check": "Q01 2025-12-01 first_upgrades",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Q01 2025-12-01 cancellation_events",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "check": "Q01 2025-12-01 pro_deletion_exits",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q01 2025-12-01 opening_pro_cancellers",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "check": "Q01 2025-12-01 meaningful_share_of_active",
+      "passed": true,
+      "actual": 0.701298701298,
+      "expected": 0.7012987012987013
+    },
+    {
+      "check": "Q01 2025-12-01 actions_per_meaningfully_active_user",
+      "passed": true,
+      "actual": 1.624691358024,
+      "expected": 1.6246913580246913
+    },
+    {
+      "check": "Q01 2025-12-01 paid_cancellation_rate",
+      "passed": true,
+      "actual": 0.083916083916,
+      "expected": 0.08391608391608392
+    },
+    {
+      "check": "Q01 2025-12-01 engagement split",
+      "passed": true,
+      "actual": 1155,
+      "expected": 1155
+    },
+    {
+      "check": "Q02 closing_pro_mom",
+      "passed": true,
+      "actual": 0.006993006993,
+      "expected": 0.006993006993007089
+    },
+    {
+      "check": "Q02 closing_pro_yoy",
+      "passed": true,
+      "actual": -0.006896551724,
+      "expected": -0.006896551724137945
+    },
+    {
+      "check": "Q02 cancellation_mom_pp",
+      "passed": true,
+      "actual": 0.8054014951,
+      "expected": 0.8054014950566679
+    },
+    {
+      "check": "Q04 2025-01-01 review_count",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "check": "Q04 2025-01-01 average_rating",
+      "passed": true,
+      "actual": 4.6,
+      "expected": 4.6
+    },
+    {
+      "check": "Q04 2025-02-01 review_count",
+      "passed": true,
+      "actual": 33,
+      "expected": 33
+    },
+    {
+      "check": "Q04 2025-02-01 average_rating",
+      "passed": true,
+      "actual": 2.666666,
+      "expected": 2.6666666666666665
+    },
+    {
+      "check": "Q04 2025-03-01 review_count",
+      "passed": true,
+      "actual": 37,
+      "expected": 37
+    },
+    {
+      "check": "Q04 2025-03-01 average_rating",
+      "passed": true,
+      "actual": 2.513513,
+      "expected": 2.5135135135135136
+    },
+    {
+      "check": "Q04 2025-04-01 review_count",
+      "passed": true,
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "check": "Q04 2025-04-01 average_rating",
+      "passed": true,
+      "actual": 2.51923,
+      "expected": 2.519230769230769
+    },
+    {
+      "check": "Q04 2025-05-01 review_count",
+      "passed": true,
+      "actual": 67,
+      "expected": 67
+    },
+    {
+      "check": "Q04 2025-05-01 average_rating",
+      "passed": true,
+      "actual": 2.507462,
+      "expected": 2.5074626865671643
+    },
+    {
+      "check": "Q04 2025-06-01 review_count",
+      "passed": true,
+      "actual": 66,
+      "expected": 66
+    },
+    {
+      "check": "Q04 2025-06-01 average_rating",
+      "passed": true,
+      "actual": 2.727272,
+      "expected": 2.727272727272727
+    },
+    {
+      "check": "Q04 2025-07-01 review_count",
+      "passed": true,
+      "actual": 69,
+      "expected": 69
+    },
+    {
+      "check": "Q04 2025-07-01 average_rating",
+      "passed": true,
+      "actual": 2.31884,
+      "expected": 2.318840579710145
+    },
+    {
+      "check": "Q04 2025-08-01 review_count",
+      "passed": true,
+      "actual": 72,
+      "expected": 72
+    },
+    {
+      "check": "Q04 2025-08-01 average_rating",
+      "passed": true,
+      "actual": 2.166666,
+      "expected": 2.1666666666666665
+    },
+    {
+      "check": "Q04 2025-09-01 review_count",
+      "passed": true,
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "check": "Q04 2025-09-01 average_rating",
+      "passed": true,
+      "actual": 2.36,
+      "expected": 2.36
+    },
+    {
+      "check": "Q04 2025-10-01 review_count",
+      "passed": true,
+      "actual": 91,
+      "expected": 91
+    },
+    {
+      "check": "Q04 2025-10-01 average_rating",
+      "passed": true,
+      "actual": 2.351648,
+      "expected": 2.3516483516483517
+    },
+    {
+      "check": "Q04 2025-11-01 review_count",
+      "passed": true,
+      "actual": 73,
+      "expected": 73
+    },
+    {
+      "check": "Q04 2025-11-01 average_rating",
+      "passed": true,
+      "actual": 2.506849,
+      "expected": 2.506849315068493
+    },
+    {
+      "check": "Q04 2025-12-01 review_count",
+      "passed": true,
+      "actual": 93,
+      "expected": 93
+    },
+    {
+      "check": "Q04 2025-12-01 average_rating",
+      "passed": true,
+      "actual": 2.236559,
+      "expected": 2.236559139784946
+    },
+    {
+      "check": "Q08 2025-01-01 free_events",
+      "passed": true,
+      "actual": 5121,
+      "expected": 5121
+    },
+    {
+      "check": "Q08 2025-01-01 free_exposed_users",
+      "passed": true,
+      "actual": 921,
+      "expected": 921
+    },
+    {
+      "check": "Q08 2025-01-01 restriction_events",
+      "passed": true,
+      "actual": 389,
+      "expected": 389
+    },
+    {
+      "check": "Q08 2025-01-01 users_with_restrictions",
+      "passed": true,
+      "actual": 295,
+      "expected": 295
+    },
+    {
+      "check": "Q08 2025-01-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.422366992399,
+      "expected": 0.4223669923995657
+    },
+    {
+      "check": "Q08 2025-01-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 7.596172622534,
+      "expected": 7.596172622534661
+    },
+    {
+      "check": "Q08 2025-02-01 free_events",
+      "passed": true,
+      "actual": 3954,
+      "expected": 3954
+    },
+    {
+      "check": "Q08 2025-02-01 free_exposed_users",
+      "passed": true,
+      "actual": 966,
+      "expected": 966
+    },
+    {
+      "check": "Q08 2025-02-01 restriction_events",
+      "passed": true,
+      "actual": 358,
+      "expected": 358
+    },
+    {
+      "check": "Q08 2025-02-01 users_with_restrictions",
+      "passed": true,
+      "actual": 295,
+      "expected": 295
+    },
+    {
+      "check": "Q08 2025-02-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.370600414078,
+      "expected": 0.37060041407867494
+    },
+    {
+      "check": "Q08 2025-02-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 9.054122407688,
+      "expected": 9.054122407688418
+    },
+    {
+      "check": "Q08 2025-03-01 free_events",
+      "passed": true,
+      "actual": 4038,
+      "expected": 4038
+    },
+    {
+      "check": "Q08 2025-03-01 free_exposed_users",
+      "passed": true,
+      "actual": 1029,
+      "expected": 1029
+    },
+    {
+      "check": "Q08 2025-03-01 restriction_events",
+      "passed": true,
+      "actual": 378,
+      "expected": 378
+    },
+    {
+      "check": "Q08 2025-03-01 users_with_restrictions",
+      "passed": true,
+      "actual": 303,
+      "expected": 303
+    },
+    {
+      "check": "Q08 2025-03-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.367346938775,
+      "expected": 0.3673469387755102
+    },
+    {
+      "check": "Q08 2025-03-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 9.361069836552,
+      "expected": 9.36106983655275
+    },
+    {
+      "check": "Q08 2025-04-01 free_events",
+      "passed": true,
+      "actual": 3666,
+      "expected": 3666
+    },
+    {
+      "check": "Q08 2025-04-01 free_exposed_users",
+      "passed": true,
+      "actual": 1026,
+      "expected": 1026
+    },
+    {
+      "check": "Q08 2025-04-01 restriction_events",
+      "passed": true,
+      "actual": 283,
+      "expected": 283
+    },
+    {
+      "check": "Q08 2025-04-01 users_with_restrictions",
+      "passed": true,
+      "actual": 242,
+      "expected": 242
+    },
+    {
+      "check": "Q08 2025-04-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.275828460038,
+      "expected": 0.27582846003898637
+    },
+    {
+      "check": "Q08 2025-04-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 7.719585379159,
+      "expected": 7.719585379159848
+    },
+    {
+      "check": "Q08 2025-05-01 free_events",
+      "passed": true,
+      "actual": 2999,
+      "expected": 2999
+    },
+    {
+      "check": "Q08 2025-05-01 free_exposed_users",
+      "passed": true,
+      "actual": 1011,
+      "expected": 1011
+    },
+    {
+      "check": "Q08 2025-05-01 restriction_events",
+      "passed": true,
+      "actual": 213,
+      "expected": 213
+    },
+    {
+      "check": "Q08 2025-05-01 users_with_restrictions",
+      "passed": true,
+      "actual": 188,
+      "expected": 188
+    },
+    {
+      "check": "Q08 2025-05-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.210682492581,
+      "expected": 0.21068249258160238
+    },
+    {
+      "check": "Q08 2025-05-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 7.102367455818,
+      "expected": 7.102367455818606
+    },
+    {
+      "check": "Q08 2025-06-01 free_events",
+      "passed": true,
+      "actual": 3145,
+      "expected": 3145
+    },
+    {
+      "check": "Q08 2025-06-01 free_exposed_users",
+      "passed": true,
+      "actual": 1032,
+      "expected": 1032
+    },
+    {
+      "check": "Q08 2025-06-01 restriction_events",
+      "passed": true,
+      "actual": 255,
+      "expected": 255
+    },
+    {
+      "check": "Q08 2025-06-01 users_with_restrictions",
+      "passed": true,
+      "actual": 227,
+      "expected": 227
+    },
+    {
+      "check": "Q08 2025-06-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.247093023255,
+      "expected": 0.24709302325581395
+    },
+    {
+      "check": "Q08 2025-06-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 8.108108108108,
+      "expected": 8.108108108108109
+    },
+    {
+      "check": "Q08 2025-07-01 free_events",
+      "passed": true,
+      "actual": 3163,
+      "expected": 3163
+    },
+    {
+      "check": "Q08 2025-07-01 free_exposed_users",
+      "passed": true,
+      "actual": 1057,
+      "expected": 1057
+    },
+    {
+      "check": "Q08 2025-07-01 restriction_events",
+      "passed": true,
+      "actual": 261,
+      "expected": 261
+    },
+    {
+      "check": "Q08 2025-07-01 users_with_restrictions",
+      "passed": true,
+      "actual": 230,
+      "expected": 230
+    },
+    {
+      "check": "Q08 2025-07-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.24692526017,
+      "expected": 0.2469252601702933
+    },
+    {
+      "check": "Q08 2025-07-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 8.251659816629,
+      "expected": 8.251659816629783
+    },
+    {
+      "check": "Q08 2025-08-01 free_events",
+      "passed": true,
+      "actual": 3139,
+      "expected": 3139
+    },
+    {
+      "check": "Q08 2025-08-01 free_exposed_users",
+      "passed": true,
+      "actual": 1041,
+      "expected": 1041
+    },
+    {
+      "check": "Q08 2025-08-01 restriction_events",
+      "passed": true,
+      "actual": 207,
+      "expected": 207
+    },
+    {
+      "check": "Q08 2025-08-01 users_with_restrictions",
+      "passed": true,
+      "actual": 186,
+      "expected": 186
+    },
+    {
+      "check": "Q08 2025-08-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.198847262247,
+      "expected": 0.1988472622478386
+    },
+    {
+      "check": "Q08 2025-08-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 6.594456833386,
+      "expected": 6.594456833386429
+    },
+    {
+      "check": "Q08 2025-09-01 free_events",
+      "passed": true,
+      "actual": 3103,
+      "expected": 3103
+    },
+    {
+      "check": "Q08 2025-09-01 free_exposed_users",
+      "passed": true,
+      "actual": 1055,
+      "expected": 1055
+    },
+    {
+      "check": "Q08 2025-09-01 restriction_events",
+      "passed": true,
+      "actual": 218,
+      "expected": 218
+    },
+    {
+      "check": "Q08 2025-09-01 users_with_restrictions",
+      "passed": true,
+      "actual": 192,
+      "expected": 192
+    },
+    {
+      "check": "Q08 2025-09-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.20663507109,
+      "expected": 0.2066350710900474
+    },
+    {
+      "check": "Q08 2025-09-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 7.025459233,
+      "expected": 7.025459233000323
+    },
+    {
+      "check": "Q08 2025-10-01 free_events",
+      "passed": true,
+      "actual": 3048,
+      "expected": 3048
+    },
+    {
+      "check": "Q08 2025-10-01 free_exposed_users",
+      "passed": true,
+      "actual": 1059,
+      "expected": 1059
+    },
+    {
+      "check": "Q08 2025-10-01 restriction_events",
+      "passed": true,
+      "actual": 226,
+      "expected": 226
+    },
+    {
+      "check": "Q08 2025-10-01 users_with_restrictions",
+      "passed": true,
+      "actual": 205,
+      "expected": 205
+    },
+    {
+      "check": "Q08 2025-10-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.213408876298,
+      "expected": 0.21340887629839472
+    },
+    {
+      "check": "Q08 2025-10-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 7.414698162729,
+      "expected": 7.414698162729659
+    },
+    {
+      "check": "Q08 2025-11-01 free_events",
+      "passed": true,
+      "actual": 3076,
+      "expected": 3076
+    },
+    {
+      "check": "Q08 2025-11-01 free_exposed_users",
+      "passed": true,
+      "actual": 1048,
+      "expected": 1048
+    },
+    {
+      "check": "Q08 2025-11-01 restriction_events",
+      "passed": true,
+      "actual": 244,
+      "expected": 244
+    },
+    {
+      "check": "Q08 2025-11-01 users_with_restrictions",
+      "passed": true,
+      "actual": 217,
+      "expected": 217
+    },
+    {
+      "check": "Q08 2025-11-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.23282442748,
+      "expected": 0.23282442748091603
+    },
+    {
+      "check": "Q08 2025-11-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 7.932379713914,
+      "expected": 7.932379713914174
+    },
+    {
+      "check": "Q08 2025-12-01 free_events",
+      "passed": true,
+      "actual": 2846,
+      "expected": 2846
+    },
+    {
+      "check": "Q08 2025-12-01 free_exposed_users",
+      "passed": true,
+      "actual": 1019,
+      "expected": 1019
+    },
+    {
+      "check": "Q08 2025-12-01 restriction_events",
+      "passed": true,
+      "actual": 222,
+      "expected": 222
+    },
+    {
+      "check": "Q08 2025-12-01 users_with_restrictions",
+      "passed": true,
+      "actual": 194,
+      "expected": 194
+    },
+    {
+      "check": "Q08 2025-12-01 blocks_per_exposed_user",
+      "passed": true,
+      "actual": 0.217860647693,
+      "expected": 0.21786064769381747
+    },
+    {
+      "check": "Q08 2025-12-01 blocks_per_100_free_events",
+      "passed": true,
+      "actual": 7.800421644413,
+      "expected": 7.800421644413212
+    },
+    {
+      "check": "Q11 2025-01-01 registered_users",
+      "passed": true,
+      "actual": 105,
+      "expected": 105
+    },
+    {
+      "check": "Q11 2025-01-01 eligible_90d_users",
+      "passed": true,
+      "actual": 105,
+      "expected": 105
+    },
+    {
+      "check": "Q11 2025-01-01 converted_90d_users",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q11 2025-01-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.180952380952,
+      "expected": 0.18095238095238095
+    },
+    {
+      "check": "Q11 2025-02-01 registered_users",
+      "passed": true,
+      "actual": 92,
+      "expected": 92
+    },
+    {
+      "check": "Q11 2025-02-01 eligible_90d_users",
+      "passed": true,
+      "actual": 92,
+      "expected": 92
+    },
+    {
+      "check": "Q11 2025-02-01 converted_90d_users",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "check": "Q11 2025-02-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.108695652173,
+      "expected": 0.10869565217391304
+    },
+    {
+      "check": "Q11 2025-03-01 registered_users",
+      "passed": true,
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "check": "Q11 2025-03-01 eligible_90d_users",
+      "passed": true,
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "check": "Q11 2025-03-01 converted_90d_users",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q11 2025-03-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.2,
+      "expected": 0.2
+    },
+    {
+      "check": "Q11 2025-04-01 registered_users",
+      "passed": true,
+      "actual": 48,
+      "expected": 48
+    },
+    {
+      "check": "Q11 2025-04-01 eligible_90d_users",
+      "passed": true,
+      "actual": 48,
+      "expected": 48
+    },
+    {
+      "check": "Q11 2025-04-01 converted_90d_users",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q11 2025-04-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.083333333333,
+      "expected": 0.08333333333333333
+    },
+    {
+      "check": "Q11 2025-05-01 registered_users",
+      "passed": true,
+      "actual": 37,
+      "expected": 37
+    },
+    {
+      "check": "Q11 2025-05-01 eligible_90d_users",
+      "passed": true,
+      "actual": 37,
+      "expected": 37
+    },
+    {
+      "check": "Q11 2025-05-01 converted_90d_users",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q11 2025-05-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.054054054054,
+      "expected": 0.05405405405405406
+    },
+    {
+      "check": "Q11 2025-06-01 registered_users",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "check": "Q11 2025-06-01 eligible_90d_users",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "check": "Q11 2025-06-01 converted_90d_users",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q11 2025-06-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.066666666666,
+      "expected": 0.06666666666666667
+    },
+    {
+      "check": "Q11 2025-07-01 registered_users",
+      "passed": true,
+      "actual": 26,
+      "expected": 26
+    },
+    {
+      "check": "Q11 2025-07-01 eligible_90d_users",
+      "passed": true,
+      "actual": 26,
+      "expected": 26
+    },
+    {
+      "check": "Q11 2025-07-01 converted_90d_users",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q11 2025-07-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.076923076923,
+      "expected": 0.07692307692307693
+    },
+    {
+      "check": "Q11 2025-08-01 registered_users",
+      "passed": true,
+      "actual": 23,
+      "expected": 23
+    },
+    {
+      "check": "Q11 2025-08-01 eligible_90d_users",
+      "passed": true,
+      "actual": 23,
+      "expected": 23
+    },
+    {
+      "check": "Q11 2025-08-01 converted_90d_users",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q11 2025-08-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.043478260869,
+      "expected": 0.043478260869565216
+    },
+    {
+      "check": "Q11 2025-09-01 registered_users",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q11 2025-09-01 eligible_90d_users",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q11 2025-09-01 converted_90d_users",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q11 2025-09-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 0.052631578947,
+      "expected": 0.05263157894736842
+    },
+    {
+      "check": "Q11 2025-10-01 registered_users",
+      "passed": true,
+      "actual": 17,
+      "expected": 17
+    },
+    {
+      "check": "Q11 2025-10-01 eligible_90d_users",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q11 2025-10-01 converted_90d_users",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q11 2025-10-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": 1.0,
+      "expected": 1.0
+    },
+    {
+      "check": "Q11 2025-10-01 immature headline",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Q11 2025-11-01 registered_users",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q11 2025-11-01 eligible_90d_users",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q11 2025-11-01 converted_90d_users",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q11 2025-11-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Q11 2025-11-01 immature headline",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Q11 2025-12-01 registered_users",
+      "passed": true,
+      "actual": 13,
+      "expected": 13
+    },
+    {
+      "check": "Q11 2025-12-01 eligible_90d_users",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q11 2025-12-01 converted_90d_users",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q11 2025-12-01 conversion_rate_among_eligible",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Q11 2025-12-01 immature headline",
+      "passed": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 931,
+      "expected": 931
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 265,
+      "expected": 265
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 341,
+      "expected": 341
+    },
+    {
+      "check": "Q16 ('2025-01-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.284640171858,
+      "expected": 0.284640171858217
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 974,
+      "expected": 974
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 267,
+      "expected": 267
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 354,
+      "expected": 354
+    },
+    {
+      "check": "Q16 ('2025-02-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.274127310061,
+      "expected": 0.2741273100616016
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.285714285714,
+      "expected": 0.2857142857142857
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1072,
+      "expected": 1072
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 274,
+      "expected": 274
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 336,
+      "expected": 336
+    },
+    {
+      "check": "Q16 ('2025-03-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.255597014925,
+      "expected": 0.2555970149253731
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.25,
+      "expected": 0.25
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1154,
+      "expected": 1154
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 281,
+      "expected": 281
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 354,
+      "expected": 354
+    },
+    {
+      "check": "Q16 ('2025-04-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.243500866551,
+      "expected": 0.24350086655112652
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.222222222222,
+      "expected": 0.2222222222222222
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1220,
+      "expected": 1220
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 295,
+      "expected": 295
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 340,
+      "expected": 340
+    },
+    {
+      "check": "Q16 ('2025-05-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.241803278688,
+      "expected": 0.24180327868852458
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.375,
+      "expected": 0.375
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1258,
+      "expected": 1258
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 301,
+      "expected": 301
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 340,
+      "expected": 340
+    },
+    {
+      "check": "Q16 ('2025-06-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.239268680445,
+      "expected": 0.23926868044515104
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.214285714285,
+      "expected": 0.21428571428571427
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1280,
+      "expected": 1280
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 349,
+      "expected": 349
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 396,
+      "expected": 396
+    },
+    {
+      "check": "Q16 ('2025-07-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.27265625,
+      "expected": 0.27265625
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.266666666666,
+      "expected": 0.26666666666666666
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1295,
+      "expected": 1295
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 356,
+      "expected": 356
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 407,
+      "expected": 407
+    },
+    {
+      "check": "Q16 ('2025-08-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.274903474903,
+      "expected": 0.2749034749034749
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 13,
+      "expected": 13
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.307692307692,
+      "expected": 0.3076923076923077
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1309,
+      "expected": 1309
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 307,
+      "expected": 307
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 346,
+      "expected": 346
+    },
+    {
+      "check": "Q16 ('2025-09-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.234530175706,
+      "expected": 0.2345301757066463
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.368421052631,
+      "expected": 0.3684210526315789
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1311,
+      "expected": 1311
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 293,
+      "expected": 293
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 331,
+      "expected": 331
+    },
+    {
+      "check": "Q16 ('2025-10-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.223493516399,
+      "expected": 0.2234935163996949
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 13,
+      "expected": 13
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.307692307692,
+      "expected": 0.3076923076923077
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1318,
+      "expected": 1318
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 323,
+      "expected": 323
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 363,
+      "expected": 363
+    },
+    {
+      "check": "Q16 ('2025-11-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.24506828528,
+      "expected": 0.24506828528072838
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Deleted this month') eligible_account_observations",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Deleted this month') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Deleted this month') friction_events",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Deleted this month') prior_friction_share",
+      "passed": true,
+      "actual": 0.083333333333,
+      "expected": 0.08333333333333333
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Retained through month end') eligible_account_observations",
+      "passed": true,
+      "actual": 1323,
+      "expected": 1323
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Retained through month end') accounts_with_prior_friction",
+      "passed": true,
+      "actual": 341,
+      "expected": 341
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Retained through month end') friction_events",
+      "passed": true,
+      "actual": 382,
+      "expected": 382
+    },
+    {
+      "check": "Q16 ('2025-12-01', 'Retained through month end') prior_friction_share",
+      "passed": true,
+      "actual": 0.257747543461,
+      "expected": 0.25774754346182915
+    },
+    {
+      "check": "Q16P Deleted this month eligible_account_months",
+      "passed": true,
+      "actual": 124,
+      "expected": 124
+    },
+    {
+      "check": "Q16P Deleted this month distinct_users",
+      "passed": true,
+      "actual": 124,
+      "expected": 124
+    },
+    {
+      "check": "Q16P Deleted this month account_months_with_prior_friction",
+      "passed": true,
+      "actual": 32,
+      "expected": 32
+    },
+    {
+      "check": "Q16P Deleted this month prior_friction_share",
+      "passed": true,
+      "actual": 0.258064516129,
+      "expected": 0.25806451612903225
+    },
+    {
+      "check": "Q16P Retained through month end eligible_account_months",
+      "passed": true,
+      "actual": 14445,
+      "expected": 14445
+    },
+    {
+      "check": "Q16P Retained through month end distinct_users",
+      "passed": true,
+      "actual": 1441,
+      "expected": 1441
+    },
+    {
+      "check": "Q16P Retained through month end account_months_with_prior_friction",
+      "passed": true,
+      "actual": 3652,
+      "expected": 3652
+    },
+    {
+      "check": "Q16P Retained through month end prior_friction_share",
+      "passed": true,
+      "actual": 0.252821045344,
+      "expected": 0.25282104534440986
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 91,
+      "expected": 91
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 106,
+      "expected": 106
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 147,
+      "expected": 147
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-01-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 60,
+      "expected": 60
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 114,
+      "expected": 114
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-02-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 72,
+      "expected": 72
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 116,
+      "expected": 116
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-03-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 65,
+      "expected": 65
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 67,
+      "expected": 67
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 72,
+      "expected": 72
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-04-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 38,
+      "expected": 38
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 39,
+      "expected": 39
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 74,
+      "expected": 74
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-05-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 26,
+      "expected": 26
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 55,
+      "expected": 55
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-06-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 26,
+      "expected": 26
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.342105263157,
+      "expected": 0.34210526315789475
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 58,
+      "expected": 58
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 77,
+      "expected": 77
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-07-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 81,
+      "expected": 81
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 32,
+      "expected": 32
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.395061728395,
+      "expected": 0.3950617283950617
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 66,
+      "expected": 66
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-08-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 28,
+      "expected": 28
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.341463414634,
+      "expected": 0.34146341463414637
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 48,
+      "expected": 48
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 81,
+      "expected": 81
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-09-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 74,
+      "expected": 74
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 26,
+      "expected": 26
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.351351351351,
+      "expected": 0.35135135135135137
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 53,
+      "expected": 53
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 70,
+      "expected": 70
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-10-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 88,
+      "expected": 88
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 34,
+      "expected": 34
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.386363636363,
+      "expected": 0.38636363636363635
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 66,
+      "expected": 66
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-11-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'Android') recorded_outcomes",
+      "passed": true,
+      "actual": 88,
+      "expected": 88
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'Android') recorded_failures",
+      "passed": true,
+      "actual": 29,
+      "expected": 29
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'Android') failure_rate",
+      "passed": true,
+      "actual": 0.329545454545,
+      "expected": 0.32954545454545453
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'iOS') recorded_outcomes",
+      "passed": true,
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'iOS') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'iOS') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'Web') recorded_outcomes",
+      "passed": true,
+      "actual": 81,
+      "expected": 81
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'Web') recorded_failures",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Q17 ('2025-12-01', 'Web') failure_rate",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "check": "Q06 ('2025-01-01', 'App Store Search')",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q06 ('2025-01-01', 'Organic Search')",
+      "passed": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "check": "Q06 ('2025-01-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Q06 ('2025-01-01', 'Referral')",
+      "passed": true,
+      "actual": 22,
+      "expected": 22
+    },
+    {
+      "check": "Q06 ('2025-01-01', 'Social Media')",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Q06 ('2025-02-01', 'App Store Search')",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q06 ('2025-02-01', 'Organic Search')",
+      "passed": true,
+      "actual": 34,
+      "expected": 34
+    },
+    {
+      "check": "Q06 ('2025-02-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "check": "Q06 ('2025-02-01', 'Referral')",
+      "passed": true,
+      "actual": 19,
+      "expected": 19
+    },
+    {
+      "check": "Q06 ('2025-02-01', 'Social Media')",
+      "passed": true,
+      "actual": 20,
+      "expected": 20
+    },
+    {
+      "check": "Q06 ('2025-03-01', 'App Store Search')",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q06 ('2025-03-01', 'Organic Search')",
+      "passed": true,
+      "actual": 21,
+      "expected": 21
+    },
+    {
+      "check": "Q06 ('2025-03-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q06 ('2025-03-01', 'Referral')",
+      "passed": true,
+      "actual": 18,
+      "expected": 18
+    },
+    {
+      "check": "Q06 ('2025-03-01', 'Social Media')",
+      "passed": true,
+      "actual": 18,
+      "expected": 18
+    },
+    {
+      "check": "Q06 ('2025-04-01', 'App Store Search')",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q06 ('2025-04-01', 'Organic Search')",
+      "passed": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Q06 ('2025-04-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q06 ('2025-04-01', 'Referral')",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Q06 ('2025-04-01', 'Social Media')",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Q06 ('2025-05-01', 'App Store Search')",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q06 ('2025-05-01', 'Organic Search')",
+      "passed": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "check": "Q06 ('2025-05-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q06 ('2025-05-01', 'Referral')",
+      "passed": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Q06 ('2025-05-01', 'Social Media')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-06-01', 'App Store Search')",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q06 ('2025-06-01', 'Organic Search')",
+      "passed": true,
+      "actual": 12,
+      "expected": 12
+    },
+    {
+      "check": "Q06 ('2025-06-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q06 ('2025-06-01', 'Referral')",
+      "passed": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Q06 ('2025-06-01', 'Social Media')",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "check": "Q06 ('2025-07-01', 'App Store Search')",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Q06 ('2025-07-01', 'Organic Search')",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q06 ('2025-07-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q06 ('2025-07-01', 'Referral')",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q06 ('2025-07-01', 'Social Media')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-08-01', 'App Store Search')",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q06 ('2025-08-01', 'Organic Search')",
+      "passed": true,
+      "actual": 9,
+      "expected": 9
+    },
+    {
+      "check": "Q06 ('2025-08-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q06 ('2025-08-01', 'Referral')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-08-01', 'Social Media')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-09-01', 'App Store Search')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-09-01', 'Organic Search')",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "check": "Q06 ('2025-09-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-09-01', 'Referral')",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q06 ('2025-09-01', 'Social Media')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-10-01', 'App Store Search')",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q06 ('2025-10-01', 'Organic Search')",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Q06 ('2025-10-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q06 ('2025-10-01', 'Referral')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-10-01', 'Social Media')",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q06 ('2025-11-01', 'App Store Search')",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q06 ('2025-11-01', 'Organic Search')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-11-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q06 ('2025-11-01', 'Referral')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-11-01', 'Social Media')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-12-01', 'App Store Search')",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Q06 ('2025-12-01', 'Organic Search')",
+      "passed": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Q06 ('2025-12-01', 'Paid Ads')",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Q06 ('2025-12-01', 'Referral')",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Q06 ('2025-12-01', 'Social Media')",
+      "passed": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "QA01 2023-01-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-01-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-02-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-02-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-03-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-03-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-04-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-04-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-05-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-05-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-06-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-06-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-07-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-07-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-08-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-08-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-09-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-09-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-10-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-10-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-11-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-11-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-12-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2023-12-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-01-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-01-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-02-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-02-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-03-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-03-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-04-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-04-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-05-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-05-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-06-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-06-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-07-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-07-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-08-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-08-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-09-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-09-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-10-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-10-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-11-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-11-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-12-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2024-12-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-01-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-01-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-02-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-02-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-03-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-03-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-04-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-04-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-05-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-05-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-06-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-06-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-07-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-07-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-08-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-08-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-09-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-09-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-10-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-10-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-11-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-11-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-12-01T00:00:00 pro_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA01 2025-12-01T00:00:00 account_residual",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA02 Journey invalid",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA02 Checkout invalid",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA03 eligibility_or_window_violations",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA03 duplicate_account_months",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA04 deleted users",
+      "passed": true,
+      "actual": 150,
+      "expected": 150
+    },
+    {
+      "check": "QA04 deletion-month activity",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA05A start-only abandonment",
+      "passed": true,
+      "actual": 4217,
+      "expected": 4217
+    },
+    {
+      "check": "QA06 unmatched tiers",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA06 ambiguous tiers",
+      "passed": true,
+      "actual": 2911,
+      "expected": 2911
+    },
+    {
+      "check": "QA07A date_rows",
+      "passed": true,
+      "actual": 1096,
+      "expected": 1096
+    },
+    {
+      "check": "QA07A distinct_days",
+      "passed": true,
+      "actual": 1096,
+      "expected": 1096
+    },
+    {
+      "check": "QA07A expected_contiguous_days",
+      "passed": true,
+      "actual": 1096,
+      "expected": 1096
+    },
+    {
+      "check": "QA07B immature conversion",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA08 missing_pro_row_matches",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA08 multiple_pro_row_matches",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "QA09 Activity_Events",
+      "passed": true,
+      "actual": 120000,
+      "expected": 120000
+    },
+    {
+      "check": "QA09 Business_Change_Register",
+      "passed": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "check": "QA09 Date",
+      "passed": true,
+      "actual": 1096,
+      "expected": 1096
+    },
+    {
+      "check": "QA09 Invoices",
+      "passed": true,
+      "actual": 3421,
+      "expected": 3421
+    },
+    {
+      "check": "QA09 Payment_Transactions",
+      "passed": true,
+      "actual": 3421,
+      "expected": 3421
+    },
+    {
+      "check": "QA09 Plan_Versions",
+      "passed": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "QA09 Platforms",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "QA09 Reviews",
+      "passed": true,
+      "actual": 805,
+      "expected": 805
+    },
+    {
+      "check": "QA09 Sessions",
+      "passed": true,
+      "actual": 74834,
+      "expected": 74834
+    },
+    {
+      "check": "QA09 Subscription_History",
+      "passed": true,
+      "actual": 2078,
+      "expected": 2078
+    },
+    {
+      "check": "QA09 Users",
+      "passed": true,
+      "actual": 1500,
+      "expected": 1500
+    },
+    {
+      "check": "Source unchanged Activity_Events.csv",
+      "passed": true,
+      "actual": "dbe2c4051c7ed95b7cee802feb039eb4fe848d1b222adaf6a46b811f83a44c96",
+      "expected": "dbe2c4051c7ed95b7cee802feb039eb4fe848d1b222adaf6a46b811f83a44c96"
+    },
+    {
+      "check": "Source unchanged Business_Change_Register.csv",
+      "passed": true,
+      "actual": "f049a26b13378f948bbaaf9b5827869030b168358b84c00a7cdd71139b7b58bf",
+      "expected": "f049a26b13378f948bbaaf9b5827869030b168358b84c00a7cdd71139b7b58bf"
+    },
+    {
+      "check": "Source unchanged Date.csv",
+      "passed": true,
+      "actual": "27d7c51586b09b6365d6911ca32295be7586838da42deea8e98a1afc7aedb942",
+      "expected": "27d7c51586b09b6365d6911ca32295be7586838da42deea8e98a1afc7aedb942"
+    },
+    {
+      "check": "Source unchanged Invoices.csv",
+      "passed": true,
+      "actual": "12cb6c9cfdf669e7756512d49640b163698c8871185404bd73bb647455980019",
+      "expected": "12cb6c9cfdf669e7756512d49640b163698c8871185404bd73bb647455980019"
+    },
+    {
+      "check": "Source unchanged Payment_Transactions.csv",
+      "passed": true,
+      "actual": "c5a274eff72e41b0c20b165097ee38031d56761a96f1d214caf79f1fe4e7c9ee",
+      "expected": "c5a274eff72e41b0c20b165097ee38031d56761a96f1d214caf79f1fe4e7c9ee"
+    },
+    {
+      "check": "Source unchanged Plan_Versions.csv",
+      "passed": true,
+      "actual": "f4827dc9b3d7efcbb71ea0109d8aa4ca3b76549a4ddb3741022fc1dbf85dd533",
+      "expected": "f4827dc9b3d7efcbb71ea0109d8aa4ca3b76549a4ddb3741022fc1dbf85dd533"
+    },
+    {
+      "check": "Source unchanged Platforms.csv",
+      "passed": true,
+      "actual": "cd1aa9ebfa6c7d55873d765ff0f094c838d0d9ae0a28f827bbe21eb3831055eb",
+      "expected": "cd1aa9ebfa6c7d55873d765ff0f094c838d0d9ae0a28f827bbe21eb3831055eb"
+    },
+    {
+      "check": "Source unchanged Reviews.csv",
+      "passed": true,
+      "actual": "ae2490da56b1b75f6a96420fd8acd716f29c04147ff04cef0e323b2bb030df97",
+      "expected": "ae2490da56b1b75f6a96420fd8acd716f29c04147ff04cef0e323b2bb030df97"
+    },
+    {
+      "check": "Source unchanged Sessions.csv",
+      "passed": true,
+      "actual": "07ea8cd4a12b70e40808a69cde7fd4ac8db3447d8506013dbcd64db4748ffac1",
+      "expected": "07ea8cd4a12b70e40808a69cde7fd4ac8db3447d8506013dbcd64db4748ffac1"
+    },
+    {
+      "check": "Source unchanged Subscription_History.csv",
+      "passed": true,
+      "actual": "d58c5f3a6f6413a1a39239a3121294ab9fc868c723dd4f8008101a55bb4add36",
+      "expected": "d58c5f3a6f6413a1a39239a3121294ab9fc868c723dd4f8008101a55bb4add36"
+    },
+    {
+      "check": "Source unchanged Users.csv",
+      "passed": true,
+      "actual": "ff3b59e51462b9718e534016ec5b50ab1bbe3043bc10483f94e88ca6df699530",
+      "expected": "ff3b59e51462b9718e534016ec5b50ab1bbe3043bc10483f94e88ca6df699530"
+    },
+    {
+      "check": "Executed script hash 02_reporting_views.sql",
+      "passed": true,
+      "actual": "50f16246aeba77ff3c00fa94b2818e552fd26301f160cde9f893a0a4be62f2a1",
+      "expected": "50f16246aeba77ff3c00fa94b2818e552fd26301f160cde9f893a0a4be62f2a1"
+    },
+    {
+      "check": "Executed script hash 03_dashboard_queries.sql",
+      "passed": true,
+      "actual": "3a31bc9254b01c6e5edd85170356f8722b1b8d03d1c0b6cef360517d6ae1df2d",
+      "expected": "3a31bc9254b01c6e5edd85170356f8722b1b8d03d1c0b6cef360517d6ae1df2d"
+    }
+  ]
+}

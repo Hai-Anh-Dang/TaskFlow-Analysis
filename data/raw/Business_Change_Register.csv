@@ -1,0 +1,7 @@
+change_id,description,intended_benefit,announcement_date,rollout_start,rollout_end,affected_plans,affected_platforms,affected_versions,rollout_group
+CHG001,"Free plan allowance reduced (10->3 projects, 200->50 tasks)",Encourage upgrades to Pro,2025-01-15,2025-02-01,2025-02-01,Free,"Web, iOS, Android",All,All Free users
+CHG002,Pro plan price increased $9.99 -> $14.99; added priority support,Increase revenue per subscriber,2025-02-10,2025-03-01,2025-03-01,Pro,"Web, iOS, Android",All,"All Pro subscribers, applied at next renewal"
+CHG003,Web interface redesign (navigation and layout overhaul),"Modernise UI, ease onboarding",2025-03-20,2025-04-01,2025-04-15,"Free, Pro",Web,All,"All web users, phased over 2 weeks"
+CHG004,Mobile interface redesign (same overhaul extended to iOS/Android),Consistent experience across platforms,2025-04-20,2025-05-01,2025-05-15,"Free, Pro","iOS, Android",All,"All mobile users, phased over 2 weeks"
+CHG005,Checkout flow redesign (added verification and plan-confirmation steps),"Reduce erroneous signups, improve plan-selection accuracy",2025-05-15,2025-06-01,2025-06-01,Free (upgrade flow),"Web, iOS, Android",All,All users starting checkout
+CHG006,Android app release v7.0 (backend sync service migration),Improve long-term sync performance,2025-06-25,2025-07-01,2025-07-10,"Free, Pro",Android,7.0+,All Android users on auto-update

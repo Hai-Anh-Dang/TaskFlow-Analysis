@@ -1,0 +1,5 @@
+plan_version_id,tier,effective_start,effective_end,price,billing_frequency,project_allowance,task_allowance,features
+PLAN001,Free,2023-01-01,2025-01-31,0.0,,10.0,200.0,"Basic task management, reminders"
+PLAN002,Free,2025-02-01,,0.0,,3.0,50.0,"Basic task management, reminders"
+PLAN003,Pro,2023-01-01,2025-02-28,9.99,Monthly,,,"Unlimited projects & tasks, reminders, reports, calendar integration"
+PLAN004,Pro,2025-03-01,,14.99,Monthly,,,"Unlimited projects & tasks, reminders, reports, calendar integration, priority support"

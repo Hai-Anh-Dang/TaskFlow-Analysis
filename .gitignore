@@ -1,0 +1,23 @@
+# Local report binaries: interactive report is linked separately.
+*.pbix
+*.pbit
+*.abf
+*.bak
+*.log
+*.tmp
+*.pyc
+__pycache__/
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+desktop.ini
+.pbi/
+.vscode/
+.idea/
+archive/
+backups/
+data/generated/
+validation/local/

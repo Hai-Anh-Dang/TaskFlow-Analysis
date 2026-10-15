@@ -1,0 +1,806 @@
+review_id,user_id,review_date,platform,rating,review_text,issue_category
+REV00001,768,2025-06-27,Web,1,Free plan is way too restricted now.,Restriction
+REV00002,524,2025-10-03,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00003,1166,2025-12-25,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00004,1059,2025-05-19,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00005,66,2025-10-18,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00006,319,2025-09-17,iOS,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00007,1120,2025-10-05,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00008,870,2025-11-10,iOS,2,Free plan is way too restricted now.,Restriction
+REV00009,1486,2025-11-08,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00010,985,2025-02-18,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00011,235,2025-12-08,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00012,742,2025-07-15,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00013,394,2025-10-06,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00014,777,2025-11-08,Android,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00015,1296,2025-09-26,iOS,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00016,1333,2025-05-25,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00017,256,2025-05-16,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00018,1299,2025-04-10,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00019,1463,2025-10-31,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00020,108,2025-05-10,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00021,1326,2025-06-18,Web,1,Free plan is way too restricted now.,Restriction
+REV00022,249,2025-02-10,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00023,1253,2025-05-14,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00024,685,2025-10-06,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00025,1121,2025-03-10,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00026,192,2025-03-12,iOS,1,Free plan is way too restricted now.,Restriction
+REV00027,595,2025-12-04,iOS,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00028,1473,2025-12-04,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00029,716,2025-07-13,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00030,1122,2025-10-12,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00031,454,2025-02-16,Android,2,Free plan is way too restricted now.,Restriction
+REV00032,438,2025-05-14,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00033,734,2025-05-17,Web,2,Free plan is way too restricted now.,Restriction
+REV00034,1013,2025-02-27,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00035,799,2025-07-28,Web,2,Free plan is way too restricted now.,Restriction
+REV00036,826,2025-03-12,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00037,1428,2025-08-09,iOS,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00038,39,2025-10-23,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00039,156,2025-05-24,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00040,121,2025-06-05,Android,1,Keep hitting the project limit on the free plan.,Restriction
+REV00041,690,2025-12-17,Web,2,Free plan is way too restricted now.,Restriction
+REV00042,724,2025-05-04,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00043,1110,2025-11-20,Android,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00044,801,2025-09-26,Web,2,Free plan is way too restricted now.,Restriction
+REV00045,1027,2025-04-22,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00046,167,2025-09-22,Web,2,Free plan is way too restricted now.,Restriction
+REV00047,589,2025-04-14,iOS,2,Free plan is way too restricted now.,Restriction
+REV00048,656,2025-10-09,Android,2,Free plan is way too restricted now.,Restriction
+REV00049,1078,2025-03-09,iOS,2,Free plan is way too restricted now.,Restriction
+REV00050,687,2025-12-13,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00051,767,2025-04-02,Android,2,Free plan is way too restricted now.,Restriction
+REV00052,1400,2025-10-05,Android,1,Keep hitting the project limit on the free plan.,Restriction
+REV00053,384,2025-04-26,iOS,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00054,905,2025-10-31,Android,2,Free plan is way too restricted now.,Restriction
+REV00055,700,2025-09-26,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00056,1134,2025-03-08,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00057,1271,2025-04-02,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00058,721,2025-03-14,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00059,1247,2025-03-29,iOS,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00060,591,2025-07-05,Android,1,Free plan is way too restricted now.,Restriction
+REV00061,359,2025-06-30,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00062,837,2025-10-19,Web,1,Free plan is way too restricted now.,Restriction
+REV00063,546,2025-03-15,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00064,919,2025-05-17,iOS,2,Free plan is way too restricted now.,Restriction
+REV00065,762,2025-05-12,iOS,2,Free plan is way too restricted now.,Restriction
+REV00066,993,2025-07-26,Web,2,Free plan is way too restricted now.,Restriction
+REV00067,657,2025-06-21,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00068,418,2025-02-22,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00069,655,2025-10-10,Web,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00070,1258,2025-03-28,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00071,641,2025-04-23,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00072,944,2025-06-19,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00073,1222,2025-12-01,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00074,561,2025-05-27,Web,2,Free plan is way too restricted now.,Restriction
+REV00075,566,2025-06-01,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00076,415,2025-05-21,iOS,2,Free plan is way too restricted now.,Restriction
+REV00077,882,2025-05-17,Web,2,Free plan is way too restricted now.,Restriction
+REV00078,1335,2025-10-24,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00079,910,2025-07-28,Android,2,Free plan is way too restricted now.,Restriction
+REV00080,1245,2025-12-05,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00081,174,2025-10-23,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00082,846,2025-02-24,Web,2,Free plan is way too restricted now.,Restriction
+REV00083,1364,2025-08-10,Web,1,Free plan is way too restricted now.,Restriction
+REV00084,973,2025-04-16,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00085,209,2025-10-13,Android,1,Keep hitting the project limit on the free plan.,Restriction
+REV00086,930,2025-11-11,Web,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00087,965,2025-07-15,iOS,1,Free plan is way too restricted now.,Restriction
+REV00088,387,2025-12-03,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00089,136,2025-07-05,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00090,1446,2025-11-17,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00091,946,2025-07-16,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00092,258,2025-11-09,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00093,103,2025-09-16,iOS,1,Free plan is way too restricted now.,Restriction
+REV00094,719,2025-02-24,Web,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00095,45,2025-02-09,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00096,669,2025-04-20,iOS,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00097,280,2025-10-13,Android,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00098,1442,2025-09-20,Android,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00099,942,2025-11-01,Web,1,Free plan is way too restricted now.,Restriction
+REV00100,932,2025-03-14,Web,2,Free plan is way too restricted now.,Restriction
+REV00101,1189,2025-04-30,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00102,47,2025-11-08,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00103,246,2025-05-10,Android,1,Keep hitting the project limit on the free plan.,Restriction
+REV00104,1112,2025-07-14,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00105,479,2025-04-28,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00106,1003,2025-12-26,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00107,1176,2025-02-23,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00108,571,2025-09-02,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00109,445,2025-11-11,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00110,1444,2025-11-21,Android,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00111,69,2025-10-16,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00112,515,2025-03-03,Web,2,Free plan is way too restricted now.,Restriction
+REV00113,1451,2025-09-02,Android,2,Free plan is way too restricted now.,Restriction
+REV00114,544,2025-03-02,iOS,1,Free plan is way too restricted now.,Restriction
+REV00115,397,2025-06-22,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00116,622,2025-12-11,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00117,1495,2025-12-10,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00118,1432,2025-10-23,iOS,1,Free plan is way too restricted now.,Restriction
+REV00119,1334,2025-07-20,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00120,1283,2025-07-19,iOS,2,Free plan is way too restricted now.,Restriction
+REV00121,688,2025-02-20,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00122,1030,2025-05-10,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00123,314,2025-07-06,iOS,1,Free plan is way too restricted now.,Restriction
+REV00124,873,2025-09-17,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00125,1226,2025-10-13,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00126,1339,2025-07-27,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00127,215,2025-12-07,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00128,729,2025-10-16,iOS,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00129,847,2025-10-01,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00130,665,2025-02-13,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00131,381,2025-06-05,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00132,399,2025-06-23,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00133,375,2025-12-17,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00134,154,2025-02-18,iOS,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00135,122,2025-05-02,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00136,405,2025-06-21,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00137,1133,2025-10-03,Android,2,Free plan is way too restricted now.,Restriction
+REV00138,238,2025-02-11,iOS,2,Free plan is way too restricted now.,Restriction
+REV00139,1264,2025-05-07,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00140,1028,2025-03-23,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00141,1038,2025-07-10,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00142,861,2025-09-04,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00143,264,2025-08-07,Web,1,Free plan is way too restricted now.,Restriction
+REV00144,967,2025-05-26,Android,1,Free plan is way too restricted now.,Restriction
+REV00145,557,2025-05-24,Android,1,Free plan is way too restricted now.,Restriction
+REV00146,198,2025-04-07,Web,1,Free plan is way too restricted now.,Restriction
+REV00147,1242,2025-03-25,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00148,800,2025-05-26,Android,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00149,1412,2025-07-29,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00150,972,2025-07-10,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00151,613,2025-11-24,Android,1,Free plan is way too restricted now.,Restriction
+REV00152,109,2025-10-11,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00153,501,2025-11-23,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00154,1155,2025-11-01,iOS,1,Free plan is way too restricted now.,Restriction
+REV00155,1195,2025-08-05,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00156,1114,2025-12-10,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00157,955,2025-10-21,iOS,1,Free plan is way too restricted now.,Restriction
+REV00158,1187,2025-08-25,iOS,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00159,1088,2025-12-12,Web,2,Free plan is way too restricted now.,Restriction
+REV00160,1485,2025-11-27,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00161,914,2025-04-11,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00162,1366,2025-10-10,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00163,295,2025-10-14,Android,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00164,954,2025-04-19,iOS,1,Free plan is way too restricted now.,Restriction
+REV00165,1457,2025-10-20,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00166,231,2025-11-10,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00167,1171,2025-04-12,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00168,1069,2025-02-17,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00169,974,2025-12-06,Web,1,Free plan is way too restricted now.,Restriction
+REV00170,664,2025-08-30,Web,1,Free plan is way too restricted now.,Restriction
+REV00171,670,2025-02-16,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00172,306,2025-09-05,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00173,1213,2025-04-12,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00174,155,2025-08-24,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00175,745,2025-02-11,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00176,1362,2025-08-16,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00177,899,2025-10-15,Android,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00178,144,2025-11-06,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00179,114,2025-07-25,Web,1,Free plan is way too restricted now.,Restriction
+REV00180,435,2025-04-16,Android,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00181,1281,2025-11-11,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00182,828,2025-03-15,Android,2,Free plan is way too restricted now.,Restriction
+REV00183,1453,2025-09-12,Web,1,Free plan is way too restricted now.,Restriction
+REV00184,840,2025-05-06,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00185,437,2025-09-12,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00186,1180,2025-11-17,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00187,732,2025-07-17,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00188,746,2025-10-31,Web,1,Free plan is way too restricted now.,Restriction
+REV00189,1301,2025-05-26,Android,1,Free plan is way too restricted now.,Restriction
+REV00190,758,2025-12-25,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00191,976,2025-02-26,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00192,703,2025-04-02,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00193,1475,2025-12-13,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00194,600,2025-05-17,Android,2,Free plan is way too restricted now.,Restriction
+REV00195,1342,2025-10-15,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00196,1218,2025-07-09,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00197,1489,2025-12-18,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00198,133,2025-12-21,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00199,64,2025-03-25,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00200,416,2025-07-13,iOS,1,Free plan is way too restricted now.,Restriction
+REV00201,433,2025-07-07,Android,1,Free plan is way too restricted now.,Restriction
+REV00202,627,2025-08-10,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00203,1490,2025-12-29,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00204,835,2025-03-04,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00205,333,2025-03-07,Web,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00206,100,2025-11-21,Android,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00207,554,2025-11-11,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00208,8,2025-03-04,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00209,1402,2025-10-16,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00210,658,2025-08-08,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00211,472,2025-09-18,Web,1,Keep hitting the project limit on the free plan.,Restriction
+REV00212,788,2025-07-27,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00213,841,2025-08-30,Web,2,Free plan is way too restricted now.,Restriction
+REV00214,726,2025-04-02,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00215,1169,2025-10-10,iOS,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00216,332,2025-03-06,Web,1,Free plan is way too restricted now.,Restriction
+REV00217,1325,2025-10-07,iOS,1,Free plan is way too restricted now.,Restriction
+REV00218,1116,2025-07-04,iOS,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00219,1252,2025-10-31,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00220,504,2025-06-20,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00221,617,2025-06-02,Android,2,Keep hitting the project limit on the free plan.,Restriction
+REV00222,288,2025-06-02,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00223,856,2025-12-17,Web,2,Free plan is way too restricted now.,Restriction
+REV00224,22,2025-11-29,iOS,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00225,1244,2025-03-29,iOS,1,Free plan is way too restricted now.,Restriction
+REV00226,813,2025-02-20,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00227,90,2025-07-10,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00228,446,2025-05-26,iOS,1,Keep hitting the project limit on the free plan.,Restriction
+REV00229,496,2025-06-13,Web,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00230,77,2025-06-20,Android,1,Keep hitting the project limit on the free plan.,Restriction
+REV00231,1172,2025-03-23,Android,1,Free plan is way too restricted now.,Restriction
+REV00232,410,2025-03-29,iOS,2,Free plan is way too restricted now.,Restriction
+REV00233,830,2025-10-24,Android,1,Keep hitting the project limit on the free plan.,Restriction
+REV00234,1229,2025-06-15,Web,2,Free plan is way too restricted now.,Restriction
+REV00235,203,2025-02-10,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00236,991,2025-12-06,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00237,731,2025-04-09,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00238,740,2025-06-04,Web,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00239,406,2025-04-20,iOS,2,Free plan is way too restricted now.,Restriction
+REV00240,456,2025-09-13,Web,2,Keep hitting the project limit on the free plan.,Restriction
+REV00241,61,2025-10-30,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00242,782,2025-08-21,Android,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00243,1161,2025-02-13,Web,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00244,894,2025-09-12,iOS,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00245,72,2025-03-02,Android,1,Free tier feels unusable after the allowance cut.,Restriction
+REV00246,543,2025-11-27,Android,1,Keep hitting the project limit on the free plan.,Restriction
+REV00247,682,2025-12-02,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00248,797,2025-10-16,Web,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00249,1392,2025-09-03,Android,2,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00250,871,2025-10-21,Web,1,"Used to fit my workflow, now everything gets blocked.",Restriction
+REV00251,1025,2025-08-02,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00252,743,2025-11-09,iOS,2,Keep hitting the project limit on the free plan.,Restriction
+REV00253,1093,2025-02-13,Web,2,Free tier feels unusable after the allowance cut.,Restriction
+REV00254,1111,2025-10-16,Web,3,Can't find basic features after the redesign.,Navigation
+REV00255,129,2025-05-14,Android,3,Can't find basic features after the redesign.,Navigation
+REV00256,317,2025-11-26,iOS,2,Can't find basic features after the redesign.,Navigation
+REV00257,1258,2025-12-25,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00258,1069,2025-09-19,Web,2,Redesign broke my usual workflow.,Navigation
+REV00259,2,2025-12-12,Android,2,Redesign broke my usual workflow.,Navigation
+REV00260,354,2025-04-08,Web,3,Redesign broke my usual workflow.,Navigation
+REV00261,815,2025-09-22,iOS,3,Can't find basic features after the redesign.,Navigation
+REV00262,704,2025-08-17,iOS,3,"New layout is confusing, used to be much easier.",Navigation
+REV00263,1259,2025-05-10,Web,3,Can't find basic features after the redesign.,Navigation
+REV00264,1124,2025-10-30,Android,3,"New layout is confusing, used to be much easier.",Navigation
+REV00265,235,2025-12-12,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00266,966,2025-08-26,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00267,904,2025-10-11,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00268,1182,2025-06-19,Web,2,Can't find basic features after the redesign.,Navigation
+REV00269,470,2025-05-16,iOS,2,Redesign broke my usual workflow.,Navigation
+REV00270,793,2025-07-06,Android,3,"New layout is confusing, used to be much easier.",Navigation
+REV00271,459,2025-09-08,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00272,819,2025-12-10,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00273,745,2025-07-22,Android,2,"New layout is confusing, used to be much easier.",Navigation
+REV00274,149,2025-06-01,Android,2,Takes way longer to do simple things since the update.,Navigation
+REV00275,43,2025-11-13,Web,3,Redesign broke my usual workflow.,Navigation
+REV00276,710,2025-04-02,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00277,277,2025-04-12,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00278,451,2025-04-02,Web,3,Redesign broke my usual workflow.,Navigation
+REV00279,818,2025-05-28,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00280,291,2025-08-27,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00281,719,2025-08-31,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00282,226,2025-10-01,Android,3,Redesign broke my usual workflow.,Navigation
+REV00283,851,2025-08-08,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00284,142,2025-12-13,Web,2,Can't find basic features after the redesign.,Navigation
+REV00285,1261,2025-08-28,iOS,2,Can't find basic features after the redesign.,Navigation
+REV00286,1273,2025-09-22,Android,2,Can't find basic features after the redesign.,Navigation
+REV00287,36,2025-09-16,iOS,2,Can't find basic features after the redesign.,Navigation
+REV00288,554,2025-11-30,iOS,2,Redesign broke my usual workflow.,Navigation
+REV00289,749,2025-10-09,iOS,3,Can't find basic features after the redesign.,Navigation
+REV00290,838,2025-04-12,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00291,978,2025-11-04,Android,3,Can't find basic features after the redesign.,Navigation
+REV00292,957,2025-08-10,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00293,1105,2025-08-30,Web,3,Can't find basic features after the redesign.,Navigation
+REV00294,610,2025-07-03,Android,2,Takes way longer to do simple things since the update.,Navigation
+REV00295,307,2025-06-26,Android,2,Takes way longer to do simple things since the update.,Navigation
+REV00296,562,2025-11-21,Web,2,Can't find basic features after the redesign.,Navigation
+REV00297,1089,2025-08-27,Web,2,Redesign broke my usual workflow.,Navigation
+REV00298,138,2025-05-27,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00299,357,2025-08-10,iOS,2,Redesign broke my usual workflow.,Navigation
+REV00300,1183,2025-09-27,Web,3,Can't find basic features after the redesign.,Navigation
+REV00301,576,2025-09-29,iOS,3,Takes way longer to do simple things since the update.,Navigation
+REV00302,952,2025-10-30,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00303,600,2025-12-12,Android,2,Takes way longer to do simple things since the update.,Navigation
+REV00304,287,2025-04-16,Web,3,Redesign broke my usual workflow.,Navigation
+REV00305,1229,2025-12-25,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00306,596,2025-08-17,iOS,2,Takes way longer to do simple things since the update.,Navigation
+REV00307,1186,2025-11-05,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00308,849,2025-04-08,Web,2,Can't find basic features after the redesign.,Navigation
+REV00309,1313,2025-07-21,iOS,3,Redesign broke my usual workflow.,Navigation
+REV00310,172,2025-06-11,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00311,400,2025-11-20,iOS,3,Can't find basic features after the redesign.,Navigation
+REV00312,758,2025-06-07,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00313,918,2025-05-10,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00314,492,2025-10-28,Android,2,Redesign broke my usual workflow.,Navigation
+REV00315,914,2025-07-07,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00316,449,2025-10-07,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00317,484,2025-09-06,Web,2,Can't find basic features after the redesign.,Navigation
+REV00318,211,2025-12-14,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00319,279,2025-12-05,Web,2,Can't find basic features after the redesign.,Navigation
+REV00320,545,2025-09-24,iOS,2,Takes way longer to do simple things since the update.,Navigation
+REV00321,674,2025-11-19,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00322,911,2025-08-06,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00323,1008,2025-05-08,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00324,821,2025-04-27,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00325,721,2025-11-25,Android,2,"New layout is confusing, used to be much easier.",Navigation
+REV00326,953,2025-06-28,Android,3,"New layout is confusing, used to be much easier.",Navigation
+REV00327,1166,2025-12-02,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00328,1064,2025-05-12,Android,3,Redesign broke my usual workflow.,Navigation
+REV00329,1066,2025-10-24,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00330,585,2025-12-15,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00331,12,2025-06-29,Web,2,Redesign broke my usual workflow.,Navigation
+REV00332,623,2025-05-14,Android,3,Can't find basic features after the redesign.,Navigation
+REV00333,1248,2025-09-09,Web,2,Redesign broke my usual workflow.,Navigation
+REV00334,1194,2025-12-29,Web,2,Redesign broke my usual workflow.,Navigation
+REV00335,29,2025-05-30,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00336,69,2025-06-29,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00337,181,2025-08-10,Web,3,Can't find basic features after the redesign.,Navigation
+REV00338,1266,2025-12-05,Android,3,Can't find basic features after the redesign.,Navigation
+REV00339,1187,2025-08-11,iOS,2,Redesign broke my usual workflow.,Navigation
+REV00340,240,2025-10-17,iOS,3,Redesign broke my usual workflow.,Navigation
+REV00341,541,2025-06-16,Android,2,"New layout is confusing, used to be much easier.",Navigation
+REV00342,518,2025-04-26,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00343,203,2025-06-26,Web,3,Can't find basic features after the redesign.,Navigation
+REV00344,324,2025-04-06,Web,2,Redesign broke my usual workflow.,Navigation
+REV00345,1172,2025-06-24,Android,3,Redesign broke my usual workflow.,Navigation
+REV00346,622,2025-06-27,iOS,3,"New layout is confusing, used to be much easier.",Navigation
+REV00347,1264,2025-06-18,Web,2,Redesign broke my usual workflow.,Navigation
+REV00348,968,2025-06-26,iOS,3,"New layout is confusing, used to be much easier.",Navigation
+REV00349,494,2025-04-27,Web,3,Can't find basic features after the redesign.,Navigation
+REV00350,1099,2025-05-05,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00351,760,2025-08-07,iOS,3,"New layout is confusing, used to be much easier.",Navigation
+REV00352,97,2025-07-13,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00353,1056,2025-06-17,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00354,268,2025-08-29,Android,2,Can't find basic features after the redesign.,Navigation
+REV00355,705,2025-07-05,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00356,84,2025-04-15,Web,2,Can't find basic features after the redesign.,Navigation
+REV00357,429,2025-08-25,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00358,649,2025-11-16,Web,2,Can't find basic features after the redesign.,Navigation
+REV00359,614,2025-09-14,iOS,3,"New layout is confusing, used to be much easier.",Navigation
+REV00360,355,2025-11-06,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00361,611,2025-11-18,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00362,862,2025-11-14,Web,3,Redesign broke my usual workflow.,Navigation
+REV00363,577,2025-06-21,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00364,1199,2025-08-03,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00365,1023,2025-08-03,Web,2,Redesign broke my usual workflow.,Navigation
+REV00366,412,2025-04-11,Web,3,Can't find basic features after the redesign.,Navigation
+REV00367,975,2025-12-16,iOS,2,Takes way longer to do simple things since the update.,Navigation
+REV00368,1045,2025-08-19,iOS,2,Takes way longer to do simple things since the update.,Navigation
+REV00369,655,2025-10-20,Web,3,Can't find basic features after the redesign.,Navigation
+REV00370,146,2025-04-15,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00371,334,2025-11-19,iOS,3,Takes way longer to do simple things since the update.,Navigation
+REV00372,1103,2025-07-30,iOS,2,Can't find basic features after the redesign.,Navigation
+REV00373,77,2025-10-01,Android,3,"New layout is confusing, used to be much easier.",Navigation
+REV00374,959,2025-05-04,Android,2,Takes way longer to do simple things since the update.,Navigation
+REV00375,1296,2025-10-31,iOS,2,Redesign broke my usual workflow.,Navigation
+REV00376,1168,2025-08-30,Web,3,Redesign broke my usual workflow.,Navigation
+REV00377,1149,2025-06-15,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00378,8,2025-07-15,Web,3,Can't find basic features after the redesign.,Navigation
+REV00379,1191,2025-10-15,Android,3,Can't find basic features after the redesign.,Navigation
+REV00380,1169,2025-12-18,iOS,3,Takes way longer to do simple things since the update.,Navigation
+REV00381,715,2025-10-10,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00382,631,2025-11-03,iOS,3,Can't find basic features after the redesign.,Navigation
+REV00383,490,2025-07-06,Android,3,"New layout is confusing, used to be much easier.",Navigation
+REV00384,59,2025-05-14,Android,3,"New layout is confusing, used to be much easier.",Navigation
+REV00385,76,2025-08-25,Web,3,Redesign broke my usual workflow.,Navigation
+REV00386,431,2025-05-20,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00387,757,2025-12-31,iOS,3,Takes way longer to do simple things since the update.,Navigation
+REV00388,220,2025-05-10,Web,3,Redesign broke my usual workflow.,Navigation
+REV00389,46,2025-12-08,Web,2,Redesign broke my usual workflow.,Navigation
+REV00390,689,2025-11-01,Web,2,Redesign broke my usual workflow.,Navigation
+REV00391,296,2025-09-09,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00392,491,2025-10-11,iOS,3,Redesign broke my usual workflow.,Navigation
+REV00393,676,2025-11-15,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00394,476,2025-11-05,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00395,1073,2025-10-10,Web,2,Can't find basic features after the redesign.,Navigation
+REV00396,353,2025-10-14,iOS,2,Takes way longer to do simple things since the update.,Navigation
+REV00397,428,2025-08-07,iOS,3,Redesign broke my usual workflow.,Navigation
+REV00398,1062,2025-05-27,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00399,572,2025-10-02,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00400,659,2025-09-23,Android,3,Redesign broke my usual workflow.,Navigation
+REV00401,162,2025-07-24,Web,3,Can't find basic features after the redesign.,Navigation
+REV00402,905,2025-09-26,Android,2,Takes way longer to do simple things since the update.,Navigation
+REV00403,1159,2025-09-21,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00404,455,2025-06-09,Android,2,"New layout is confusing, used to be much easier.",Navigation
+REV00405,683,2025-11-21,Web,3,Redesign broke my usual workflow.,Navigation
+REV00406,714,2025-05-07,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00407,508,2025-06-24,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00408,1223,2025-09-06,Web,3,"New layout is confusing, used to be much easier.",Navigation
+REV00409,798,2025-06-10,iOS,2,Takes way longer to do simple things since the update.,Navigation
+REV00410,1055,2025-09-02,Web,3,Takes way longer to do simple things since the update.,Navigation
+REV00411,802,2025-07-23,Web,3,Can't find basic features after the redesign.,Navigation
+REV00412,1230,2025-09-10,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00413,845,2025-06-05,Web,2,Redesign broke my usual workflow.,Navigation
+REV00414,1061,2025-05-17,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00415,41,2025-11-03,Android,2,Can't find basic features after the redesign.,Navigation
+REV00416,902,2025-09-05,Android,2,Can't find basic features after the redesign.,Navigation
+REV00417,267,2025-12-18,iOS,3,Takes way longer to do simple things since the update.,Navigation
+REV00418,846,2025-09-14,Web,3,Can't find basic features after the redesign.,Navigation
+REV00419,866,2025-08-11,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00420,134,2025-12-04,iOS,3,Redesign broke my usual workflow.,Navigation
+REV00421,380,2025-10-11,Web,3,Redesign broke my usual workflow.,Navigation
+REV00422,1290,2025-06-03,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00423,538,2025-08-31,iOS,2,Can't find basic features after the redesign.,Navigation
+REV00424,1022,2025-10-07,Android,3,Takes way longer to do simple things since the update.,Navigation
+REV00425,159,2025-07-13,iOS,3,Redesign broke my usual workflow.,Navigation
+REV00426,402,2025-12-27,iOS,2,"New layout is confusing, used to be much easier.",Navigation
+REV00427,1192,2025-12-04,iOS,2,Takes way longer to do simple things since the update.,Navigation
+REV00428,1101,2025-12-09,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00429,987,2025-11-17,Web,3,Redesign broke my usual workflow.,Navigation
+REV00430,865,2025-12-26,Android,3,Can't find basic features after the redesign.,Navigation
+REV00431,34,2025-06-20,Web,3,Can't find basic features after the redesign.,Navigation
+REV00432,825,2025-06-25,Web,2,Can't find basic features after the redesign.,Navigation
+REV00433,855,2025-05-06,iOS,3,Takes way longer to do simple things since the update.,Navigation
+REV00434,1269,2025-07-02,Android,3,Can't find basic features after the redesign.,Navigation
+REV00435,85,2025-11-17,Web,2,Takes way longer to do simple things since the update.,Navigation
+REV00436,124,2025-08-25,Web,2,Redesign broke my usual workflow.,Navigation
+REV00437,880,2025-11-01,Android,2,Redesign broke my usual workflow.,Navigation
+REV00438,806,2025-05-14,Android,2,Takes way longer to do simple things since the update.,Navigation
+REV00439,385,2025-12-31,Web,2,"New layout is confusing, used to be much easier.",Navigation
+REV00440,735,2025-12-31,Android,3,"New layout is confusing, used to be much easier.",Navigation
+REV00441,184,2025-12-04,Android,1,My changes don't sync across devices anymore.,Sync
+REV00442,207,2025-07-22,Android,2,My changes don't sync across devices anymore.,Sync
+REV00443,829,2025-07-12,Android,1,My changes don't sync across devices anymore.,Sync
+REV00444,778,2025-09-20,Android,2,My changes don't sync across devices anymore.,Sync
+REV00445,917,2025-08-20,Android,2,My changes don't sync across devices anymore.,Sync
+REV00446,555,2025-10-30,Android,2,Sync keeps failing since the last app update.,Sync
+REV00447,1318,2025-09-07,Android,1,Sync keeps failing since the last app update.,Sync
+REV00448,80,2025-09-19,Android,2,Sync keeps failing since the last app update.,Sync
+REV00449,315,2025-12-14,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00450,1124,2025-08-23,Android,1,Sync keeps failing since the last app update.,Sync
+REV00451,616,2025-09-07,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00452,348,2025-12-21,Android,1,My changes don't sync across devices anymore.,Sync
+REV00453,1242,2025-08-18,Android,1,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00454,439,2025-11-21,Android,1,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00455,623,2025-08-22,Android,1,My changes don't sync across devices anymore.,Sync
+REV00456,204,2025-12-16,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00457,1058,2025-08-25,Android,2,Constant sync errors on Android lately.,Sync
+REV00458,611,2025-12-26,Android,1,Sync keeps failing since the last app update.,Sync
+REV00459,356,2025-11-26,Android,2,Sync keeps failing since the last app update.,Sync
+REV00460,670,2025-10-16,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00461,383,2025-10-27,Android,2,Sync keeps failing since the last app update.,Sync
+REV00462,1019,2025-12-03,Android,2,Constant sync errors on Android lately.,Sync
+REV00463,1006,2025-09-09,Android,1,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00464,1311,2025-12-03,Android,2,Constant sync errors on Android lately.,Sync
+REV00465,1266,2025-10-16,Android,2,Sync keeps failing since the last app update.,Sync
+REV00466,839,2025-07-08,Android,1,Sync keeps failing since the last app update.,Sync
+REV00467,959,2025-08-12,Android,2,My changes don't sync across devices anymore.,Sync
+REV00468,471,2025-11-01,Android,1,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00469,1015,2025-10-03,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00470,10,2025-08-27,Android,2,My changes don't sync across devices anymore.,Sync
+REV00471,828,2025-08-04,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00472,931,2025-07-02,Android,2,Constant sync errors on Android lately.,Sync
+REV00473,1172,2025-12-09,Android,2,Constant sync errors on Android lately.,Sync
+REV00474,294,2025-08-13,Android,1,My changes don't sync across devices anymore.,Sync
+REV00475,219,2025-09-02,Android,1,Constant sync errors on Android lately.,Sync
+REV00476,1463,2025-10-19,Android,1,My changes don't sync across devices anymore.,Sync
+REV00477,531,2025-12-21,Android,2,My changes don't sync across devices anymore.,Sync
+REV00478,1056,2025-12-11,Android,2,Sync keeps failing since the last app update.,Sync
+REV00479,478,2025-08-12,Android,2,Constant sync errors on Android lately.,Sync
+REV00480,1472,2025-12-27,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00481,11,2025-12-31,Android,1,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00482,1064,2025-12-23,Android,1,Constant sync errors on Android lately.,Sync
+REV00483,210,2025-08-29,Android,2,Constant sync errors on Android lately.,Sync
+REV00484,941,2025-12-04,Android,2,Constant sync errors on Android lately.,Sync
+REV00485,874,2025-08-20,Android,1,Constant sync errors on Android lately.,Sync
+REV00486,442,2025-09-07,Android,2,Sync keeps failing since the last app update.,Sync
+REV00487,1412,2025-10-30,Android,2,Sync keeps failing since the last app update.,Sync
+REV00488,1301,2025-09-13,Android,1,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00489,51,2025-08-12,Android,1,Constant sync errors on Android lately.,Sync
+REV00490,1342,2025-09-05,Android,1,Constant sync errors on Android lately.,Sync
+REV00491,902,2025-08-19,Android,1,Sync keeps failing since the last app update.,Sync
+REV00492,982,2025-07-13,Android,2,Constant sync errors on Android lately.,Sync
+REV00493,378,2025-09-20,Android,2,Sync keeps failing since the last app update.,Sync
+REV00494,556,2025-12-28,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00495,1275,2025-09-04,Android,2,Sync keeps failing since the last app update.,Sync
+REV00496,999,2025-10-02,Android,2,My changes don't sync across devices anymore.,Sync
+REV00497,1338,2025-07-02,Android,1,My changes don't sync across devices anymore.,Sync
+REV00498,506,2025-10-30,Android,2,My changes don't sync across devices anymore.,Sync
+REV00499,997,2025-08-05,Android,2,"Tasks disappear and reappear, sync is unreliable.",Sync
+REV00500,1097,2025-08-29,Android,2,Sync keeps failing since the last app update.,Sync
+REV00501,688,2025-09-29,Android,1,Sync keeps failing since the last app update.,Sync
+REV00502,783,2025-10-13,Android,1,My changes don't sync across devices anymore.,Sync
+REV00503,1123,2025-12-25,Android,1,My changes don't sync across devices anymore.,Sync
+REV00504,1138,2025-10-19,Android,2,Sync keeps failing since the last app update.,Sync
+REV00505,1193,2025-09-02,Android,1,My changes don't sync across devices anymore.,Sync
+REV00506,827,2025-11-30,Android,2,Constant sync errors on Android lately.,Sync
+REV00507,1217,2025-11-05,Android,1,Constant sync errors on Android lately.,Sync
+REV00508,30,2025-11-02,Android,1,Constant sync errors on Android lately.,Sync
+REV00509,468,2025-12-14,Android,2,My changes don't sync across devices anymore.,Sync
+REV00510,865,2025-07-16,Android,1,Sync keeps failing since the last app update.,Sync
+REV00511,409,2025-12-09,Web,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00512,211,2025-07-09,Web,1,Too expensive for what you actually get now.,Price
+REV00513,31,2025-05-09,Web,1,Price went up but I don't see the extra value.,Price
+REV00514,141,2025-04-02,Android,2,Too expensive for what you actually get now.,Price
+REV00515,1322,2025-12-31,Web,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00516,59,2025-04-05,Android,2,Too expensive for what you actually get now.,Price
+REV00517,250,2025-05-01,Web,1,"Pro used to be worth it, not anymore at this price.",Price
+REV00518,10,2025-06-03,Android,2,Too expensive for what you actually get now.,Price
+REV00519,994,2025-07-09,Web,2,Too expensive for what you actually get now.,Price
+REV00520,253,2025-07-07,Android,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00521,830,2025-08-08,Android,1,Too expensive for what you actually get now.,Price
+REV00522,411,2025-08-08,iOS,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00523,942,2025-10-09,Web,1,Price went up but I don't see the extra value.,Price
+REV00524,314,2025-12-07,iOS,1,"Pro used to be worth it, not anymore at this price.",Price
+REV00525,509,2025-12-31,Android,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00526,450,2025-08-02,Web,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00527,654,2025-12-31,Web,1,"Pro used to be worth it, not anymore at this price.",Price
+REV00528,1059,2025-05-07,iOS,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00529,500,2025-09-09,Web,1,Too expensive for what you actually get now.,Price
+REV00530,127,2025-06-06,Web,2,Price went up but I don't see the extra value.,Price
+REV00531,112,2025-09-04,iOS,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00532,306,2025-08-07,Android,1,Too expensive for what you actually get now.,Price
+REV00533,1001,2025-06-05,Web,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00534,578,2025-04-05,Web,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00535,452,2025-05-02,Web,1,"Pro used to be worth it, not anymore at this price.",Price
+REV00536,662,2025-09-02,Android,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00537,15,2025-06-30,Android,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00538,713,2025-05-05,Android,2,Too expensive for what you actually get now.,Price
+REV00539,546,2025-07-06,Android,2,Too expensive for what you actually get now.,Price
+REV00540,749,2025-04-09,iOS,1,"Pro used to be worth it, not anymore at this price.",Price
+REV00541,1317,2025-08-07,iOS,2,Price went up but I don't see the extra value.,Price
+REV00542,803,2025-04-04,Web,1,"Pro used to be worth it, not anymore at this price.",Price
+REV00543,797,2025-04-07,Web,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00544,1050,2025-09-03,iOS,2,Too expensive for what you actually get now.,Price
+REV00545,352,2025-12-08,Android,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00546,636,2025-12-31,iOS,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00547,385,2025-10-31,Web,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00548,165,2025-10-03,Web,2,Price went up but I don't see the extra value.,Price
+REV00549,420,2025-09-04,Web,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00550,23,2025-05-04,Android,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00551,66,2025-10-08,Web,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00552,1087,2025-11-09,iOS,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00553,639,2025-07-03,iOS,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00554,42,2025-12-31,iOS,1,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00555,1043,2025-07-09,iOS,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00556,985,2025-05-05,Web,2,Price went up but I don't see the extra value.,Price
+REV00557,1209,2025-10-07,Android,2,Too expensive for what you actually get now.,Price
+REV00558,501,2025-10-01,iOS,2,"Pro used to be worth it, not anymore at this price.",Price
+REV00559,137,2025-09-05,Android,2,"Cancelled after the renewal price increase, not worth it anymore.",Price
+REV00560,1092,2025-03-31,Web,1,"Pro used to be worth it, not anymore at this price.",Price
+REV00561,1438,2025-11-30,iOS,2,Way too many steps just to subscribe.,Checkout
+REV00562,1113,2025-12-26,Web,3,"Checkout has too many steps now, gave up halfway.",Checkout
+REV00563,44,2025-07-09,Web,3,"Checkout has too many steps now, gave up halfway.",Checkout
+REV00564,766,2025-08-09,Web,3,Way too many steps just to subscribe.,Checkout
+REV00565,15,2025-12-27,Android,2,"Abandoned my upgrade, checkout was too long.",Checkout
+REV00566,1009,2025-08-03,iOS,2,"Checkout has too many steps now, gave up halfway.",Checkout
+REV00567,155,2025-06-20,Web,3,Way too many steps just to subscribe.,Checkout
+REV00568,858,2025-09-28,Web,2,Tried to upgrade but the payment process kept redirecting me.,Checkout
+REV00569,776,2025-08-17,Web,2,Tried to upgrade but the payment process kept redirecting me.,Checkout
+REV00570,1323,2025-07-16,iOS,3,"Checkout has too many steps now, gave up halfway.",Checkout
+REV00571,961,2025-09-20,Android,3,Way too many steps just to subscribe.,Checkout
+REV00572,669,2025-12-16,iOS,3,"Abandoned my upgrade, checkout was too long.",Checkout
+REV00573,660,2025-09-19,Web,2,"Abandoned my upgrade, checkout was too long.",Checkout
+REV00574,625,2025-07-25,Web,3,Tried to upgrade but the payment process kept redirecting me.,Checkout
+REV00575,1395,2025-07-23,Web,3,"Checkout has too many steps now, gave up halfway.",Checkout
+REV00576,529,2025-12-29,Android,2,Way too many steps just to subscribe.,Checkout
+REV00577,1054,2025-11-18,iOS,3,"Checkout has too many steps now, gave up halfway.",Checkout
+REV00578,1372,2025-08-09,Android,3,Way too many steps just to subscribe.,Checkout
+REV00579,1414,2025-12-07,iOS,3,"Abandoned my upgrade, checkout was too long.",Checkout
+REV00580,1359,2025-09-14,Web,2,"Checkout has too many steps now, gave up halfway.",Checkout
+REV00581,1276,2025-06-30,Android,3,Tried to upgrade but the payment process kept redirecting me.,Checkout
+REV00582,1297,2025-12-23,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00583,1462,2025-10-20,iOS,5,Solid app for personal productivity.,Positive / other
+REV00584,1250,2025-09-02,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00585,1061,2025-06-19,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00586,58,2024-12-09,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00587,63,2024-04-22,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00588,691,2024-07-13,iOS,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00589,1103,2025-03-07,iOS,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00590,572,2025-06-28,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00591,748,2025-03-27,iOS,4,"Clean interface, easy to use every day.",Positive / other
+REV00592,648,2025-02-03,iOS,4,Solid app for personal productivity.,Positive / other
+REV00593,46,2025-05-22,Web,5,Solid app for personal productivity.,Positive / other
+REV00594,990,2025-07-24,Android,5,"Clean interface, easy to use every day.",Positive / other
+REV00595,65,2023-07-01,iOS,4,Solid app for personal productivity.,Positive / other
+REV00596,945,2025-05-12,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00597,1097,2025-08-31,Android,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00598,10,2023-05-22,Android,5,"Clean interface, easy to use every day.",Positive / other
+REV00599,334,2025-05-07,iOS,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00600,857,2024-09-01,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00601,1011,2025-03-09,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00602,528,2024-03-10,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00603,156,2023-12-08,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00604,896,2024-11-28,iOS,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00605,392,2025-07-05,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00606,296,2025-07-18,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00607,924,2025-03-09,iOS,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00608,202,2023-08-10,iOS,4,"Clean interface, easy to use every day.",Positive / other
+REV00609,228,2025-10-01,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00610,333,2024-11-19,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00611,1143,2025-11-16,Android,4,"Clean interface, easy to use every day.",Positive / other
+REV00612,1457,2025-11-11,Android,4,"Clean interface, easy to use every day.",Positive / other
+REV00613,688,2024-07-18,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00614,900,2025-11-15,Web,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00615,244,2024-05-27,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00616,519,2024-04-30,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00617,1371,2025-06-25,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00618,655,2025-11-21,Web,5,Solid app for personal productivity.,Positive / other
+REV00619,5,2023-08-03,Android,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00620,226,2025-07-28,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00621,138,2024-06-19,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00622,1340,2025-06-12,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00623,109,2025-08-18,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00624,1247,2025-09-08,iOS,4,Solid app for personal productivity.,Positive / other
+REV00625,1000,2025-03-02,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00626,1125,2025-03-02,iOS,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00627,1201,2025-06-13,iOS,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00628,897,2025-02-08,iOS,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00629,117,2025-07-23,Web,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00630,52,2023-07-10,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00631,1113,2025-05-24,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00632,512,2025-02-19,Android,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00633,86,2023-07-29,iOS,4,Solid app for personal productivity.,Positive / other
+REV00634,91,2025-11-09,Android,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00635,1491,2025-12-24,iOS,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00636,115,2025-05-03,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00637,1380,2025-12-25,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00638,299,2024-03-15,Android,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00639,1162,2025-08-25,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00640,18,2025-05-29,iOS,5,Solid app for personal productivity.,Positive / other
+REV00641,1151,2025-04-07,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00642,435,2025-01-11,Android,4,Solid app for personal productivity.,Positive / other
+REV00643,1068,2025-09-04,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00644,672,2024-09-06,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00645,345,2023-12-01,Web,4,Solid app for personal productivity.,Positive / other
+REV00646,314,2025-09-30,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00647,1405,2025-07-12,iOS,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00648,263,2024-05-16,Web,4,Solid app for personal productivity.,Positive / other
+REV00649,741,2025-03-20,Android,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00650,1454,2025-10-30,iOS,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00651,262,2025-04-22,Android,4,"Clean interface, easy to use every day.",Positive / other
+REV00652,957,2025-10-20,Android,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00653,1276,2025-06-24,Android,5,Solid app for personal productivity.,Positive / other
+REV00654,1238,2025-09-11,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00655,308,2025-12-18,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00656,11,2023-09-15,Android,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00657,1235,2025-12-12,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00658,267,2024-11-28,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00659,232,2023-12-31,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00660,1185,2025-07-26,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00661,1430,2025-11-03,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00662,918,2025-05-30,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00663,677,2025-04-01,Android,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00664,958,2024-12-22,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00665,973,2025-03-20,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00666,780,2025-01-07,iOS,5,Solid app for personal productivity.,Positive / other
+REV00667,1172,2025-05-09,Android,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00668,1231,2025-09-01,Android,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00669,1015,2025-09-17,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00670,750,2025-05-04,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00671,394,2024-09-17,Android,5,"Clean interface, easy to use every day.",Positive / other
+REV00672,603,2024-05-08,iOS,4,"Clean interface, easy to use every day.",Positive / other
+REV00673,1274,2025-06-24,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00674,565,2024-05-26,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00675,703,2024-12-04,Web,5,Solid app for personal productivity.,Positive / other
+REV00676,542,2024-08-31,Android,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00677,1034,2025-11-23,iOS,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00678,534,2024-06-04,iOS,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00679,1347,2025-10-26,iOS,4,"Clean interface, easy to use every day.",Positive / other
+REV00680,290,2025-02-14,iOS,4,"Clean interface, easy to use every day.",Positive / other
+REV00681,61,2023-12-14,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00682,1484,2025-11-20,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00683,303,2023-11-10,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00684,161,2024-02-02,iOS,4,Solid app for personal productivity.,Positive / other
+REV00685,1377,2025-06-12,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00686,968,2025-01-13,iOS,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00687,1071,2025-01-08,Web,5,Solid app for personal productivity.,Positive / other
+REV00688,163,2025-03-02,iOS,4,Solid app for personal productivity.,Positive / other
+REV00689,1032,2025-05-08,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00690,146,2024-11-12,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00691,1193,2025-02-24,Android,4,"Clean interface, easy to use every day.",Positive / other
+REV00692,1316,2025-11-25,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00693,836,2024-09-12,Android,4,Solid app for personal productivity.,Positive / other
+REV00694,858,2025-01-06,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00695,492,2024-08-31,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00696,1343,2025-11-15,Web,5,Solid app for personal productivity.,Positive / other
+REV00697,162,2025-02-09,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00698,98,2024-03-12,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00699,248,2024-12-13,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00700,965,2025-08-15,iOS,4,Solid app for personal productivity.,Positive / other
+REV00701,1264,2025-09-03,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00702,165,2025-07-22,Web,5,Solid app for personal productivity.,Positive / other
+REV00703,641,2025-03-19,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00704,220,2025-02-05,Web,4,Solid app for personal productivity.,Positive / other
+REV00705,29,2025-04-03,Web,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00706,1042,2025-06-24,Web,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00707,686,2024-12-24,Android,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00708,260,2024-08-23,Android,4,Solid app for personal productivity.,Positive / other
+REV00709,847,2025-06-12,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00710,72,2024-06-27,Android,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00711,417,2024-08-30,Android,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00712,592,2025-02-09,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00713,495,2024-06-05,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00714,840,2025-12-23,iOS,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00715,841,2025-12-14,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00716,1475,2025-11-04,iOS,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00717,1036,2025-01-30,iOS,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00718,1072,2025-05-28,iOS,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00719,1396,2025-10-14,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00720,1119,2025-11-11,Android,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00721,1304,2025-12-08,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00722,952,2025-04-23,Web,5,Solid app for personal productivity.,Positive / other
+REV00723,152,2024-10-27,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00724,1342,2025-06-21,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00725,425,2025-01-13,Android,4,Solid app for personal productivity.,Positive / other
+REV00726,1012,2025-08-27,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00727,1033,2025-04-26,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00728,175,2025-01-05,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00729,49,2025-10-31,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00730,936,2025-06-26,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00731,1285,2025-07-16,iOS,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00732,1296,2025-06-17,iOS,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00733,783,2025-05-13,Android,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00734,15,2023-09-13,Android,4,"Clean interface, easy to use every day.",Positive / other
+REV00735,1338,2025-08-06,Android,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00736,989,2025-05-04,Web,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00737,933,2025-01-17,Web,5,Solid app for personal productivity.,Positive / other
+REV00738,1078,2025-04-03,iOS,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00739,1198,2025-12-25,Web,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00740,301,2025-04-16,Android,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00741,521,2024-08-08,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00742,1369,2025-12-05,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00743,1308,2025-10-01,Android,5,Solid app for personal productivity.,Positive / other
+REV00744,454,2025-10-16,Android,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00745,1291,2025-12-23,iOS,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00746,1272,2025-06-29,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00747,148,2024-03-05,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00748,879,2025-05-09,Android,5,Solid app for personal productivity.,Positive / other
+REV00749,205,2023-11-11,Web,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00750,1173,2025-02-17,Web,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00751,397,2025-03-11,Web,5,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00752,297,2024-03-25,iOS,5,Solid app for personal productivity.,Positive / other
+REV00753,934,2025-08-18,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00754,171,2024-07-31,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00755,1359,2025-06-27,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00756,408,2025-10-25,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00757,577,2025-04-18,iOS,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00758,372,2024-05-23,Web,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00759,614,2024-08-28,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00760,938,2025-12-15,Web,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00761,1421,2025-09-29,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00762,1161,2025-05-29,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00763,398,2025-07-24,iOS,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00764,180,2024-07-17,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00765,121,2025-09-26,Android,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00766,108,2025-11-30,iOS,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00767,323,2025-06-15,Web,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00768,4,2023-06-25,Web,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00769,401,2024-11-06,iOS,4,Solid app for personal productivity.,Positive / other
+REV00770,40,2025-06-06,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00771,23,2024-03-22,Android,4,"Clean interface, easy to use every day.",Positive / other
+REV00772,1309,2025-07-02,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00773,50,2025-07-29,iOS,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00774,1256,2025-09-14,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00775,135,2024-12-02,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00776,288,2025-11-14,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00777,416,2024-05-15,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00778,1468,2025-10-12,Web,5,"Great reminders feature, keeps me on track.",Positive / other
+REV00779,159,2024-07-20,iOS,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00780,674,2025-11-15,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00781,128,2023-05-18,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00782,1433,2025-09-28,Web,5,Solid app for personal productivity.,Positive / other
+REV00783,657,2024-09-06,Web,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00784,1135,2025-02-21,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00785,1415,2025-10-05,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00786,983,2025-09-12,iOS,5,Does exactly what I need for daily task tracking.,Positive / other
+REV00787,324,2024-05-30,Web,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00788,1066,2025-01-22,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00789,112,2023-04-21,iOS,4,"Clean interface, easy to use every day.",Positive / other
+REV00790,424,2025-11-20,iOS,4,Solid app for personal productivity.,Positive / other
+REV00791,1136,2025-04-01,iOS,5,Solid app for personal productivity.,Positive / other
+REV00792,985,2025-04-12,Web,5,Solid app for personal productivity.,Positive / other
+REV00793,557,2024-06-16,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00794,107,2025-07-23,iOS,5,Solid app for personal productivity.,Positive / other
+REV00795,1490,2025-12-23,iOS,5,"Clean interface, easy to use every day.",Positive / other
+REV00796,1214,2025-03-18,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00797,668,2025-09-09,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00798,6,2024-02-26,Android,4,"Great reminders feature, keeps me on track.",Positive / other
+REV00799,1126,2025-06-06,Web,4,"Simple and reliable, exactly what I want from a task app.",Positive / other
+REV00800,916,2025-02-04,Web,5,"Clean interface, easy to use every day.",Positive / other
+REV00801,1025,2025-08-06,Web,4,Does exactly what I need for daily task tracking.,Positive / other
+REV00802,769,2025-10-22,Android,5,Solid app for personal productivity.,Positive / other
+REV00803,974,2025-02-05,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00804,496,2025-10-31,Web,4,"Clean interface, easy to use every day.",Positive / other
+REV00805,1212,2025-11-22,Web,5,Solid app for personal productivity.,Positive / other

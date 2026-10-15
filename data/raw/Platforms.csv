@@ -1,0 +1,4 @@
+platform_id,platform_name,platform_type
+PLAT01,Web,Web
+PLAT02,iOS,Mobile
+PLAT03,Android,Mobile

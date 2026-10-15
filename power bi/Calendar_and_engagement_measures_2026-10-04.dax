@@ -1,0 +1,151 @@
+// Five individual measure definitions applied during the 4 October live revision.
+// Author separately in the _Measures table; this is not a single executable DAX query.
+
+// Eligible account-month observations in selected complete calendar outcome months, February 2023 to December 2025. Registered by the prior month's first day and open at outcome-month start; groups are deleted during outcome month or retained through month end. Users can repeat across months. Existing outcome axis is retained; legacy imported comparison rows are not counted. Partial calendar selections return blank.
+Deletion Comparison Observations =
+VAR SelectedOutcomeMonths =
+    FILTER ( VALUES ( 'Date'[Month Start] ), NOT ISBLANK ( 'Date'[Month Start] ) )
+VAR SelectedDates =
+    FILTER ( VALUES ( 'Date'[date] ), NOT ISBLANK ( 'Date'[date] ) )
+VAR IsFullCalendarSelection =
+    COUNTROWS ( SelectedOutcomeMonths ) > 0
+        && COUNTROWS ( SelectedDates )
+            = SUMX ( SelectedOutcomeMonths, DAY ( EOMONTH ( 'Date'[Month Start], 0 ) ) )
+VAR ValidOutcomeMonths =
+    FILTER (
+        SelectedOutcomeMonths,
+        EDATE ( 'Date'[Month Start], -1 ) >= DATE ( 2023, 1, 1 )
+            && EOMONTH ( 'Date'[Month Start], 0 ) <= DATE ( 2025, 12, 31 )
+    )
+VAR SelectedOutcomes =
+    CALCULATETABLE (
+        VALUES ( 'Deletion Comparison'[outcome] ),
+        REMOVEFILTERS ( 'Date' )
+    )
+VAR ScopedAccounts =
+    CALCULATETABLE (
+        SELECTCOLUMNS (
+            'Users',
+            "AccountId", 'Users'[user_id],
+            "RegisteredOn", 'Users'[registration_date],
+            "DeletedOn", 'Users'[account_deletion_date]
+        ),
+        REMOVEFILTERS ( 'Date' )
+    )
+RETURN
+    IF (
+        IsFullCalendarSelection && COUNTROWS ( ValidOutcomeMonths ) > 0,
+        SUMX (
+            ValidOutcomeMonths,
+            VAR OutcomeMonthStart = 'Date'[Month Start]
+            VAR PriorMonthStart = EDATE ( OutcomeMonthStart, -1 )
+            VAR FollowingMonthStart = EDATE ( OutcomeMonthStart, 1 )
+            VAR EligibleGroupAccounts =
+                FILTER (
+                    ScopedAccounts,
+                    NOT ISBLANK ( [AccountId] )
+                        && NOT ISBLANK ( [RegisteredOn] )
+                        && [RegisteredOn] <= PriorMonthStart
+                        && ( ISBLANK ( [DeletedOn] ) || [DeletedOn] >= OutcomeMonthStart )
+                        && (
+                            (
+                                NOT ISBLANK ( [DeletedOn] )
+                                    && [DeletedOn] >= OutcomeMonthStart
+                                    && [DeletedOn] < FollowingMonthStart
+                                    && CONTAINSROW ( SelectedOutcomes, "Deleted this month" )
+                            )
+                                || (
+                                    ( ISBLANK ( [DeletedOn] ) || [DeletedOn] >= FollowingMonthStart )
+                                        && CONTAINSROW ( SelectedOutcomes, "Retained through month end" )
+                                )
+                        )
+                )
+            RETURN COUNTROWS ( EligibleGroupAccounts )
+        )
+    )
+
+// Eligible outcome account-months with at least one recorded action_blocked, allowance_reached, sync_failed or action_failed during the full preceding calendar month [prior month start, outcome month start). Same eligibility, scope and complete-month guard as Deletion Comparison Observations. User/platform filters are retained; absence of recorded friction does not establish complete tracking.
+Observations with Prior Friction =
+VAR SelectedOutcomeMonths =
+    FILTER ( VALUES ( 'Date'[Month Start] ), NOT ISBLANK ( 'Date'[Month Start] ) )
+VAR SelectedDates =
+    FILTER ( VALUES ( 'Date'[date] ), NOT ISBLANK ( 'Date'[date] ) )
+VAR IsFullCalendarSelection =
+    COUNTROWS ( SelectedOutcomeMonths ) > 0
+        && COUNTROWS ( SelectedDates )
+            = SUMX ( SelectedOutcomeMonths, DAY ( EOMONTH ( 'Date'[Month Start], 0 ) ) )
+VAR ValidOutcomeMonths =
+    FILTER (
+        SelectedOutcomeMonths,
+        EDATE ( 'Date'[Month Start], -1 ) >= DATE ( 2023, 1, 1 )
+            && EOMONTH ( 'Date'[Month Start], 0 ) <= DATE ( 2025, 12, 31 )
+    )
+VAR SelectedOutcomes =
+    CALCULATETABLE (
+        VALUES ( 'Deletion Comparison'[outcome] ),
+        REMOVEFILTERS ( 'Date' )
+    )
+VAR ScopedAccounts =
+    CALCULATETABLE (
+        SELECTCOLUMNS (
+            'Users',
+            "AccountId", 'Users'[user_id],
+            "RegisteredOn", 'Users'[registration_date],
+            "DeletedOn", 'Users'[account_deletion_date]
+        ),
+        REMOVEFILTERS ( 'Date' )
+    )
+RETURN
+    IF (
+        IsFullCalendarSelection && COUNTROWS ( ValidOutcomeMonths ) > 0,
+        SUMX (
+            ValidOutcomeMonths,
+            VAR OutcomeMonthStart = 'Date'[Month Start]
+            VAR PriorMonthStart = EDATE ( OutcomeMonthStart, -1 )
+            VAR FollowingMonthStart = EDATE ( OutcomeMonthStart, 1 )
+            VAR EligibleGroupAccounts =
+                FILTER (
+                    ScopedAccounts,
+                    NOT ISBLANK ( [AccountId] )
+                        && NOT ISBLANK ( [RegisteredOn] )
+                        && [RegisteredOn] <= PriorMonthStart
+                        && ( ISBLANK ( [DeletedOn] ) || [DeletedOn] >= OutcomeMonthStart )
+                        && (
+                            (
+                                NOT ISBLANK ( [DeletedOn] )
+                                    && [DeletedOn] >= OutcomeMonthStart
+                                    && [DeletedOn] < FollowingMonthStart
+                                    && CONTAINSROW ( SelectedOutcomes, "Deleted this month" )
+                            )
+                                || (
+                                    ( ISBLANK ( [DeletedOn] ) || [DeletedOn] >= FollowingMonthStart )
+                                        && CONTAINSROW ( SelectedOutcomes, "Retained through month end" )
+                                )
+                        )
+                )
+            VAR EligibleAccountIds =
+                SELECTCOLUMNS ( EligibleGroupAccounts, "AccountId", [AccountId] )
+            VAR FrictionAccountIds =
+                CALCULATETABLE (
+                    VALUES ( 'Activity Events'[user_id] ),
+                    REMOVEFILTERS ( 'Date' ),
+                    'Activity Events'[event_date] >= PriorMonthStart,
+                    'Activity Events'[event_date] < OutcomeMonthStart,
+                    'Activity Events'[action]
+                        IN { "action_blocked", "allowance_reached", "sync_failed", "action_failed" }
+                )
+            RETURN COUNTROWS ( INTERSECT ( EligibleAccountIds, FrictionAccountIds ) )
+        )
+    )
+
+// Pooled eligible account-months with recorded friction in the full preceding calendar month divided by eligible account-months within each selected outcome group. February 2023 to December 2025 outcome coverage; partial selected months return blank. Retained people can repeat and later enter the deleted group. Descriptive association only; no causal inference or complete-tracking claim.
+Prior Friction Share =
+DIVIDE ( [Observations with Prior Friction], [Deletion Comparison Observations] )
+
+// Distinct users with at least one successful meaningful action divided by distinct users with any recorded event in the same selected scope. The denominator represents recorded activity, not all registered users or proof of complete tracking; zero denominator returns blank.
+Meaningful Active Share =
+DIVIDE ( [Meaningfully Active Users], [Active Users] )
+
+// Recorded first and repeat Pro upgrade movements in the selected complete calendar months. Adds entry movements for the subscriber ledger, not unique purchasers or a conversion rate. Inherits the existing monthly movement completeness guard.
+Pro Entries =
+[First Pro Upgrades] + [Repeat Pro Upgrades]

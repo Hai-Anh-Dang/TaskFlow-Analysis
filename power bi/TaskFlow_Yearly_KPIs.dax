@@ -1,0 +1,177 @@
+// TaskFlow annual KPI authoring pack. Prepared 2 October 2026.
+// Create the table in Modeling > New table. Then create EACH measure separately.
+// This is an authoring pack, not a single executable DAX query.
+// Existing monthly measures remain unchanged. Put new measures in _Measures.
+// Known complete historical coverage: 2023-01-01 through 2025-12-31.
+
+// CALCULATED TABLE: leave disconnected; no relationships.
+KPI Year =
+DISTINCT (
+    SELECTCOLUMNS (
+        FILTER ( 'Date', 'Date'[year] >= 2023 && 'Date'[year] <= 2025 ),
+        "Year", 'Date'[year]
+    )
+)
+
+// HELPER MEASURE: one complete, supported year; otherwise BLANK.
+KPI Selected Year =
+VAR Y = SELECTEDVALUE ( 'KPI Year'[Year] )
+VAR YearStartDate = IF ( NOT ISBLANK ( Y ), DATE ( Y, 1, 1 ) )
+VAR YearEndDate = IF ( NOT ISBLANK ( Y ), DATE ( Y, 12, 31 ) )
+VAR CoveredDays =
+    CALCULATE (
+        DISTINCTCOUNT ( 'Date'[date] ),
+        REMOVEFILTERS ( 'Date' ),
+        'Date'[year] = Y
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y )
+            && Y >= 2023 && Y <= 2025
+            && CoveredDays = DATEDIFF ( YearStartDate, YearEndDate, DAY ) + 1,
+        Y
+    )
+
+// MAIN CARD 1: registrations during the whole selected year.
+Yearly New Users =
+VAR Y = [KPI Selected Year]
+RETURN
+    IF (
+        NOT ISBLANK ( Y ),
+        CALCULATE ( [New Users], REMOVEFILTERS ( 'Date' ), 'Date'[year] = Y )
+    )
+
+// MAIN CARD 2: distinct users across the year, not a sum of monthly users.
+Yearly Active Users =
+VAR Y = [KPI Selected Year]
+RETURN
+    IF (
+        NOT ISBLANK ( Y ),
+        CALCULATE ( [Active Users], REMOVEFILTERS ( 'Date' ), 'Date'[year] = Y )
+    )
+
+// MAIN CARD 3: carried-forward December closing stock, not annual summed balances.
+Yearly Closing Pro Subscribers =
+VAR Y = [KPI Selected Year]
+RETURN
+    IF (
+        NOT ISBLANK ( Y ),
+        CALCULATE (
+            [Closing Pro Subscribers],
+            REMOVEFILTERS ( 'Date' ),
+            'Date'[year] = Y
+        )
+    )
+
+// CANCELLATION DENOMINATOR: Pro subscribers carried into 1 January.
+Yearly Opening Pro Subscribers =
+VAR Y = [KPI Selected Year]
+VAR JanuaryStart = IF ( NOT ISBLANK ( Y ), DATE ( Y, 1, 1 ) )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ),
+        COALESCE (
+            CALCULATE (
+                DISTINCTCOUNT ( 'User Month'[user_id] ),
+                REMOVEFILTERS ( 'Date' ),
+                'Date'[date] = JanuaryStart,
+                'User Month'[opening_pro] = 1
+            ),
+            0
+        )
+    )
+
+// CANCELLATION NUMERATOR: opening-year Pro users with at least one paid cancellation
+// during the year. Count each user once, including a returning opener who cancels again.
+// New paid joiners and deletion-only exits do not belong in this numerator.
+Yearly Opening Pro Users Cancelled =
+VAR Y = [KPI Selected Year]
+VAR JanuaryStart = IF ( NOT ISBLANK ( Y ), DATE ( Y, 1, 1 ) )
+VAR OpeningUsers =
+    CALCULATETABLE (
+        VALUES ( 'User Month'[user_id] ),
+        REMOVEFILTERS ( 'Date' ),
+        'Date'[date] = JanuaryStart,
+        'User Month'[opening_pro] = 1
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ),
+        COALESCE (
+            CALCULATE (
+                DISTINCTCOUNT ( 'User Month'[user_id] ),
+                REMOVEFILTERS ( 'Date' ),
+                'Date'[year] = Y,
+                'User Month'[pro_cancellations] > 0,
+                KEEPFILTERS ( TREATAS ( OpeningUsers, 'User Month'[user_id] ) )
+            ),
+            0
+        )
+    )
+
+// MAIN CARD 4: opening-year cohort probability of at least one paid cancellation.
+// Display title: Opening-year Pro cancellation rate.
+Yearly Paid Cancellation Rate =
+DIVIDE ( [Yearly Opening Pro Users Cancelled], [Yearly Opening Pro Subscribers] )
+
+// ANNUAL COMPARISONS: change the disconnected year, not only the Date filter.
+// Missing or zero prior count baselines return BLANK.
+Yearly New Users YoY % =
+VAR Y = [KPI Selected Year]
+VAR CurrentValue = [Yearly New Users]
+VAR PreviousValue =
+    CALCULATE (
+        [Yearly New Users],
+        REMOVEFILTERS ( 'KPI Year' ),
+        'KPI Year'[Year] = Y - 1
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ) && NOT ISBLANK ( CurrentValue ) && NOT ISBLANK ( PreviousValue ),
+        DIVIDE ( CurrentValue - PreviousValue, PreviousValue )
+    )
+
+Yearly Active Users YoY % =
+VAR Y = [KPI Selected Year]
+VAR CurrentValue = [Yearly Active Users]
+VAR PreviousValue =
+    CALCULATE (
+        [Yearly Active Users],
+        REMOVEFILTERS ( 'KPI Year' ),
+        'KPI Year'[Year] = Y - 1
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ) && NOT ISBLANK ( CurrentValue ) && NOT ISBLANK ( PreviousValue ),
+        DIVIDE ( CurrentValue - PreviousValue, PreviousValue )
+    )
+
+Yearly Closing Pro Subscribers YoY % =
+VAR Y = [KPI Selected Year]
+VAR CurrentValue = [Yearly Closing Pro Subscribers]
+VAR PreviousValue =
+    CALCULATE (
+        [Yearly Closing Pro Subscribers],
+        REMOVEFILTERS ( 'KPI Year' ),
+        'KPI Year'[Year] = Y - 1
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ) && NOT ISBLANK ( CurrentValue ) && NOT ISBLANK ( PreviousValue ),
+        DIVIDE ( CurrentValue - PreviousValue, PreviousValue )
+    )
+
+Yearly Paid Cancellation Rate YoY pp =
+VAR Y = [KPI Selected Year]
+VAR CurrentValue = [Yearly Paid Cancellation Rate]
+VAR PreviousValue =
+    CALCULATE (
+        [Yearly Paid Cancellation Rate],
+        REMOVEFILTERS ( 'KPI Year' ),
+        'KPI Year'[Year] = Y - 1
+    )
+RETURN
+    IF (
+        NOT ISBLANK ( Y ) && NOT ISBLANK ( CurrentValue ) && NOT ISBLANK ( PreviousValue ),
+        100 * ( CurrentValue - PreviousValue )
+    )

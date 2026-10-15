@@ -1,0 +1,3 @@
+# Needed only for optional synthetic data generation; audits use the Python standard library.
+numpy
+pandas
